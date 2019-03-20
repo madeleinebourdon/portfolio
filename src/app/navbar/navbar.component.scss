@@ -1,0 +1,42 @@
+@import'../variables.scss';
+nav {
+    background: $navbarBackground;
+    color: white;
+    padding: 1rem;
+
+
+    .navbar-brand {
+        font-weight: 600;
+        color: $mainColor;
+        font-family: 'Paprika', cursive;
+        font-size: 1.4rem;
+    }
+
+    .nav-link {
+        display: flex;
+        align-items: center;
+    }
+    .nav-link::after {
+        margin-left: 1rem;
+        width: 2px;
+        height: 1.5rem;
+        background: $mainColor;
+        content: '';
+    }
+    .nav-link:last-of-type::after {
+        width: 0;
+    }
+
+    .hover {
+        padding-bottom: 1px;
+        border-bottom: 2px solid transparent;
+    }
+    .hover:hover {
+        padding-bottom: 1px;
+        border-bottom: 2px solid $mainColor;
+        transition: all 0.35s;
+        transition-timing-function: linear;
+    }
+
+    
+}
