@@ -7,24 +7,26 @@
   </div>
 
 
-  <form action="post">
-    <div class="row mx-0">
-      <div class="col px-0">
-        <label for="name" class="sr-only">Votre nom</label>
-        <input type="text" placeholder="Votre nom" id="name">
+  <div class="mx-auto">
+    <form action="post">
+      <div class="row mx-0">
+        <div class="col px-0">
+          <label for="name" class="sr-only">Votre nom</label>
+          <input type="text" placeholder="Votre nom" id="name" required>
+        </div>
+        <div class="col px-0">
+          <label for="email" class="sr-only">Votre email</label>
+          <input type="email" placeholder="Votre email" id="email" required>
+        </div>
       </div>
-      <div class="col px-0">
-        <label for="email" class="sr-only">Votre email</label>
-        <input type="email" placeholder="Votre email" id="email">
-      </div>
-    </div>
 
-    <label for="subject" class="sr-only">Sujet de votre message</label>
-    <input type="text" placeholder="Sujet de votre message" id="subject">
-    <label for="message" class="sr-only">Votre message</label>
-    <textarea id="message" placeholder="Votre message"></textarea>
+      <label for="subject" class="sr-only">Sujet de votre message</label>
+      <input type="text" placeholder="Sujet de votre message" id="subject" required>
+      
+      <label for="message" class="sr-only">Votre message</label>
+      <textarea id="message" placeholder="Votre message" required></textarea>
 
-    <button class="btn btn-primary">Envoyer</button>
-
-  </form>
+      <button class="btn btn-primary">Envoyer</button>
+    </form>
+  </div>
 </div>
