@@ -7,6 +7,16 @@ h1 {
     font-weight: 600;
     text-align: center;
     font-size: 2.2rem;
+    font-family: 'Cabin', sans-serif;
+}
+h2 {
+    color: #009432;
+font-weight: 600;
+font-size: 1.25rem;
+}
+a {
+    color: green;
+    font-weight: 600;
 }
 
 // surcharge de bootstrap
@@ -32,4 +42,20 @@ h1 {
     color: #fff;
     background-color: $primaryColorDarker;
     border-color: $primaryColorDarker;
+}
+
+
+.darker-container {
+    // background-color: #a5a5a5;
+    background-color: #c0c0c0;
+}
+
+.padding {
+    padding-top: $generalPadding;
+    padding-bottom: $generalPadding;
+}
+
+.anchor {
+    padding-top: 5rem;
+    margin-top: -5rem;
 }

@@ -7,8 +7,13 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { RealisationsComponent } from './realisations/realisations.component';
-import { AboutComponent } from './about/about.component';
+import { AboutComponent } from './part/about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { JumbotronComponent } from './div/jumbotron/jumbotron.component';
+import { IntroComponent } from './div/intro/intro.component';
+import { SkillsComponent } from './div/skills/skills.component';
+import { LanguagesComponent } from './div/languages/languages.component';
+import { ExperienceComponent } from './div/experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +22,12 @@ import { ContactComponent } from './contact/contact.component';
     HomeComponent,
     RealisationsComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    JumbotronComponent,
+    IntroComponent,
+    SkillsComponent,
+    LanguagesComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
