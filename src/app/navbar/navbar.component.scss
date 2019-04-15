@@ -36,7 +36,13 @@ nav {
         border-bottom: 2px solid $mainColor;
         transition: all 0.35s;
         transition-timing-function: linear;
-    }
+    }   
+}
 
-    
+@media (max-width: 992px) {
+    nav {
+        .nav-link::after {
+            content: none;
+        }
+    }
 }
