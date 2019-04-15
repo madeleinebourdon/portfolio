@@ -1,0 +1,79 @@
+.portfolio-carousel {
+    h2 {
+        text-align: center;
+        margin: 1rem;
+        margin-top: 2rem;
+        font-size: 1.75rem;
+    }
+}
+
+.portfolio-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0.5rem;
+}
+
+.portfolio-button {
+    background: #111;
+    color: #dedede;
+    border: none;
+    border-right: 2px solid black;
+    padding: 0.5rem;
+    font-family: 'Cabin', sans-serif;
+}
+.portfolio-button:last-of-type {
+    border-right: none;
+}
+
+.portfolio-slide {
+    height: 35rem;
+    background-color: #111;
+
+    h2 {
+        text-align: center;
+    }
+}
+
+.portfolio-background {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+// images du carousel
+// projets pro
+.pro001 .portfolio-background {
+    background-image: url(https://www.justacote.com/photos_entreprises/sergic-pontoise-pontoise-59e5ab2928391.jpg);
+}
+.pro002 .portfolio-background {
+    background-image: url('../../../assets/img/portfolio/pro002.jpg');
+}
+
+.portfolio-darker-background {
+    background-color: rgba(0,0,0,0.75);
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+        font-size: 4rem;
+    }
+    span.subtitle {
+        color: #009432;
+        font-size: 1.2rem;
+    }
+}
+
+.portfolio-description {
+    height: 100%;
+    padding: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
