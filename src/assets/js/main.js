@@ -12,7 +12,41 @@ $(document).ready(function () {
             clickable: true,
         },
     });
+
+    // chartJS
+    // html5
+    new Chart(document.getElementById("htmlChart"), {
+        type: 'doughnut',
+        data: {
+            datasets: [
+                {
+                    backgroundColor: ["#ea6228", "#c0c0c0"],
+                    data: [80, 20],
+                    borderWidth: 0,
+                }
+            ]
+        },
+        options: {
+            tooltips: {
+                enabled: false
+            }
+        }
+    });
 })
+
+// chart
+// https://www.chartjs.org/docs/latest/getting-started/integration.html#content-security-policy
+var ctx = $('#skillChart');
+
+
+// var myPieChart = new Chart(ctx, {
+//     type: 'pie',
+//     data: 
+//     ,
+//     options: options
+// });
+
+
 
 
 // quand on appuie sur un onglet, choisit quel carousel afficher
@@ -32,3 +66,4 @@ function portfolio(click) {
             console.log('ERREUR: la valeur donnée à la fonction portfolio() n\'est pas conforme.');
     }
 }
+
