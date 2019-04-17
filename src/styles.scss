@@ -1,71 +1,79 @@
-@import'app/variables.scss';
+@import "app/variables.scss";
 body {
-    background: $bodyBackground;
+  background: $bodyBackground;
 }
-h1, h2 {
-    color: $primaryColorDarker;
-    font-weight: 600;
-    text-align: center;
-    font-size: 2.2rem;
-    font-family: 'Cabin', sans-serif;
+h1,
+h2,
+h4 {
+  font-family: "Cabin", sans-serif;
+}
+h1,
+h2 {
+  color: $primaryColorDarker;
+  font-weight: 600;
+  text-align: center;
+  font-size: 2.2rem;
+  // font-family: 'Cabin', sans-serif;
 }
 h3 {
-    color: #009432;
-font-weight: 600;
-font-size: 1.25rem;
+  color: #009432;
+  font-weight: 600;
+  // font-size: 1.25rem;
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 1.5rem 0;
 }
 h5 {
-    text-align: center;
+  text-align: center;
 }
 a {
-    color: green;
-    font-weight: 600;
+  color: green;
+  font-weight: 600;
 }
 
 // surcharge de bootstrap
 .btn-primary {
-    background: $primaryColor;
-    border-color: $primaryColor;
+  background: $primaryColor;
+  border-color: $primaryColor;
 }
 
 .btn-primary:hover {
-    background: $primaryColorDarker;
-    border-color: $primaryColorDarker;
+  background: $primaryColorDarker;
+  border-color: $primaryColorDarker;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .btn-primary:not(:disabled):not(.disabled):active:focus,
-.show>.btn-primary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem rgba(0, 148, 50, 0.5);
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 148, 50, 0.5);
 }
 
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
-.show>.btn-primary.dropdown-toggle {
-    color: #fff;
-    background-color: $primaryColorDarker;
-    border-color: $primaryColorDarker;
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: $primaryColorDarker;
+  border-color: $primaryColorDarker;
 }
 
-
 .darker-container {
-    // background-color: #a5a5a5;
-    // background-color: #c0c0c0;
-    background-color: rgba(0, 0, 0, 0.05);
+  // background-color: #a5a5a5;
+  // background-color: #c0c0c0;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .padding {
-    padding-top: $generalPadding;
-    padding-bottom: $generalPadding;
+  padding-top: $generalPadding;
+  padding-bottom: $generalPadding;
 }
 
 .anchor {
-    padding-top: 5rem;
-    margin-top: -5rem;
+  padding-top: 5rem;
+  margin-top: -5rem;
 }
 
 .part {
-        // background: #353535;
-        background: #212729;
-        color: #d4d4d4;
+  // background: #353535;
+  background: #212729;
+  color: #ededed;
 }

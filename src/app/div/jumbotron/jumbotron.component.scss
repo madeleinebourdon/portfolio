@@ -1,45 +1,42 @@
 .jumbotron {
-    background-image: url("../../../assets/img/andrew-coelho-215805-unsplash.jpg");
-    background-color: #2d3436;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    padding: 0;
-    // height: 33vh;
-    height: 40vh;
-    border-radius: 0;
-    margin-bottom: 0;
+  background-image: url("../../../assets/img/andrew-coelho-215805-unsplash.jpg");
+  background-color: #2d3436;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 0;
+  // height: 33vh;
+  height: 40vh;
+  border-radius: 0;
+  margin-bottom: 0;
 }
 
 .jumbotron-darken {
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .jumbotron-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    height: 100%;
+  height: 100%;
 
-    h1 {
-        color: white;
-        font-size: 2.5rem;
-        // text-transform: uppercase;
-        // font-family: 'Boogaloo', cursive;
-        font-family: 'Cabin', sans-serif;
-    }
-    span {
-        color: #ccc;
-        font-size: 2rem;
-        // font-family: 'Paprika', cursive;
-        font-family: 'Reenie Beanie', cursive;
-    }
-    * {
-        color: white;
-    }
+  h1 {
+    color: white;
+    font-size: 2.5rem;
+    // text-transform: uppercase;
+    // font-family: 'Boogaloo', cursive;
+    font-family: "Cabin", sans-serif;
+  }
+  span {
+    color: #ccc;
+    font-size: 2rem;
+    // font-family: 'Paprika', cursive;
+    font-family: "Reenie Beanie", cursive;
+  }
 }

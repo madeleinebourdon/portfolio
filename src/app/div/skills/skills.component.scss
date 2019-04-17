@@ -1,19 +1,40 @@
 @import'../../variables.scss';
 
-.skillChart {
-    // max-width: 100%;
-    // max-height: 100%;
+// .col {
+//     height: 100%;
+// }
+.skillsRow {
+    background: #2d3436;
+    margin-bottom: 2rem;
+    padding: 1rem;
 
-//     height: 20vw;
-// width: 20vw;
-
-// height: 6vw;
-// width: 6vw;
-
-height: $chartSize;
-width: $chartSize;
-margin: auto;
+    h4 {
+        color: #ededed;
+    }
 }
-.col {
-    height: 100%;
+.skillChart {
+    height: $chartSize;
+    width: $chartSize;
+    margin: auto;
+}
+.chartLegend {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.66rem;
+}
+.htmlLegend {
+    color: #ea6228;
+}
+.cssLegend {
+    color: #0070b7;
+}
+.jsLegend {
+    color: #f7c130;
+}
+.phpLegend {
+    color: #7377ad;
+}
+.sqlLegend {
+    color: #ec9221;
 }
