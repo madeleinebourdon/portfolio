@@ -14,13 +14,36 @@ $(document).ready(function () {
     });
 
     // chartJS
+    let unknownColor = "#485460";
+
     // html5
     new Chart(document.getElementById("htmlChart"), {
         type: 'doughnut',
         data: {
             datasets: [
                 {
-                    backgroundColor: ["#ea6228", "#c0c0c0"],
+                    backgroundColor: ["#ea6228", unknownColor],
+                    data: [85, 15],
+                    borderWidth: 0,
+                }
+            ]
+        },
+        options: {
+            tooltips: {
+                enabled: false
+            },
+            aspectRatio: 1,
+            responsive: false
+        }
+    });
+
+    // css3
+    new Chart(document.getElementById("cssChart"), {
+        type: 'doughnut',
+        data: {
+            datasets: [
+                {
+                    backgroundColor: ["#0070b7", unknownColor],
                     data: [80, 20],
                     borderWidth: 0,
                 }
@@ -29,7 +52,72 @@ $(document).ready(function () {
         options: {
             tooltips: {
                 enabled: false
-            }
+            },
+            aspectRatio: 1,
+            responsive: false
+        }
+    });
+
+    // js
+    new Chart(document.getElementById("jsChart"), {
+        type: 'doughnut',
+        data: {
+            datasets: [
+                {
+                    backgroundColor: ["#f7c130", unknownColor],
+                    data: [45, 55],
+                    borderWidth: 0,
+                }
+            ]
+        },
+        options: {
+            tooltips: {
+                enabled: false
+            },
+            aspectRatio: 1,
+            responsive: false
+        }
+    });
+
+    // php
+    new Chart(document.getElementById("phpChart"), {
+        type: 'doughnut',
+        data: {
+            datasets: [
+                {
+                    backgroundColor: ["#7377ad", unknownColor],
+                    data: [55, 45],
+                    borderWidth: 0,
+                }
+            ]
+        },
+        options: {
+            tooltips: {
+                enabled: false
+            },
+            aspectRatio: 1,
+            responsive: false
+        }
+    });
+
+    // sql
+    new Chart(document.getElementById("sqlChart"), {
+        type: 'doughnut',
+        data: {
+            datasets: [
+                {
+                    backgroundColor: ["#ec9221", unknownColor],
+                    data: [30, 70],
+                    borderWidth: 0,
+                }
+            ]
+        },
+        options: {
+            tooltips: {
+                enabled: false
+            },
+            aspectRatio: 1,
+            responsive: false
         }
     });
 })
