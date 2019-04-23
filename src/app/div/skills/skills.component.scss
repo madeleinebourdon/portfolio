@@ -3,6 +3,41 @@
 // .col {
 //     height: 100%;
 // }
+
+.card {
+    background: #2d3436;
+
+    .btn-link {
+        width: 100%;
+    }
+
+    .card-header {
+        background-color: rgba(0, 0, 0, .1);
+    }
+
+    button.collapsed:after,
+    button:not(.collapsed):after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        right: 3rem;
+        display: inline-block;
+        position: absolute;
+
+
+
+    }
+
+    // div fermée
+    button.collapsed:after {
+        content: "\f054";
+    }
+
+    // div ouverte
+    button:not(.collapsed):after {
+        content: "\f078";
+    }
+}
+
 .skillsRow {
     background: #2d3436;
     margin-bottom: 2rem;
@@ -12,29 +47,36 @@
         color: #ededed;
     }
 }
+
 .skillChart {
     height: $chartSize;
     width: $chartSize;
     margin: auto;
 }
+
 .chartLegend {
     display: block;
     font-weight: bold;
     text-align: center;
     padding: 0.66rem;
 }
+
 .htmlLegend {
     color: #ea6228;
 }
+
 .cssLegend {
     color: #0070b7;
 }
+
 .jsLegend {
     color: #f7c130;
 }
+
 .phpLegend {
     color: #7377ad;
 }
+
 .sqlLegend {
     color: #ec9221;
 }
