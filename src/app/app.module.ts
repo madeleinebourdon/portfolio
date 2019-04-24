@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import { RealisationsComponent } from './realisations/realisations.component';
 import { AboutComponent } from './part/about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { JumbotronComponent } from './div/jumbotron/jumbotron.component';
@@ -21,7 +20,6 @@ import { PortfolioComponent } from './part/portfolio/portfolio.component';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    RealisationsComponent,
     AboutComponent,
     ContactComponent,
     JumbotronComponent,
