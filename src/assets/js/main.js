@@ -149,7 +149,7 @@ $(document).ready(function () {
             datasets: [
                 {
                     backgroundColor: ["#fe809c", unknownColor],
-                    data: [15, 85],
+                    data: [20, 85],
                     borderWidth: 0,
                 }
             ]
