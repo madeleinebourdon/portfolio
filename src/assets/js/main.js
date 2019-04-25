@@ -15,6 +15,7 @@ $(document).ready(function () {
 
     // chartJS
     let unknownColor = "#485460";
+    let responsiveEnabled = false;
 
     // html5
     new Chart(document.getElementById("htmlChart"), {
@@ -33,7 +34,7 @@ $(document).ready(function () {
                 enabled: false
             },
             aspectRatio: 1,
-            responsive: false
+            responsive: responsiveEnabled
         }
     });
 
@@ -54,7 +55,7 @@ $(document).ready(function () {
                 enabled: false
             },
             aspectRatio: 1,
-            responsive: false
+            responsive: responsiveEnabled
         }
     });
 
@@ -75,7 +76,7 @@ $(document).ready(function () {
                 enabled: false
             },
             aspectRatio: 1,
-            responsive: false
+            responsive: responsiveEnabled
         }
     });
 
@@ -96,7 +97,7 @@ $(document).ready(function () {
                 enabled: false
             },
             aspectRatio: 1,
-            responsive: false
+            responsive: responsiveEnabled
         }
     });
 
@@ -117,7 +118,7 @@ $(document).ready(function () {
                 enabled: false
             },
             aspectRatio: 1,
-            responsive: false
+            responsive: responsiveEnabled
         }
     });
 
@@ -138,7 +139,7 @@ $(document).ready(function () {
                 enabled: false
             },
             aspectRatio: 1,
-            responsive: false
+            responsive: responsiveEnabled
         }
     });
 
@@ -159,7 +160,7 @@ $(document).ready(function () {
                 enabled: false
             },
             aspectRatio: 1,
-            responsive: false
+            responsive: responsiveEnabled
         }
     });
 
@@ -180,7 +181,7 @@ $(document).ready(function () {
                 enabled: false
             },
             aspectRatio: 1,
-            responsive: false
+            responsive: responsiveEnabled
         }
     });
 
@@ -201,7 +202,7 @@ $(document).ready(function () {
                 enabled: false
             },
             aspectRatio: 1,
-            responsive: false
+            responsive: responsiveEnabled
         }
     });
 
@@ -222,7 +223,7 @@ $(document).ready(function () {
                 enabled: false
             },
             aspectRatio: 1,
-            responsive: false
+            responsive: responsiveEnabled
         }
     });
 
@@ -243,7 +244,7 @@ $(document).ready(function () {
                 enabled: false
             },
             aspectRatio: 1,
-            responsive: false
+            responsive: responsiveEnabled
         }
     });
 
@@ -264,7 +265,7 @@ $(document).ready(function () {
                 enabled: false
             },
             aspectRatio: 1,
-            responsive: false
+            responsive: responsiveEnabled
         }
     });
 
@@ -285,7 +286,7 @@ $(document).ready(function () {
                 enabled: false
             },
             aspectRatio: 1,
-            responsive: false
+            responsive: responsiveEnabled
         }
     });
 
@@ -306,7 +307,7 @@ $(document).ready(function () {
                 enabled: false
             },
             aspectRatio: 1,
-            responsive: false
+            responsive: responsiveEnabled
         }
     });
 
@@ -327,7 +328,7 @@ $(document).ready(function () {
                     enabled: false
                 },
                 aspectRatio: 1,
-                responsive: false
+                responsive: responsiveEnabled
             }
         });
     
@@ -369,7 +370,7 @@ $(document).ready(function () {
                     enabled: false
                 },
                 aspectRatio: 1,
-                responsive: false
+                responsive: responsiveEnabled
             }
         });
 })
