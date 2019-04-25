@@ -1,9 +1,5 @@
 @import'../../variables.scss';
 
-// .col {
-//     height: 100%;
-// }
-
 .card {
     background: #2d3436;
 
@@ -27,14 +23,14 @@
         color: rgba(255,255,255,0.1);
     }
 
-    // div fermée
-    button.collapsed:after {
-        content: "\f054";
-    }
-
     // div ouverte
     button:not(.collapsed):after {
         content: "\f078";
+    }
+
+    // div fermée
+    button.collapsed:after {
+        content: "\f054";
     }
 }
 
@@ -51,6 +47,11 @@
 .skillChart {
     height: $chartSize;
     width: $chartSize;
+    margin: auto;
+}
+.smallSkillChart {
+    height: calc(#{$chartSize} / 2);
+    width: calc(#{$chartSize} / 2);
     margin: auto;
 }
 
@@ -73,10 +74,53 @@
     color: #f7c130;
 }
 
+.bootstrapLegend {
+    color: #6d42a0;
+}
+.faLegend {
+    color: #228be6;
+}
+.swiperLegend {
+    color: #2c8dfb;
+}
+.chartjsLegend {
+    color: #fe809c;
+}
+
 .phpLegend {
     color: #7377ad;
 }
 
 .sqlLegend {
     color: #ec9221;
+}
+
+.phpmaLegend {
+    color: #f0970e;
+}
+
+.wordpressLegend {
+    color: #207196;
+}
+
+.phpLegend {
+    color: #7377ad;
+}
+
+.angularLegend {
+    color: #c3002f;
+}
+
+.ionicLegend {
+    color: #4c89ef;
+}
+.symfonyLegend {
+    color: #000000;
+}
+
+.gitLegend {
+    color: #e94e31;
+}
+.photoshopLegend {
+    color: #3c92e9;
 }

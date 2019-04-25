@@ -44,7 +44,7 @@ $(document).ready(function () {
             datasets: [
                 {
                     backgroundColor: ["#0070b7", unknownColor],
-                    data: [80, 20],
+                    data: [85, 15],
                     borderWidth: 0,
                 }
             ]
@@ -66,6 +66,90 @@ $(document).ready(function () {
                 {
                     backgroundColor: ["#f7c130", unknownColor],
                     data: [45, 55],
+                    borderWidth: 0,
+                }
+            ]
+        },
+        options: {
+            tooltips: {
+                enabled: false
+            },
+            aspectRatio: 1,
+            responsive: false
+        }
+    });
+
+    // bootstrap
+    new Chart(document.getElementById("bootstrapChart"), {
+        type: 'doughnut',
+        data: {
+            datasets: [
+                {
+                    backgroundColor: ["#6d42a0", unknownColor],
+                    data: [65, 35],
+                    borderWidth: 0,
+                }
+            ]
+        },
+        options: {
+            tooltips: {
+                enabled: false
+            },
+            aspectRatio: 1,
+            responsive: false
+        }
+    });
+
+    // fontawesome
+    new Chart(document.getElementById("faChart"), {
+        type: 'doughnut',
+        data: {
+            datasets: [
+                {
+                    backgroundColor: ["#228be6", unknownColor],
+                    data: [75, 25],
+                    borderWidth: 0,
+                }
+            ]
+        },
+        options: {
+            tooltips: {
+                enabled: false
+            },
+            aspectRatio: 1,
+            responsive: false
+        }
+    });
+
+    // swiper
+    new Chart(document.getElementById("swiperChart"), {
+        type: 'doughnut',
+        data: {
+            datasets: [
+                {
+                    backgroundColor: ["#2c8dfb", unknownColor],
+                    data: [40, 60],
+                    borderWidth: 0,
+                }
+            ]
+        },
+        options: {
+            tooltips: {
+                enabled: false
+            },
+            aspectRatio: 1,
+            responsive: false
+        }
+    });
+
+    // chart.js
+    new Chart(document.getElementById("chartjsChart"), {
+        type: 'doughnut',
+        data: {
+            datasets: [
+                {
+                    backgroundColor: ["#fe809c", unknownColor],
+                    data: [15, 85],
                     borderWidth: 0,
                 }
             ]
@@ -120,6 +204,153 @@ $(document).ready(function () {
             responsive: false
         }
     });
+
+    // phpmyadmin
+    new Chart(document.getElementById("phpmaChart"), {
+        type: 'doughnut',
+        data: {
+            datasets: [
+                {
+                    backgroundColor: ["#f0970e", unknownColor],
+                    data: [40, 60],
+                    borderWidth: 0,
+                }
+            ]
+        },
+        options: {
+            tooltips: {
+                enabled: false
+            },
+            aspectRatio: 1,
+            responsive: false
+        }
+    });
+
+    // wordpress
+    new Chart(document.getElementById("wordpressChart"), {
+        type: 'doughnut',
+        data: {
+            datasets: [
+                {
+                    backgroundColor: ["#207196", unknownColor],
+                    data: [30, 70],
+                    borderWidth: 0,
+                }
+            ]
+        },
+        options: {
+            tooltips: {
+                enabled: false
+            },
+            aspectRatio: 1,
+            responsive: false
+        }
+    });
+
+    // angular
+    new Chart(document.getElementById("angularChart"), {
+        type: 'doughnut',
+        data: {
+            datasets: [
+                {
+                    backgroundColor: ["#c3002f", unknownColor],
+                    data: [35, 65],
+                    borderWidth: 0,
+                }
+            ]
+        },
+        options: {
+            tooltips: {
+                enabled: false
+            },
+            aspectRatio: 1,
+            responsive: false
+        }
+    });
+
+    // ionic
+    new Chart(document.getElementById("ionicChart"), {
+        type: 'doughnut',
+        data: {
+            datasets: [
+                {
+                    backgroundColor: ["#4c89ef", unknownColor],
+                    data: [40, 60],
+                    borderWidth: 0,
+                }
+            ]
+        },
+        options: {
+            tooltips: {
+                enabled: false
+            },
+            aspectRatio: 1,
+            responsive: false
+        }
+    });
+
+    // symfony
+    new Chart(document.getElementById("symfonyChart"), {
+        type: 'doughnut',
+        data: {
+            datasets: [
+                {
+                    backgroundColor: ["#000000", unknownColor],
+                    data: [40, 60],
+                    borderWidth: 0,
+                }
+            ]
+        },
+        options: {
+            tooltips: {
+                enabled: false
+            },
+            aspectRatio: 1,
+            responsive: false
+        }
+    });
+
+        // git
+        new Chart(document.getElementById("gitChart"), {
+            type: 'doughnut',
+            data: {
+                datasets: [
+                    {
+                        backgroundColor: ["#e94e31", unknownColor],
+                        data: [70, 30],
+                        borderWidth: 0,
+                    }
+                ]
+            },
+            options: {
+                tooltips: {
+                    enabled: false
+                },
+                aspectRatio: 1,
+                responsive: false
+            }
+        });
+    
+        // photoshop
+        new Chart(document.getElementById("photoshopChart"), {
+            type: 'doughnut',
+            data: {
+                datasets: [
+                    {
+                        backgroundColor: ["#3c92e9", unknownColor],
+                        data: [40, 60],
+                        borderWidth: 0,
+                    }
+                ]
+            },
+            options: {
+                tooltips: {
+                    enabled: false
+                },
+                aspectRatio: 1,
+                responsive: false
+            }
+        });
 })
 
 // chart
