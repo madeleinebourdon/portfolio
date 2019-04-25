@@ -338,6 +338,27 @@ $(document).ready(function () {
                 datasets: [
                     {
                         backgroundColor: ["#3c92e9", unknownColor],
+                        data: [45, 55],
+                        borderWidth: 0,
+                    }
+                ]
+            },
+            options: {
+                tooltips: {
+                    enabled: false
+                },
+                aspectRatio: 1,
+                responsive: responsiveEnabled
+            }
+        });
+
+        // avocode
+        new Chart(document.getElementById("avocodeChart"), {
+            type: 'doughnut',
+            data: {
+                datasets: [
+                    {
+                        backgroundColor: ["#00bc87", unknownColor],
                         data: [40, 60],
                         borderWidth: 0,
                     }
