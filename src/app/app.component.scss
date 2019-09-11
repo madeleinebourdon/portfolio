@@ -10,3 +10,14 @@
 .homepage-main {
     min-height: calc(100vh - #{map-get($sizes, 'minHeaderHeight')} - #{map-get($sizes, 'bigJumbotronHeight')} - #{map-get($sizes, 'minFooterHeight')});
 }
+
+.main,
+.homepage-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+app-contact {
+    width: 100%;
+}
