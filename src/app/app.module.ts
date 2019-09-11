@@ -6,14 +6,14 @@ import { AppComponent } from './app.component';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './part/about/about.component';
-import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
 import { JumbotronComponent } from './div/jumbotron/jumbotron.component';
 import { IntroComponent } from './div/intro/intro.component';
 import { SkillsComponent } from './div/skills/skills.component';
 import { LanguagesComponent } from './div/languages/languages.component';
 import { ExperienceComponent } from './div/experience/experience.component';
-import { PortfolioComponent } from './part/portfolio/portfolio.component';
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
