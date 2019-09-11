@@ -1,0 +1,25 @@
+@import'../variables.scss';
+
+.bg-dark {
+    background-color: #0b0c0d!important;
+}
+
+.footer {
+    min-height: map-get($sizes, 'minFooterHeight');
+    display: flex;
+    align-items: center;
+
+    .fa, .fas, .fab {
+        font-size: 1.3rem;
+    }
+    
+}
+
+a {
+    font-weight: initial;
+    color: #c0c0c0;
+}
+
+ul {
+    margin-bottom: 0;
+}

@@ -1,3 +1,5 @@
+@import'../../variables.scss';
+
 .jumbotron {
   background-image: url("../../../assets/img/andrew-coelho-215805-unsplash.jpg");
   background-color: #2d3436;
@@ -6,13 +8,12 @@
   background-repeat: no-repeat;
 
   padding: 0;
-  // height: 33vh;
-  height: 20vh;
+  height: map-get($sizes, 'smallJumbotronHeight');
   border-radius: 0;
   margin-bottom: 0;
 }
 .jumbotron-big {
-  height: 40vh;
+  height: map-get($sizes, 'bigJumbotronHeight');
 }
 
 .jumbotron-darken {
