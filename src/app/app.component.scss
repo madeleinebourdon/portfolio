@@ -2,3 +2,11 @@
 // main {
 //     padding-top: 1rem;
 // }
+
+.main {
+    min-height: calc(100vh - #{map-get($sizes, 'minHeaderHeight')} - #{map-get($sizes, 'smallJumbotronHeight')} - #{map-get($sizes, 'minFooterHeight')});
+}
+
+.homepage-main {
+    min-height: calc(100vh - #{map-get($sizes, 'minHeaderHeight')} - #{map-get($sizes, 'bigJumbotronHeight')} - #{map-get($sizes, 'minFooterHeight')});
+}

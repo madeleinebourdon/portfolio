@@ -1,8 +1,9 @@
 @import'../variables.scss';
 nav {
     background: $navbarBackground;
+    min-height: map-get($sizes, 'minHeaderHeight');
     color: white;
-    padding: 1rem;
+    padding: 0;
 
 
     .navbar-brand {
