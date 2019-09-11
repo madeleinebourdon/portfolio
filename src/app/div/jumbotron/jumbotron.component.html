@@ -1,10 +1,17 @@
-<div class="jumbotron">
+<div class="jumbotron jumbotron-big" *ngIf="intro">
   <div class="jumbotron-darken">
-    <div class="jumbotron-content" *ngIf="intro">
+    <div class="jumbotron-content">
       <h1>Madeleine Bourdon</h1>
       <span>
         Développeuse front-end junior
       </span>
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron" *ngIf="!intro">
+  <div class="jumbotron-darken">
+    <div class="jumbotron-content">
     </div>
   </div>
 </div>
