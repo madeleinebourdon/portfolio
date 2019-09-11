@@ -3,7 +3,7 @@
 <app-jumbotron *ngIf="!isHomeRoute()"></app-jumbotron>
 <app-jumbotron *ngIf="isHomeRoute()" intro="true"></app-jumbotron>
 
-<main>
+<main [className]="isHomeRoute() ? 'homepage-main' : 'main'">
     <router-outlet></router-outlet> 
 </main>
 
