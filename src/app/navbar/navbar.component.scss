@@ -24,7 +24,7 @@ nav {
         background: $mainColor;
         content: '';
     }
-    li.nav-item:last-of-type::after {
+    a.nav-item:last-of-type::after {
         width: 0;
     }
 
