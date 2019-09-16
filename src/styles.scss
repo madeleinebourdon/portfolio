@@ -76,10 +76,10 @@ a {
   // background: #353535;
   background: #212729;
   color: #ededed;
-  min-width: calc(100vw - 17px);
+  min-width: calc(100vw - 17px); // bricolage lié à l'ajout de display: flex sur le <main> et les <app> qui ne prennent pas toute la largeur dispo
 }
 
-// réparation des bêtise de bootstrap
+// réparation des bêtises de bootstrap
 [type="button"]::-moz-focus-inner, 
 [type="reset"]::-moz-focus-inner, 
 [type="submit"]::-moz-focus-inner, 
