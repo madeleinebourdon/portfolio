@@ -8,10 +8,12 @@
     </div>
   </div>
 </div>
-
 <div class="jumbotron" *ngIf="!intro">
   <div class="jumbotron-darken">
     <div class="jumbotron-content">
+      <h1 *ngIf="about">À propos de moi</h1>
+      <h1 *ngIf="portfolio">Réalisations</h1>
+      <h1 *ngIf="contact">Contact</h1>
     </div>
   </div>
 </div>

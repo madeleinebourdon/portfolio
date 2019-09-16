@@ -7,6 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class JumbotronComponent implements OnInit {
   @Input() intro: string;
+  @Input() about: string;
+  @Input() portfolio: string;
+  @Input() contact: string;
+  @Input() page: string;
 
   constructor() { }
 

@@ -1,9 +1,11 @@
 <app-navbar></app-navbar>
 
-<app-jumbotron *ngIf="!isHomeRoute()"></app-jumbotron>
-<app-jumbotron *ngIf="isHomeRoute()" intro="true"></app-jumbotron>
+<app-jumbotron *ngIf="currentRoute()===''" intro="true"></app-jumbotron>
+<app-jumbotron *ngIf="currentRoute()==='/about'" about="true"></app-jumbotron>
+<app-jumbotron *ngIf="currentRoute()==='/portfolio'" portfolio="true"></app-jumbotron>
+<app-jumbotron *ngIf="currentRoute()==='/contact'" contact="true"></app-jumbotron>
 
-<main [className]="isHomeRoute() ? 'homepage-main' : 'main'">
+<main [className]="currentRoute()==='' ? 'homepage-main' : 'main'">
     <router-outlet></router-outlet> 
 </main>
 
