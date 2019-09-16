@@ -13,37 +13,70 @@ nav {
         font-size: 1.4rem;
     }
 
-    .nav-link {
+    .nav-item {
         display: flex;
         align-items: center;
     }
-    .nav-link::after {
+    .nav-item::after {
         margin-left: 1rem;
         width: 2px;
         height: 1.5rem;
         background: $mainColor;
         content: '';
     }
-    .nav-link:last-of-type::after {
+    li.nav-item:last-of-type::after {
         width: 0;
     }
 
+    .btn-group .btn {
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
     .hover {
-        padding-bottom: 1px;
+        // padding-bottom: 1px;
         border-bottom: 2px solid transparent;
     }
     .hover:hover, .hover:focus, .hover:active {
-        padding-bottom: 1px;
+        // padding-bottom: 1px;
         border-bottom: 2px solid $mainColor;
         transition: all 0.35s;
         transition-timing-function: linear;
     }   
-}
 
+    // étendre le comportement natif  de bootstrap
+    .btn-group {
+        padding: .5rem 1rem;
+    }
+    .btn-group a,
+    .btn-group .btn {
+        color: rgba(255,255,255,0.5)!important;
+        text-decoration: none;
+    }
+
+    .dropdown-menu {
+        background: black;
+    }
+    .dropdown-item:focus, 
+    .dropdown-item:hover {
+        // background: $mainColor;
+            color: $mainColor;
+            background: darkgray;
+        
+    }
+}
+@media (min-width: 992px) {
+    .dropdown:hover>.dropdown-menu,
+    .btn-group:hover>.dropdown-menu {
+        display: block;
+    }
+}
 @media (max-width: 992px) {
     nav {
         .nav-link::after {
             content: none;
         }
     }
+
 }

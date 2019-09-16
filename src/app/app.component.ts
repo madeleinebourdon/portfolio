@@ -13,12 +13,12 @@ export class AppComponent {
   constructor(private router: Router, private location: Location) {
     console.log('Route : ' + this.currentRoute());
     console.log('Path : ' + this.location.path());
-    // console.log(currentRoute());
   }
 
   // isHomeRoute() {
   //   return this.router.url === '/';
   // }
+  
   currentRoute() {
     return this.location.path();
   }
