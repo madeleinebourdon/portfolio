@@ -38,7 +38,10 @@ nav {
         // padding-bottom: 1px;
         border-bottom: 2px solid transparent;
     }
-    .hover:hover, .hover:focus, .hover:active {
+    .hover:hover, 
+    .hover:focus,
+    .hover:active,
+    *:focus>.hover {
         // padding-bottom: 1px;
         border-bottom: 2px solid $mainColor;
         transition: all 0.35s;
