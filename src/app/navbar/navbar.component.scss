@@ -58,12 +58,12 @@ nav {
     .dropdown-menu {
         background: black;
     }
-    .dropdown-item:focus, 
-    .dropdown-item:hover {
+    a.dropdown-item:focus, 
+    a.dropdown-item:hover {
         // background: $mainColor;
-            color: $mainColor;
-            background: darkgray;
-        
+        // color: $mainColor!important;
+        color: white!important;
+        background: black;        
     }
 }
 @media (min-width: 992px) {
