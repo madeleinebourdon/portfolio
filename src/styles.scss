@@ -78,3 +78,11 @@ a {
   color: #ededed;
   min-width: calc(100vw - 17px);
 }
+
+// réparation des bêtise de bootstrap
+[type="button"]::-moz-focus-inner, 
+[type="reset"]::-moz-focus-inner, 
+[type="submit"]::-moz-focus-inner, 
+button::-moz-focus-inner {
+  border-style: dotted;
+}
