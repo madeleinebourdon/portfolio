@@ -13,6 +13,19 @@ $(document).ready(function () {
         },
     });
 
+    // swiper
+    var swiperSkill = new Swiper('.swiper-container-skill', {
+        mousewheel: true,
+        watchOverflow: true,
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
     // chartJS
     let unknownColor = "#485460";
     let responsiveEnabled = false;
