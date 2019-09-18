@@ -68,6 +68,9 @@ nav {
         color: white!important;
         background: black;        
     }
+    .dropdown-menu {
+        margin: 0;
+    }
 }
 @media (min-width: 992px) {
     .dropdown:hover>.dropdown-menu,
