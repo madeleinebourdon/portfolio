@@ -40,6 +40,10 @@
     }
 }
 
+.swiper-container-skill {
+    overflow: hidden;
+}
+
 .skillsRow {
     background: #2d3436;
     margin-bottom: 2rem;
@@ -132,4 +136,14 @@
 }
 .avocodeLegend {
     color: #00bc87;
+}
+
+/// swiper
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets, 
+.swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: initial;
 }

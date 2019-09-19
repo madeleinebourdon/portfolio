@@ -14,12 +14,12 @@ $(document).ready(function () {
     });
 
     // swiper
-    var swiperSkill = new Swiper('.swiper-container-skill', {
+    var swiper = new Swiper('.swiper-container-skill', {
         mousewheel: true,
         watchOverflow: true,
         loop: true,
         slidesPerView: 1,
-        spaceBetween: 0,
+        spaceBetween: 30,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
