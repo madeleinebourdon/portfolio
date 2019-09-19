@@ -12,6 +12,10 @@
   height: map-get($sizes, 'smallJumbotronHeight');
   border-radius: 0;
   margin-bottom: 0;
+
+  &.small {
+    height: calc(#{map-get($sizes, 'smallJumbotronHeight') / 8});
+  }
 }
 .jumbotron-big {
   height: map-get($sizes, 'bigJumbotronHeight');
