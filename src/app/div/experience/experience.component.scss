@@ -1,0 +1,97 @@
+@import "../../variables.scss";
+
+.container 
+{
+    position: relative;
+}
+
+.ligneTimeline {
+    // display: flex;
+    margin: 1rem 0;
+
+    &::before {
+        content: '';
+        width: 2px;
+        height: auto;
+        // min-height: 16rem;
+        height: calc(100% - 9.5rem);
+        background: $mainColor;
+        display: block;
+        position: absolute;
+        margin-top: 1rem;
+        // margin-left: 2.5rem;
+        margin-left: 14.55rem;
+    }
+    ul {
+        list-style: none;
+
+        &:first-of-type {
+            margin-left: 12rem;
+        }
+
+        li {
+            padding-left: 1.3rem;
+            padding-bottom: 0.8rem;
+
+            &:last-of-type {
+                padding-bottom: 0;
+            }
+
+            &::before {
+                content: "\f111";
+                font-family: "Font Awesome 5 Free";
+                color: $mainColor;
+                display: inline-block;
+                // margin-left: -1.3em;
+                margin-left: -1.5rem;
+                /* same as padding-left set on li */
+                width: 1.3em;
+                /* same as padding-left set on li */
+                font-weight: 600;
+                font-size: 0.6rem;
+                margin-right: 0.5rem;
+            }
+
+            &>ul {
+                list-style: square inside;
+
+                &:first-of-type {
+                    margin-left: inherit;
+                }
+
+                li {
+                    padding-bottom: 0;
+                    &::before {
+                        color: red;
+                        content: '';
+                    }
+                }
+            }
+
+            .yearTimeline {
+                text-align: right;
+                position: absolute;
+                left: 0;
+                margin-top: -0.5rem;
+                // width: 20.5rem;
+                width: 14rem;
+                    color: #454545;
+            }
+            .yearTimelineEnd {
+                display: block;
+            }
+            .yearHeadlineTimeline {
+                color: $mainColor;
+                font-weight: bold;
+            }
+            .yearCompanyTimeline {
+                font-style: italic;
+            }
+            .experienceDescription {
+                padding-top: 0.5rem;
+                padding-left: 0.5rem;
+                color: #c7c7c7;
+            }
+        }
+    }
+}
