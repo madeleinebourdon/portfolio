@@ -15,7 +15,7 @@ $(document).ready(function () {
 
     // swiper
     var swiper = new Swiper('.swiper-container-skill', {
-        mousewheel: true,
+        mousewheel: false,
         watchOverflow: true,
         loop: true,
         slidesPerView: 1,
