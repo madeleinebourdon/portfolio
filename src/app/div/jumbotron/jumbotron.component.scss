@@ -15,6 +15,10 @@
 
   &.small {
     height: calc(#{map-get($sizes, 'smallJumbotronHeight') / 8});
+    background-color: #576063;
+    box-shadow: 
+      inset 0px 20px 25px -10px black,
+      inset 0px -11px 8px -10px black; 
   }
 }
 .jumbotron-big {
