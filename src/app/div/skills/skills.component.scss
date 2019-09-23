@@ -165,3 +165,24 @@
         border-radius: 0;
     }
 }
+
+// display grid
+.gridContainer {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.skillContainer {
+    // background-color: deeppink;
+    height: calc(100% - 5rem);
+    display: flex;
+    align-items: center;
+
+    ul {
+        width: 100%;
+        text-align: center;
+        list-style: none;
+        padding-left: 0;
+    }
+}
