@@ -79,71 +79,71 @@
     padding: 0.66rem;
 }
 
-.htmlLegend {
-    color: #ea6228;
-}
+// .htmlLegend {
+//     color: #ea6228;
+// }
 
-.cssLegend {
-    color: #0070b7;
-}
+// .cssLegend {
+//     color: #0070b7;
+// }
 
-.jsLegend {
-    color: #f7c130;
-}
+// .jsLegend {
+//     color: #f7c130;
+// }
 
-.bootstrapLegend {
-    color: #6d42a0;
-}
-.faLegend {
-    color: #228be6;
-}
-.swiperLegend {
-    color: #2c8dfb;
-}
-.chartjsLegend {
-    color: #fe809c;
-}
+// .bootstrapLegend {
+//     color: #6d42a0;
+// }
+// .faLegend {
+//     color: #228be6;
+// }
+// .swiperLegend {
+//     color: #2c8dfb;
+// }
+// .chartjsLegend {
+//     color: #fe809c;
+// }
 
-.phpLegend {
-    color: #7377ad;
-}
+// .phpLegend {
+//     color: #7377ad;
+// }
 
-.sqlLegend {
-    color: #ec9221;
-}
+// .sqlLegend {
+//     color: #ec9221;
+// }
 
-.phpmaLegend {
-    color: #f0970e;
-}
+// .phpmaLegend {
+//     color: #f0970e;
+// }
 
-.wordpressLegend {
-    color: #207196;
-}
+// .wordpressLegend {
+//     color: #207196;
+// }
 
-.phpLegend {
-    color: #7377ad;
-}
+// .phpLegend {
+//     color: #7377ad;
+// }
 
-.angularLegend {
-    color: #c3002f;
-}
+// .angularLegend {
+//     color: #c3002f;
+// }
 
-.ionicLegend {
-    color: #4c89ef;
-}
-.symfonyLegend {
-    color: #000000;
-}
+// .ionicLegend {
+//     color: #4c89ef;
+// }
+// .symfonyLegend {
+//     color: #000000;
+// }
 
-.gitLegend {
-    color: #e94e31;
-}
-.photoshopLegend {
-    color: #3c92e9;
-}
-.avocodeLegend {
-    color: #00bc87;
-}
+// .gitLegend {
+//     color: #e94e31;
+// }
+// .photoshopLegend {
+//     color: #3c92e9;
+// }
+// .avocodeLegend {
+//     color: #00bc87;
+// }
 
 /// swiper
 .swiper-wrapper {
@@ -153,4 +153,15 @@
 .swiper-container-horizontal > .swiper-pagination-bullets, 
 .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: initial;
+}
+
+
+.cardContainer {
+    min-height: 30rem;
+
+    .card {
+        height: calc(100% - 1rem);
+        margin: 0.5rem;
+        border-radius: 0;
+    }
 }
