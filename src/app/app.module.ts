@@ -10,7 +10,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { JumbotronComponent } from './div/jumbotron/jumbotron.component';
 import { IntroComponent } from './div/intro/intro.component';
-import { SkillsComponent } from './div/skills/skills.component';
+import { TechnologyComponent } from './div/technology/technology.component';
 import { LanguagesComponent } from './div/languages/languages.component';
 import { ExperienceComponent } from './div/experience/experience.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
@@ -25,7 +25,7 @@ import { FooterComponent } from './footer/footer.component';
     ContactComponent,
     JumbotronComponent,
     IntroComponent,
-    SkillsComponent,
+    TechnologyComponent,
     LanguagesComponent,
     ExperienceComponent,
     PortfolioComponent,

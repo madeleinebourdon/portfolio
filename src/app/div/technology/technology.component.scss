@@ -1,0 +1,188 @@
+@import'../../variables.scss';
+
+.card {
+    background: #2d3436;
+    height: 100%;
+    text-align: center;
+
+    dl, ol, ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    // .btn-link {
+    //     width: 100%;
+    //     color: white;
+    // }
+
+    // .card-header {
+    //     background-color: rgba(0, 0, 0, .1);
+    //     // padding: .75rem 1.25rem;
+    //     padding: 0;
+    // }
+
+    // button.btn {
+    //     padding: .75rem 1.25rem;
+    // }
+
+    // button.collapsed:after,
+    // button:not(.collapsed):after {
+    //     font-family: "Font Awesome 5 Free";
+    //     font-weight: 600;
+    //     right: 3rem;
+    //     display: inline-block;
+    //     position: absolute;
+
+    //     color: rgba(255,255,255,0.1);
+    // }
+
+    // // div ouverte
+    // button:not(.collapsed):after {
+    //     content: "\f078";
+    // }
+
+    // // div fermée
+    // button.collapsed:after {
+    //     content: "\f054";
+    // }
+}
+
+.swiper-container-skill {
+    overflow: hidden;
+}
+
+.skillsRow {
+    background: #2d3436;
+    margin-bottom: 2rem;
+    padding: 1rem;
+
+    h4 {
+        color: #ededed;
+    }
+}
+
+.skillChart {
+    height: $chartSize;
+    width: $chartSize;
+    margin: auto;
+}
+.smallSkillChart {
+    height: calc(#{$chartSize} / 2);
+    width: calc(#{$chartSize} / 2);
+    margin: auto;
+}
+
+.chartLegend {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.66rem;
+}
+
+// .htmlLegend {
+//     color: #ea6228;
+// }
+
+// .cssLegend {
+//     color: #0070b7;
+// }
+
+// .jsLegend {
+//     color: #f7c130;
+// }
+
+// .bootstrapLegend {
+//     color: #6d42a0;
+// }
+// .faLegend {
+//     color: #228be6;
+// }
+// .swiperLegend {
+//     color: #2c8dfb;
+// }
+// .chartjsLegend {
+//     color: #fe809c;
+// }
+
+// .phpLegend {
+//     color: #7377ad;
+// }
+
+// .sqlLegend {
+//     color: #ec9221;
+// }
+
+// .phpmaLegend {
+//     color: #f0970e;
+// }
+
+// .wordpressLegend {
+//     color: #207196;
+// }
+
+// .phpLegend {
+//     color: #7377ad;
+// }
+
+// .angularLegend {
+//     color: #c3002f;
+// }
+
+// .ionicLegend {
+//     color: #4c89ef;
+// }
+// .symfonyLegend {
+//     color: #000000;
+// }
+
+// .gitLegend {
+//     color: #e94e31;
+// }
+// .photoshopLegend {
+//     color: #3c92e9;
+// }
+// .avocodeLegend {
+//     color: #00bc87;
+// }
+
+/// swiper
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets, 
+.swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: initial;
+}
+
+
+.cardContainer {
+    min-height: 30rem;
+
+    .card {
+        height: calc(100% - 1rem);
+        margin: 0.5rem;
+        border-radius: 0;
+    }
+}
+
+// display grid
+.gridContainer {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.skillContainer {
+    // background-color: deeppink;
+    height: calc(100% - 5rem);
+    // display: flex;
+    // align-items: center;
+
+    ul {
+        width: 100%;
+        text-align: center;
+        list-style: none;
+        padding-left: 0;
+    }
+}
