@@ -11,6 +11,15 @@ $navbarBackground: #2d3436;
 // body
 $bodyBackground: #cacaca;
 
+$iconsColors: (
+    'full-star': #fed330,
+    'empty-star': #909090
+);
+
+$palette: (
+    'light-gray': #a5a5a5
+);
+
 /// ESPACEMENT
 // padding général de la page
 $generalPadding: 2rem;
