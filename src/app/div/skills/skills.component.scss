@@ -170,14 +170,14 @@
 .gridContainer {
     display: grid;
     gap: 1rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 .skillContainer {
     // background-color: deeppink;
     height: calc(100% - 5rem);
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
 
     ul {
         width: 100%;
