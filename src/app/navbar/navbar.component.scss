@@ -104,14 +104,33 @@ nav {
 
 @media (max-width: 992px) {
     nav {
+
         .nav-link,
         .btn-group {
             &::after {
                 content: none;
             }
         }
+
         .btn-group {
             padding-left: 0;
+            padding-right: 0;
+        }
+
+        // afficher directement le contenu des dropdown en resposive
+        .btn-group {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        // masquer le bouton pour dérouler
+        .btn-group .btn.dropdown-toggle {
+            display: none;
+        }
+
+        .dropdown-menu {
+            display: block;
+            width: 100%;
         }
     }
 
@@ -120,6 +139,7 @@ nav {
         margin: 0 0.5rem;
 
     }
+
     .navbar-toggler {
         display: flex;
         flex-direction: column;
@@ -134,5 +154,7 @@ nav {
     .uncollapsedNavbar {
         width: 100%;
     }
+
+
 
 }
