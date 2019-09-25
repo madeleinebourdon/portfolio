@@ -104,8 +104,14 @@ nav {
 
 @media (max-width: 992px) {
     nav {
-        .nav-link::after {
-            content: none;
+        .nav-link,
+        .btn-group {
+            &::after {
+                content: none;
+            }
+        }
+        .btn-group {
+            padding-left: 0;
         }
     }
 
