@@ -3,7 +3,8 @@
 h3 {
     text-align: left;
 }
-.languageRatingContainer {
+.languageRatingContainer,
+.languageShortDescription {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,6 +28,9 @@ h3 {
     margin-left: 0.5rem;
     font-style: italic;
     color: map-get($palette, light-gray);
+}
+.languageShortDescription {
+    color: map-get($palette, dark-gray);
 }
 
 dl,
