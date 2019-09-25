@@ -85,13 +85,22 @@ nav {
     .dropdown-menu {
         margin: 0;
     }
+
+    // changer les marges de bases de bootstrap pour les flèches de dropdown menu
+    .dropdown-toggle {
+        margin-left: 0.4rem;
+        margin-top: 0.3rem;
+        &::after {
+            margin-left: 0;
+        }
+    }
 }
 
-// afficher le burger menu avant le contenu de la navbar
-.navbar>.container,
-.navbar>.container-fluid {
-    // justify-content: flex-start;
-}
+// // afficher le burger menu avant le contenu de la navbar
+// .navbar>.container,
+// .navbar>.container-fluid {
+//     // justify-content: flex-start;
+// }
 
 
 @media (min-width: 992px) {
