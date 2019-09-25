@@ -1,22 +1,27 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
   <div class="container">
-    <a class="navbar-brand" href="/">Madeleine Bourdon</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link" href="/" aria-hidden="true">
-        <span class="hover">Accueil</span>
-      </a>
-      <!-- <a class="nav-item nav-link" href="/about">
+    <div class="uncollapsedNavbar">
+      <a class="navbar-brand" href="/">Madeleine Bourdon</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fas fa-bars"></span>
+        <span class="legend">Menu</span>
+
+        <!-- <span class="navbar-toggler-icon"></span> -->
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        <a class="nav-item nav-link" href="/" aria-hidden="true">
+          <span class="hover">Accueil</span>
+        </a>
+        <!-- <a class="nav-item nav-link" href="/about">
         <span class="hover">À propos de moi</span>
       </a>
       <a class="nav-item nav-link" href="/portfolio">
         <span class="hover">Réalisations</span>
       </a> -->
-      <!-- <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <a href="yes">À propos de moi</a>
           
@@ -29,39 +34,39 @@
           <a class="dropdown-item" href="#">Expérience</a>
         </div>
       </li> -->
-                    <!-- Split button -->
-      <div class="nav-item btn-group">
-        <a type="button" class="hover" href="about">À propos de moi</a>
-        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">
-          <span class="sr-only">Dérouler les sous-parties</span>
-        </button>
-        <div class="dropdown-menu">
+        <!-- Split button -->
+        <div class="nav-item btn-group">
+          <a type="button" class="hover" href="about">À propos de moi</a>
+          <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <span class="sr-only">Dérouler les sous-parties</span>
+          </button>
+          <div class="dropdown-menu">
             <a class="dropdown-item" href="about#technologies"><span class="hover">Technologies</span></a>
             <a class="dropdown-item" href="about#languages"><span class="hover">Langues</span></a>
             <a class="dropdown-item" href="about#experience"><span class="hover">Expérience</span></a>
+          </div>
         </div>
-      </div>
 
-      <div class="nav-item btn-group">
-        <a type="button" class="hover" href="portfolio">Réalisations</a>
-        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">
-          <span class="sr-only">Dérouler les sous-parties</span>
-        </button>
-        <div class="dropdown-menu">
+        <div class="nav-item btn-group">
+          <a type="button" class="hover" href="portfolio">Réalisations</a>
+          <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <span class="sr-only">Dérouler les sous-parties</span>
+          </button>
+          <div class="dropdown-menu">
             <a class="dropdown-item" href="portfolio#"><span class="hover">Projets professionnels</span></a>
             <a class="dropdown-item" href="portfolio#"><span class="hover">Projets personnels</span></a>
             <a class="dropdown-item" href="portfolio#"><span class="hover">Projets d'étude</span></a>
+          </div>
         </div>
+
+        <a class="nav-item nav-link" href="/contact">
+          <span class="hover">Contact</span>
+        </a>
       </div>
 
-      <a class="nav-item nav-link" href="/contact">
-        <span class="hover">Contact</span>
-      </a>
     </div>
-    
   </div>
-  </div>
-  
+
 </nav>

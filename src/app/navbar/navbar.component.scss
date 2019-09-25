@@ -1,10 +1,18 @@
 @import'../variables.scss';
+
 nav {
     background: $navbarBackground;
-    min-height: map-get($sizes, 'minHeaderHeight');
     color: white;
     padding: 0;
 
+
+    .uncollapsedNavbar {
+        display: flex;
+        justify-content: inherit;
+        align-items: inherit;
+        // width: 100%;
+        min-height: map-get($sizes, 'minHeaderHeight');
+    }
 
     .navbar-brand {
         font-weight: 600;
@@ -17,6 +25,7 @@ nav {
         display: flex;
         align-items: center;
     }
+
     .nav-item::after {
         margin-left: 1rem;
         width: 2px;
@@ -24,6 +33,7 @@ nav {
         background: $mainColor;
         content: '';
     }
+
     a.nav-item:last-of-type::after {
         width: 0;
     }
@@ -38,7 +48,8 @@ nav {
         // padding-bottom: 1px;
         border-bottom: 2px solid transparent;
     }
-    .hover:hover, 
+
+    .hover:hover,
     .hover:focus,
     .hover:active,
     *:focus>.hover {
@@ -46,43 +57,76 @@ nav {
         border-bottom: 2px solid $mainColor;
         transition: all 0.35s;
         transition-timing-function: linear;
-    }   
+    }
 
     // étendre le comportement natif  de bootstrap
     .btn-group {
         padding: .5rem 1rem;
     }
+
     .btn-group a,
     .btn-group .btn {
-        color: rgba(255,255,255,0.5)!important;
+        color: rgba(255, 255, 255, 0.5) !important;
         text-decoration: none;
     }
 
     .dropdown-menu {
         background: black;
     }
-    a.dropdown-item:focus, 
+
+    a.dropdown-item:focus,
     a.dropdown-item:hover {
         // background: $mainColor;
         // color: $mainColor!important;
-        color: white!important;
-        background: black;        
+        color: white !important;
+        background: black;
     }
+
     .dropdown-menu {
         margin: 0;
     }
 }
+
+// afficher le burger menu avant le contenu de la navbar
+.navbar>.container,
+.navbar>.container-fluid {
+    // justify-content: flex-start;
+}
+
+
 @media (min-width: 992px) {
+
     .dropdown:hover>.dropdown-menu,
     .btn-group:hover>.dropdown-menu {
         display: block;
     }
 }
+
 @media (max-width: 992px) {
     nav {
         .nav-link::after {
             content: none;
         }
+    }
+
+    .navbar-brand,
+    .navbar-toggler {
+        margin: 0 0.5rem;
+
+    }
+    .navbar-toggler {
+        display: flex;
+        flex-direction: column;
+        min-height: 2rem;
+
+        .legend {
+            margin-top: 0.2rem;
+            font-size: 0.8rem;
+        }
+    }
+
+    .uncollapsedNavbar {
+        width: 100%;
     }
 
 }
