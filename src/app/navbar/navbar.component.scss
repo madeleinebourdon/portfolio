@@ -90,6 +90,7 @@ nav {
     .dropdown-toggle {
         margin-left: 0.4rem;
         margin-top: 0.3rem;
+
         &::after {
             margin-left: 0;
         }
@@ -153,6 +154,14 @@ nav {
         display: flex;
         flex-direction: column;
         min-height: 2rem;
+        transition: all 0.5s;
+
+        &[aria-expanded="true"] {
+            // -webkit-box-shadow: inset 0px 0px 22px 0px rgba(0, 0, 0, 0.75);
+            // -moz-box-shadow: inset 0px 0px 22px 0px rgba(0, 0, 0, 0.75);
+            // box-shadow: inset 0px 0px 2rem 0px rgba(0, 0, 0, 0.75);
+            background: rgba(0,0,0,0.4);
+        }
 
         .legend {
             margin-top: 0.2rem;
