@@ -1,0 +1,16 @@
+.container {
+    height: 100%;
+}
+
+.skillsContainer {
+    height: calc(100% - 3rem);
+    display: flex;
+    align-items: center;
+
+    ul {
+        list-style: square;
+        padding-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
