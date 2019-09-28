@@ -1,29 +1,46 @@
 <div class="part about-me">
-    <!-- <a id="about" class="anchor">
-        <h2>À propos de moi</h2>
-    </a> -->
-    <!-- <app-jumbotron small="true"></app-jumbotron> -->
-    <app-skills></app-skills>
-    
-    <app-jumbotron small="true"></app-jumbotron>
-    <div class="row col-lg-9 px-0 px-lg-auto m-auto">
-        <div class="col-lg-7">
-            <app-technology></app-technology>
-        </div>
-        <div class="col-lg-1">
-            <app-jumbotron thin="true"></app-jumbotron>
-        </div>
+    <div class="background">
+        <div class="background-dimming">
 
-        <div class="d-flex d-lg-none">
-            <app-jumbotron small="true"></app-jumbotron>
-        </div>
-        <div class="col-lg-4">
-            <app-languages></app-languages>
+
+            <!-- <a id="about" class="anchor">
+                <h2>À propos de moi</h2>
+            </a> -->
+            <!-- <app-jumbotron small="true"></app-jumbotron> -->
+            <div class="row col-lg-9 px-0 px-lg-auto mx-auto margin-horizontal">
+                <!-- <div class="col-4 foreground margin-vertical">
+                    <app-skills></app-skills>
+                </div> -->
+                <div class="col foreground">
+                    <app-skills></app-skills>
+                </div>
+                
+            </div>
+            
+            <!-- <app-jumbotron small="true"></app-jumbotron> -->
+            <div class="row col-lg-9 px-0 px-lg-auto mx-auto margin-horizontal">
+                <div class="col-lg-8 foreground margin-vertical">
+                    <app-technology></app-technology>
+                </div>
+                <!-- <div class="col-lg-1">
+                    <app-jumbotron thin="true"></app-jumbotron>
+                </div> -->
+
+                <!-- <div class="d-flex d-lg-none">
+                    <app-jumbotron small="true"></app-jumbotron>
+                </div> -->
+                <div class="col foreground">
+                    <app-languages></app-languages>
+                </div>
+            </div>
+            
+            
+            <!-- <app-jumbotron small="true"></app-jumbotron> -->
+            <div class="foreground col-lg-9 mx-auto">
+                <app-experience></app-experience>
+            </div>
+            <!-- <app-jumbotron small="true"></app-jumbotron> -->
+
         </div>
     </div>
-    
-    
-    <app-jumbotron small="true"></app-jumbotron>
-    <app-experience></app-experience>
-    <app-jumbotron small="true"></app-jumbotron>
 </div>

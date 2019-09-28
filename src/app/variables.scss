@@ -21,6 +21,10 @@ $palette: (
     'light-gray':   #a5a5a5,
     'dark-gray':    #686868,
 );
+$bgColors: (
+    'page':         #1e272e,
+    'partDark':     #2f3640,
+);
 
 /// ESPACEMENT
 // padding général de la page
@@ -40,4 +44,4 @@ $sizes: (
     'smallJumbotronHeight': 20vh,
     'minFooterHeight': 6rem,
     );
-$partGap: #{map-get($sizes, 'smallJumbotronHeight') / 8}; // map-get doesn't work if the variable is in the same group
+$partGap: #{map-get($sizes, 'smallJumbotronHeight') / 6}; // map-get doesn't work if the variable is in the same group
