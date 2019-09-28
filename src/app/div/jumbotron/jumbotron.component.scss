@@ -20,6 +20,28 @@
       inset 0px 20px 25px -10px black,
       inset 0px -11px 8px -10px black; 
   }
+
+  &.thin {
+    height: calc(100% + #{$partGap} * 2);
+    // #{map-get($sizes, 'smallJumbotronHeight') / 8 * 2});
+    width: calc(#{map-get($sizes, 'smallJumbotronHeight') / 8});
+    box-shadow: 
+    inset 0px 20px 25px -10px black,
+    inset 0px -11px 8px -10px black; 
+    margin-top: calc(-#{map-get($sizes, 'smallJumbotronHeight') / 8});
+    margin-bottom: calc(-#{map-get($sizes, 'smallJumbotronHeight') / 8});
+
+    .jumbotron-content {
+      top: $partGap;
+      bottom: $partGap;
+      position: relative;
+      height: calc(100% - #{$partGap} * 2);
+      // background: red;
+      box-shadow: 
+      inset -11px 0 -10px 8px black, 
+      inset 20px 0 -10px 25px black;
+    }
+  }
 }
 .jumbotron-big {
   height: map-get($sizes, 'bigJumbotronHeight');

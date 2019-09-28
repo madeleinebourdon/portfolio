@@ -38,5 +38,6 @@ $sizes: (
     'minHeaderHeight': 4.2rem,
     'bigJumbotronHeight': 40vh,
     'smallJumbotronHeight': 20vh,
-    'minFooterHeight': 6rem
-);
+    'minFooterHeight': 6rem,
+    );
+$partGap: #{map-get($sizes, 'smallJumbotronHeight') / 8}; // map-get doesn't work if the variable is in the same group
