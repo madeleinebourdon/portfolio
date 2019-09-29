@@ -1,25 +1,22 @@
 @import'../variables.scss';
 
-.bg-dark {
-    background-color: #0b0c0d!important;
-}
-
 .footer {
     min-height: map-get($sizes, 'minFooterHeight');
     display: flex;
     align-items: center;
+    background-color: map-get($bgColors, 'footer');
+    color: map-get($palette, 'white');
 
     .fa, .fas, .fab {
         font-size: 1.3rem;
     }
-    
-}
+     
+    a {
+        font-weight: initial;
+        color: map-get($palette, 'offwhite');
+    }
 
-a {
-    font-weight: initial;
-    color: #c0c0c0;
-}
-
-ul {
-    margin-bottom: 0;
+    ul {
+        margin-bottom: 0;
+    }
 }

@@ -1,7 +1,7 @@
 @import'../variables.scss';
 
 nav {
-    background: $navbarBackground;
+    background: map-get($bgColors, 'navbar');
     color: white;
     padding: 0;
 
@@ -16,7 +16,7 @@ nav {
 
     .navbar-brand {
         font-weight: 600;
-        color: $mainColor;
+        color: map-get($palette, 'main');
         font-family: 'Paprika', cursive;
         font-size: 1.4rem;
     }
@@ -30,7 +30,7 @@ nav {
         margin-left: 1rem;
         width: 2px;
         height: 1.5rem;
-        background: $mainColor;
+        background: map-get($palette, 'main');
         content: '';
     }
 
@@ -54,7 +54,7 @@ nav {
     .hover:active,
     *:focus>.hover {
         // padding-bottom: 1px;
-        border-bottom: 2px solid $mainColor;
+        border-bottom: 2px solid map-get($palette, 'main');
         transition: all 0.35s;
         transition-timing-function: linear;
     }
@@ -76,8 +76,8 @@ nav {
 
     a.dropdown-item:focus,
     a.dropdown-item:hover {
-        // background: $mainColor;
-        // color: $mainColor!important;
+        // background: map-get($palette, 'main');
+        // color: map-get($palette, 'main')!important;
         color: white !important;
         background: black;
     }
@@ -120,7 +120,6 @@ nav {
 
 @media (max-width: 992px) {
     nav {
-
         .nav-link,
         .btn-group {
             &::after {

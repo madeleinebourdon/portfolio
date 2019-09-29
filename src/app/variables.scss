@@ -1,30 +1,24 @@
-/// COULEURS
-// couleur principale
-$mainColor: #01a638;
-
-
 // BOOTSTRAP
 $primaryColor: #009432;
 $primaryColorDarker: #016121;
 
-// barre de navigation
-$navbarBackground: #2d3436;
-// body
-$bodyBackground: #cacaca;
 
-$iconsColors: (
-    'full-star': #fed330,
-    'empty-star': #909090
-);
-
+/// COULEURS
 $palette: (
+    'main':         #01a638,
+    'white':        #fff,
+    'offwhite':     #c0c0c0,
     'light-gray':   #a5a5a5,
     'dark-gray':    #686868,
 );
 $bgColors: (
+    'navbar':       #2d3436,
+    'body':         #cacaca,
+    'footer':       #0b0c0d,
     'page':         #1e272e,
     'partDark':     #2f3640,
 );
+
 
 /// ESPACEMENT
 // padding général de la page
@@ -45,3 +39,11 @@ $sizes: (
     'minFooterHeight': 6rem,
     );
 $partGap: #{map-get($sizes, 'smallJumbotronHeight') / 6}; // map-get doesn't work if the variable is in the same group
+
+
+/// CODE PARTS THAT BECAME USELESS
+/// (because what they served for was commented)
+$iconsColors: (
+    'full-star': #fed330,
+    'empty-star': #909090
+);

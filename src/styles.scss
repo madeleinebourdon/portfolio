@@ -1,6 +1,6 @@
 @import "app/variables.scss";
 body {
-  background: $bodyBackground;
+  background: map-get($bgColors, 'body');
 }
 h1,
 h2,
@@ -127,7 +127,7 @@ app-about {
 .foreground {
   z-index: 1;
   position: relative;
-  background: $bodyBackground; 
+  background: map-get($bgColors, 'body'); 
   // background: map-get($bgColors, 'partDark');
 }
 .margin-horizontal {
