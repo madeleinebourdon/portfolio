@@ -63,17 +63,17 @@
     }
 }
 
-.skillChart {
-    height: $chartSize;
-    width: $chartSize;
-    margin: auto;
-}
+// .skillChart {
+//     height: $chartSize;
+//     width: $chartSize;
+//     margin: auto;
+// }
 
-.smallSkillChart {
-    height: calc(#{$chartSize} / 2);
-    width: calc(#{$chartSize} / 2);
-    margin: auto;
-}
+// .smallSkillChart {
+//     height: calc(#{$chartSize} / 2);
+//     width: calc(#{$chartSize} / 2);
+//     margin: auto;
+// }
 
 .chartLegend {
     display: block;

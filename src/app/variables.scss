@@ -1,6 +1,8 @@
-// BOOTSTRAP
-$primaryColor: #009432;
-$primaryColorDarker: #016121;
+/// BOOTSTRAP
+$bootstrapColors: (
+    'primary':      #009432,
+    'primaryDarker': #016121
+);
 
 
 /// COULEURS
@@ -10,6 +12,7 @@ $palette: (
     'offwhite':     #c0c0c0,
     'light-gray':   #a5a5a5,
     'dark-gray':    #686868,
+    'black':        #000,
 );
 $bgColors: (
     'navbar':       #2d3436,
@@ -20,30 +23,26 @@ $bgColors: (
 );
 
 
-/// ESPACEMENT
-// padding général de la page
-$generalPadding: 2rem;
-
-// taille du portrait de l'intro
-$portraitSize: 7rem;
-
-// taille des skill charts
-$chartSize: 9rem;
-
-
+/// DIMENSIONS
 $sizes: (
     // 'minHeaderHeight': 5rem,
     'minHeaderHeight': 4.2rem,
-    'bigJumbotronHeight': 40vh,
-    'smallJumbotronHeight': 20vh,
     'minFooterHeight': 6rem,
-    );
-$partGap: #{map-get($sizes, 'smallJumbotronHeight') / 6}; // map-get doesn't work if the variable is in the same group
+    'smallJumbotronHeight': 20vh,
+    'bigJumbotronHeight': 40vh,
+    'portraitSize': 7rem,               // taille du portrait de l'intro
+);
+$spacing: (
+    'general': 2rem,
+    'partGap': #{map-get($sizes, 'smallJumbotronHeight') / 6},
+);
 
 
-/// CODE PARTS THAT BECAME USELESS
-/// (because what they served for was commented)
+/// PARTIES DE CODE DEVENUES INUTILES
+/// (parce que leurs conteneurs ont été commentés)
 $iconsColors: (
     'full-star': #fed330,
     'empty-star': #909090
 );
+
+// $chartSize: 9rem; // taille des skill charts

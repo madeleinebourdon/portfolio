@@ -9,7 +9,7 @@ h4 {
 }
 h1,
 h2 {
-  color: $primaryColorDarker;
+  color: map-get($bootstrapColors, 'primaryDarker');
   font-weight: 600;
   text-align: center;
   font-size: 2.2rem;
@@ -42,13 +42,13 @@ a {
 
 // surcharge de bootstrap
 .btn-primary {
-  background: $primaryColor;
-  border-color: $primaryColor;
+  background: map-get($bootstrapColors, 'primary');
+  border-color: map-get($bootstrapColors, 'primary');
 }
 
 .btn-primary:hover {
-  background: $primaryColorDarker;
-  border-color: $primaryColorDarker;
+  background: map-get($bootstrapColors, 'primaryDarker');
+  border-color: map-get($bootstrapColors, 'primaryDarker');
 }
 
 .btn-primary:not(:disabled):not(.disabled).active:focus,
@@ -61,8 +61,8 @@ a {
 .btn-primary:not(:disabled):not(.disabled):active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: $primaryColorDarker;
-  border-color: $primaryColorDarker;
+  background-color: map-get($bootstrapColors, 'primaryDarker');
+  border-color: map-get($bootstrapColors, 'primaryDarker');
 }
 
 .darker-container {
@@ -72,8 +72,8 @@ a {
 }
 
 .padding {
-  padding-top: $generalPadding;
-  padding-bottom: $generalPadding;
+  padding-top: map-get($spacing, 'general');
+  padding-bottom: map-get($spacing, 'general');
 }
 
 .anchor {
@@ -122,7 +122,7 @@ app-about {
 }
 .background-dimming {
   // background: rgba(0, 0, 0, 0.5);
-  padding-top: $partGap;
+  padding-top: map-get($spacing, 'partGap');
 }
 .foreground {
   z-index: 1;
@@ -131,10 +131,10 @@ app-about {
   // background: map-get($bgColors, 'partDark');
 }
 .margin-horizontal {
-  margin-bottom: $partGap;
+  margin-bottom: map-get($spacing, 'partGap');
 }
 .margin-vertical {
-  margin-right: $partGap;
+  margin-right: map-get($spacing, 'partGap');
 }
 
 @media (min-width: 1200px) {
