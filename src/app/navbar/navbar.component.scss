@@ -103,8 +103,8 @@ nav {
 
 /// desktop
 @media (min-width: 992px) {
-    .dropdown:hover>.dropdown-menu,
-    .btn-group li:hover>.dropdown-menu {
+    .dropdown:hover .dropdown-menu,
+    .btn-group:hover .dropdown-menu {
         display: block;
     }
 }
