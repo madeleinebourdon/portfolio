@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .portfolio-carousel {
     h2 {
         text-align: center;
@@ -15,7 +17,7 @@
 }
 
 .portfolio-button {
-    background: #111;
+    background: map-get($bgColors, "footer");
     color: #dedede;
     border: none;
     border-right: 2px solid black;
@@ -28,7 +30,7 @@
 
 .portfolio-slide {
     height: 35rem;
-    background-color: #111;
+    background-color: map-get($bgColors, "footer");
 
     h2 {
         text-align: center;
@@ -63,7 +65,7 @@
         font-size: 4rem;
     }
     span.subtitle {
-        color: #009432;
+        color: map-get($bootstrapColors, "primary");
         font-size: 1.2rem;
     }
 }
@@ -78,6 +80,6 @@
     align-items: center;
 
     strong {
-        color: #009432;
+        color: map-get($bootstrapColors, "primary");
     }
 }

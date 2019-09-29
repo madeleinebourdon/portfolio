@@ -61,8 +61,9 @@
 
                 li {
                     padding-bottom: 0;
+                    
                     &::before {
-                        color: red;
+                        // color: red;
                         content: '';
                     }
                 }
@@ -75,8 +76,9 @@
                 margin-top: -0.5rem;
                 // width: 20.5rem;
                 width: 14rem;
-                    // color: #454545;
-                    color: #8e8e8e;
+                // color: #454545;
+                // color: #8e8e8e;
+                color: map-get($palette, 'dark-gray');
             }
             .yearTimelineEnd {
                 display: block;
@@ -91,7 +93,7 @@
             .experienceDescription {
                 padding-top: 0.5rem;
                 padding-left: 0.5rem;
-                color: #c7c7c7;
+                // color: #c7c7c7;
             }
         }
     }

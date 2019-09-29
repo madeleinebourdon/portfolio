@@ -36,8 +36,8 @@ nav {
         }
     }
 
-    a.nav-item:last-of-type::after {
-        width: 0;
+    li:last-of-type a::after {
+        display: none;
     }
 
     .btn-group .btn {
