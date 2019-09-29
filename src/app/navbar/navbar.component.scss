@@ -141,6 +141,15 @@ nav {
         .dropdown-menu {
             display: block;
             width: 100%;
+            background: transparent;
+            border: none;
+
+            .dropdown-item {
+                &:focus, &:hover {
+                    background: transparent;
+                }
+
+            }
         }
     }
 
