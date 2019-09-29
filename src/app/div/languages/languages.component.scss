@@ -1,8 +1,8 @@
 @import '../../variables.scss';
 
-h3 {
-    text-align: left;
-}
+// h3 {
+//     text-align: left;
+// }
 .languageRatingContainer,
 .languageShortDescription {
     display: flex;
@@ -38,4 +38,43 @@ ol,
 ul {
     padding-left: 0;
     list-style: none;
+}
+
+// display grid
+.gridContainer {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    .gridItem {
+        text-align: center;
+    }
+}
+
+.skillContainer {
+    // background-color: deeppink;
+    height: calc(100% - 5rem);
+    // display: flex;
+    // align-items: center;
+
+
+    ul {
+        width: 100%;
+        text-align: center;
+        list-style: none;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .gridContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .gridContainer {
+        grid-template-columns: 1fr;
+    }
 }

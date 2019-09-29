@@ -103,7 +103,8 @@ button::-moz-focus-inner {
   text-align: center;
 }
 
-app-contact {
+app-contact,
+app-about {
   width: 100%;
 }
 
@@ -134,4 +135,10 @@ app-contact {
 }
 .margin-vertical {
   margin-right: $partGap;
+}
+
+@media (min-width: 1200px) {
+  .container-xl {
+    max-width: 1140px;
+  }
 }
