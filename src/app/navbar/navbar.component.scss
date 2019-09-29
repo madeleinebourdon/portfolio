@@ -95,6 +95,13 @@ nav {
             margin-left: 0;
         }
     }
+
+    ul {
+        padding-left: 0;
+    }
+    li {
+        display: flex;
+    }
 }
 
 // // afficher le burger menu avant le contenu de la navbar
@@ -105,9 +112,8 @@ nav {
 
 
 @media (min-width: 992px) {
-
     .dropdown:hover>.dropdown-menu,
-    .btn-group:hover>.dropdown-menu {
+    .btn-group li:hover>.dropdown-menu {
         display: block;
     }
 }
@@ -148,8 +154,11 @@ nav {
                 &:focus, &:hover {
                     background: transparent;
                 }
-
             }
+        }
+
+        li {
+            flex-direction: column;
         }
     }
 
