@@ -1,17 +1,19 @@
 /// BOOTSTRAP
 $bootstrapColors: (
-    'primary':      #009432,
-    'primaryDarker': #016121
+    'primary':          #009432,
+    'primaryDarker':    #016121,
+    'secondary':        #014618
 );
 
 
 /// COULEURS
 $palette: (
-    'main':         #01a638,
+    'main':         #01c141,
+    'mainDark':     #006421,
     'white':        #fff,
     'offwhite':     #c0c0c0,
     'light-gray':   #a5a5a5,
-    'dark-gray':    #686868,
+    'dark-gray':    #363636,
     'black':        #000,
 );
 $bgColors: (
@@ -20,6 +22,9 @@ $bgColors: (
     'footer':       #0b0c0d,
     'page':         #1e272e,
     'partDark':     #2f3640,
+);
+$txtColors: (
+    'navbar':       #ececec,               // rgba(255, 255, 255, 0.5)
 );
 
 

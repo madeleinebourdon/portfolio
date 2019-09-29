@@ -6,6 +6,15 @@ nav {
     padding: 0;
 
 
+    a {
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            font-style: normal;
+        }
+    }
+
     // donne les dimensions de la navbar
     .uncollapsedNavbar {
         display: flex;
@@ -65,10 +74,15 @@ nav {
     .btn-group {
         padding: .5rem 1rem;
 
-        a, .btn {
-            color: rgba(255, 255, 255, 0.5) !important;
+        a, 
+        .btn {
+            // color: rgba(255, 255, 255, 0.5) !important;
+            color: map-get($txtColors, 'navbar');
             text-decoration: none;
         }
+    }
+    .nav-link {
+        color: map-get($txtColors, 'navbar');
     }
 
     .dropdown-menu {

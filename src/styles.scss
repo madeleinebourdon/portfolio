@@ -26,6 +26,7 @@ h2 {
 }
 h3 {
   color: #009432;
+  color: map-get($bootstrapColors, 'secondary');
   font-weight: 600;
   // font-size: 1.25rem;
   font-size: 1.5rem;
@@ -35,21 +36,30 @@ h3 {
 h5 {
   text-align: center;
 }
-a {
-  color: green;
+main a {
+  color: map-get($palette, 'mainDark');
   font-weight: 600;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: map-get($palette, 'mainDark');
+    // font-style: italic;
+  }
 }
 
 // surcharge de bootstrap
 .btn-primary {
-  background: map-get($bootstrapColors, 'primary');
-  border-color: map-get($bootstrapColors, 'primary');
-}
-
-.btn-primary:hover {
   background: map-get($bootstrapColors, 'primaryDarker');
   border-color: map-get($bootstrapColors, 'primaryDarker');
+
+  &:hover,
+  &:focus {
+    background: map-get($bootstrapColors, 'secondary');
+    border-color: map-get($bootstrapColors, 'secondary');
+  }
 }
+
 
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .btn-primary:not(:disabled):not(.disabled):active:focus,

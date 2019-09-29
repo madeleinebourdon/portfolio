@@ -15,7 +15,7 @@
         height: auto;
         // min-height: 16rem;
         height: calc(100% - 9.5rem);
-        background: map-get($palette, 'main');
+        background: map-get($palette, 'mainDark');
         display: block;
         position: absolute;
         margin-top: 1rem;
@@ -40,7 +40,7 @@
             &::before {
                 content: "\f111";
                 font-family: "Font Awesome 5 Free";
-                color: map-get($palette, 'main');
+                color: map-get($palette, 'mainDark');
                 display: inline-block;
                 // margin-left: -1.3em;
                 margin-left: -1.5rem;
@@ -84,7 +84,7 @@
                 display: block;
             }
             .yearHeadlineTimeline {
-                color: map-get($palette, 'main');
+                color: map-get($palette, 'mainDark');
                 font-weight: bold;
             }
             .yearCompanyTimeline {
@@ -99,7 +99,7 @@
     }
 
     // .fa, .fas, .fab {
-    //     color: map-get($palette, 'main');
+    //     color: map-get($palette, 'mainDark');
     //     background: white;
     //     padding: 0.5rem;
     //     border-radius: 50%;
