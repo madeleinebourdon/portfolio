@@ -36,6 +36,9 @@ h3 {
 h5 {
   text-align: center;
 }
+p:last-of-type {
+  margin-bottom: 0;
+}
 main a {
   color: map-get($palette, 'mainDark');
   font-weight: 600;

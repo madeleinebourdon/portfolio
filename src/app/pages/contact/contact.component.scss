@@ -1,7 +1,18 @@
 @import "../../variables.scss";
 
 form {
-    text-align: center;
+    .label-container {
+        display: flex;
+        align-items: center;
+    }
+    label {
+        font-weight: bold;
+        color: map-get($palette, 'dark-gray');
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
 }
 
 input, textarea {
