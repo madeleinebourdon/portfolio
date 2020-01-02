@@ -17,6 +17,7 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { FooterComponent } from './footer/footer.component';
 import { SkillsComponent } from './div/skills/skills.component';
 import { PicturesComponent } from './div/pictures/pictures.component';
+import { MessageFormComponent } from './contact/message-form/message-form.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { PicturesComponent } from './div/pictures/pictures.component';
     PortfolioComponent,
     FooterComponent,
     SkillsComponent,
-    PicturesComponent
+    PicturesComponent,
+    MessageFormComponent
   ],
   imports: [
     BrowserModule,

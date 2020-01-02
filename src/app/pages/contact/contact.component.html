@@ -13,13 +13,20 @@
         <app-pictures></app-pictures>
       </div> -->
       <!-- <div class="col-lg-10"> -->
-        <form action="post">
+        <form>
           <div class="row">
             <div class="col-lg-4 label-container">
               <label for="name">Votre nom <span class="form-asterisk" aria-label="(Obligatoire)">*</span></label>
             </div>
             <div class="col">
               <input type="text" placeholder="Arthur Dubois" id="name" required>
+
+              <!-- <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+                <div *ngIf="name.errors.required">
+                  Name is required.
+                </div>
+              </div> -->
+
             </div>
           </div>
           <div class="row">
@@ -27,7 +34,7 @@
               <label for="email">Votre adresse email <span class="form-asterisk" aria-label="(Obligatoire)">*</span></label>
             </div>
             <div class="col">
-              <input type="email" placeholder="arthur.d@exemple.fr" id="email" required>
+              <input type="email" placeholder="arthur.d@exemple.fr" id="email">
             </div>
           </div>
           <div class="row">
@@ -43,7 +50,7 @@
               <label for="message">Votre message <span class="form-asterisk" aria-label="(Obligatoire)">*</span></label>
             </div>
             <div class="col">
-              <textarea id="message" placeholder="Bonjour, je vous contacte car..." required></textarea>
+              <textarea id="message" placeholder="Bonjour, je vous contacte car..."></textarea>
             </div>
           </div>
           <div class="row">
