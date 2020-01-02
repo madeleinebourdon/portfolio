@@ -8,15 +8,15 @@
 
 
   <div class="col-lg-10 mx-auto">
-    <div class="row">
-      <div class="col-lg-2">
+    <!-- <div class="row"> -->
+      <!-- <div class="col-lg-2">
         <app-pictures></app-pictures>
-      </div>
-      <div class="col-lg-10">
+      </div> -->
+      <!-- <div class="col-lg-10"> -->
         <form action="post">
           <div class="row">
             <div class="col-lg-4 label-container">
-              <label for="name">Votre nom</label>
+              <label for="name">Votre nom <span class="form-asterisk" aria-label="(Obligatoire)">*</span></label>
             </div>
             <div class="col">
               <input type="text" placeholder="Arthur Dubois" id="name" required>
@@ -24,7 +24,7 @@
           </div>
           <div class="row">
             <div class="col-lg-4 label-container">
-              <label for="email">Votre adresse email</label>
+              <label for="email">Votre adresse email <span class="form-asterisk" aria-label="(Obligatoire)">*</span></label>
             </div>
             <div class="col">
               <input type="email" placeholder="arthur.d@exemple.fr" id="email" required>
@@ -35,15 +35,15 @@
               <label for="subject">Le sujet de votre message</label>
             </div>
             <div class="col">
-              <input type="text" placeholder="Demande d'informations" id="subject" required>
+              <input type="text" placeholder="Demande d'informations" id="subject">
             </div>
           </div>
           <div class="row">
             <div class="col-lg-4 label-container">
-              <label for="message">Votre message</label>
+              <label for="message">Votre message <span class="form-asterisk" aria-label="(Obligatoire)">*</span></label>
             </div>
             <div class="col">
-              <textarea id="message" placeholder="Bonjour, je vous contacte car j'aimerais..." required></textarea>
+              <textarea id="message" placeholder="Bonjour, je vous contacte car..." required></textarea>
             </div>
           </div>
           <div class="row">
@@ -55,8 +55,8 @@
           </div>
 
         </form>
-      </div>
-    </div>
+      <!-- </div> -->
+    <!-- </div> -->
 
     <!-- <form action="post">
       <div class="row mx-0">
