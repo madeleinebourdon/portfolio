@@ -14,12 +14,19 @@
       </div> -->
       <!-- <div class="col-lg-10"> -->
         <form>
-          <div class="row">
-            <div class="col-lg-4 label-container">
-              <label for="name">Votre nom <span class="form-asterisk" aria-label="(Obligatoire)">*</span></label>
+          <p class="form-indication" aria-hidden="true">
+            Les champs marqués d'un <span class="form-asterisk">*</span> sont obligatoires.
+          </p>
+          <div class="row mx-0">
+            <div class="label-container">
+              <label for="contactName">
+                Votre nom
+                <span class="form-asterisk" aria-hidden="true">*</span>
+                <span class="sr-only">(Obligatoire)</span>
+              </label>
             </div>
             <div class="col">
-              <input type="text" placeholder="Arthur Dubois" id="name" required>
+              <input type="text" id="contactName" required>
 
               <!-- <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
                 <div *ngIf="name.errors.required">
@@ -29,32 +36,40 @@
 
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-4 label-container">
-              <label for="email">Votre adresse email <span class="form-asterisk" aria-label="(Obligatoire)">*</span></label>
+          <div class="row mx-0">
+            <div class="label-container">
+              <label for="contactEmail">
+                Votre adresse email 
+                <span class="form-asterisk" aria-hidden="true">*</span>
+                <span class="sr-only">(Obligatoire)</span>
+              </label>
             </div>
             <div class="col">
-              <input type="email" placeholder="arthur.d@exemple.fr" id="email">
+              <input type="email" id="contactEmail" required>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-4 label-container">
+          <div class="row mx-0">
+            <div class="label-container">
               <label for="subject">Le sujet de votre message</label>
             </div>
             <div class="col">
-              <input type="text" placeholder="Demande d'informations" id="subject">
+              <input type="text" id="subject">
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-4 label-container">
-              <label for="message">Votre message <span class="form-asterisk" aria-label="(Obligatoire)">*</span></label>
+          <div class="row mx-0">
+            <div class="label-container">
+              <label for="message">
+                Votre message
+                <span class="form-asterisk" aria-hidden="true">*</span>
+                <span class="sr-only">(Obligatoire)</span>
+              </label>
             </div>
             <div class="col">
-              <textarea id="message" placeholder="Bonjour, je vous contacte car..."></textarea>
+              <textarea id="message" required></textarea>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-4 label-container">
+          <div class="row mx-0">
+            <div class="label-container">
             </div>
             <div class="col">
               <button class="btn btn-primary">Envoyer</button>

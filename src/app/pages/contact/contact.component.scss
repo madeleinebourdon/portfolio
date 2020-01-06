@@ -1,44 +1,62 @@
 @import "../../variables.scss";
 
 form {
+    .form-indication {
+        // color: map-get($palette, 'mainDark');
+        // margin-bottom: 2rem;
+        margin-bottom: map-get($spacing, 'general');
+        font-style: italic;
+    }
+    .form-asterisk {
+        color: map-get($palette, 'mainDark')
+    }
+
     .label-container {
         display: flex;
-        align-items: center;
+        // align-items: center;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 14rem;
     }
     label {
         // font-weight: bold;
         // color: map-get($palette, 'dark-gray');
-        border-bottom: 2px solid map-get($palette, 'mainDark');
+        // border-bottom: 2px solid map-get($palette, 'light-gray');
         width: 100%;
-        padding: 0.1rem 0.5rem;
-        margin-bottom: 1.25rem;
+        // padding: 0.2rem 0.5rem;
+        padding: 0.2rem 0;
+        
+        margin-top: 0.2rem;
+        // margin-bottom: 1.25rem;
+        font-weight: 450;
 
         // &:last-of-type {
         //     margin-bottom: 0;
         // }
-
-        .form-asterisk {
-            color: map-get($palette, 'mainDark')
-        }
     }
     button {
-        margin: 0.9rem 0.2rem;
+        // margin: 0.9rem 0.2rem;
         padding: 0.6rem 1.7rem;
+        margin-top: map-get($spacing, 'thirdSpacing');
     }
 }
 
 input, 
 textarea {
     width: 100%;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     border-radius: 0.2rem;
     padding: 0.3rem;
-    margin: 0.2rem;
+    margin: 0.2rem 0;
 
     &::placeholder {
         // color: red;
         font-style: italic;
         color: map-get($palette, 'dark-gray');
         opacity: 0.75;
+    }
+
+    &:focus {
+        border-color: map-get($palette, 'main');
     }
 }

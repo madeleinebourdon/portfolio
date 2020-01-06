@@ -39,6 +39,9 @@ $sizes: (
 );
 $spacing: (
     'general': 2rem,
+    'halfSpacing': 1rem,
+    'thirdSpacing': 0.66rem,
+    'quarterSpacing': 0.5rem,
     'partGap': #{map-get($sizes, 'smallJumbotronHeight') / 6},
 );
 
