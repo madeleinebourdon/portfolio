@@ -1,7 +1,7 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
   <div class="container">
     <div class="uncollapsedNavbar">
-      <a class="navbar-brand" href="/">Madeleine Bourdon</a>
+      <a class="navbar-brand" href="/" aria-hidden="true" tabindex="-1">Madeleine Bourdon</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="fas fa-bars"></span>
@@ -14,72 +14,68 @@
       <ul class="navbar-nav ml-auto">
         <!-- Acccueil -->
         <li>
-          <a class="nav-item nav-link" href="/" aria-hidden="true">
+          <a class="nav-item nav-link" href="/">
             <span class="hover">Accueil</span>
           </a>
         </li>
 
-        <div class="nav-item btn-group">
+        <li class="nav-item btn-group">
           <!-- À propos de moi -->
-          <li>
-            <a type="button" class="hover" href="about">À propos de moi</a>
+          <a type="button" class="hover" href="about">À propos de moi</a>
 
-            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              <span class="sr-only">Dérouler les sous-parties</span>
-            </button>
+          <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <span class="sr-only">Catégorie "À propos de moi" : Dérouler les sous-parties</span>
+          </button>
 
-            <div class="dropdown-menu">
-              <!-- sous-liens de "À propos de moi" -->
-              <ul>
-                <!-- Compétences -->
-                <li>
-                  <a class="dropdown-item" href="about#skills"><span class="hover">Compétences</span></a>
-                </li>
-                <!-- Technologies -->
-                <li>
-                  <a class="dropdown-item" href="about#technologies"><span class="hover">Technologies</span></a>
-                </li>
-                <!-- Expérience -->
-                <li>
-                  <a class="dropdown-item" href="about#experience"><span class="hover">Expérience</span></a>
-                </li>
-                <!-- Langues -->
-                <li>
-                  <a class="dropdown-item" href="about#languages"><span class="hover">Langues</span></a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </div>
+          <div class="dropdown-menu">
+            <!-- sous-liens de "À propos de moi" -->
+            <ul>
+              <!-- Compétences -->
+              <li>
+                <a class="dropdown-item" href="about#skills"><span class="hover">Compétences</span></a>
+              </li>
+              <!-- Technologies -->
+              <li>
+                <a class="dropdown-item" href="about#technologies"><span class="hover">Technologies</span></a>
+              </li>
+              <!-- Expérience -->
+              <li>
+                <a class="dropdown-item" href="about#experience"><span class="hover">Expérience</span></a>
+              </li>
+              <!-- Langues -->
+              <li>
+                <a class="dropdown-item" href="about#languages"><span class="hover">Langues</span></a>
+              </li>
+            </ul>
+          </div>
+        </li>
 
-        <div class="nav-item btn-group">
+        <li class="nav-item btn-group">
           <!-- Réalisations -->
-          <li>
-            <a type="button" class="hover" href="portfolio">Réalisations</a>
-            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              <span class="sr-only">Dérouler les sous-parties</span>
-            </button>
-            <div class="dropdown-menu">
-              <!-- sous-liens de "Réalisations" -->
-              <ul>
-                <!-- Projets professionnels -->
-                <li>
-                  <a class="dropdown-item" href="portfolio#"><span class="hover">Projets professionnels</span></a>
-                </li>
-                <!-- Projets personnels -->
-                <li>
-                  <a class="dropdown-item" href="portfolio#"><span class="hover">Projets personnels</span></a>
-                </li>
-                <!-- Projets d'étude -->
-                <li>
-                  <a class="dropdown-item" href="portfolio#"><span class="hover">Projets d'étude</span></a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </div>
+          <a type="button" class="hover" href="portfolio">Réalisations</a>
+          <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <span class="sr-only">Catégorie "Réalisations" : Dérouler les sous-parties</span>
+          </button>
+          <div class="dropdown-menu">
+            <!-- sous-liens de "Réalisations" -->
+            <ul>
+              <!-- Projets professionnels -->
+              <li>
+                <a class="dropdown-item" href="portfolio#"><span class="hover">Projets professionnels</span></a>
+              </li>
+              <!-- Projets personnels -->
+              <li>
+                <a class="dropdown-item" href="portfolio#"><span class="hover">Projets personnels</span></a>
+              </li>
+              <!-- Projets d'étude -->
+              <li>
+                <a class="dropdown-item" href="portfolio#"><span class="hover">Projets d'étude</span></a>
+              </li>
+            </ul>
+          </div>
+        </li>
 
         <li>
           <a class="nav-item nav-link" href="/contact">
