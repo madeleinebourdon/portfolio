@@ -1,11 +1,20 @@
 @import "../../variables.scss";
 
+.contact-intro {
+    margin-bottom: map-get($spacing, 'doubleSpacing');
+
+    p {
+        &:first-of-type {
+            margin-top: map-get($spacing, 'quarterSpacing');
+        }
+    }
+}
+
 form {
     .form-indication {
-        // color: map-get($palette, 'mainDark');
-        // margin-bottom: 2rem;
         margin-bottom: map-get($spacing, 'general');
         font-style: italic;
+        font-size: 0.9rem;
     }
     .form-asterisk {
         color: map-get($palette, 'mainDark')

@@ -1,83 +1,76 @@
 <div class="container padding">
-  <!-- <div class="text-center">
-    <h1>{{title}}</h1>
-    <p>
-      Vous avez quelque chose à me dire ?
-    </p>
-  </div> -->
-
-
   <div class="col-lg-10 mx-auto">
-    <!-- <div class="row"> -->
-      <!-- <div class="col-lg-2">
-        <app-pictures></app-pictures>
-      </div> -->
-      <!-- <div class="col-lg-10"> -->
-        <form>
-          <p class="form-indication" aria-hidden="true">
-            Les champs marqués d'un <span class="form-asterisk">*</span> sont obligatoires.
-          </p>
-          <div class="row mx-0">
-            <div class="label-container">
-              <label for="contactName">
-                Votre nom
-                <span class="form-asterisk" aria-hidden="true">*</span>
-                <span class="sr-only">(Obligatoire)</span>
-              </label>
-            </div>
-            <div class="col">
-              <input type="text" id="contactName" required>
+    <div class="contact-intro">
+      <p>
+        Envie de me contacter ? Vous pouvez le faire en remplissant le formulaire ci-dessous.
+      </p>
+    </div>
 
-              <!-- <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+    <form>
+      <p class="form-indication" aria-hidden="true">
+        Les champs marqués d'un <span class="form-asterisk">*</span> sont obligatoires.
+      </p>
+      <div class="row mx-0">
+        <div class="label-container">
+          <label for="contactName">
+            Votre nom
+            <span class="form-asterisk" aria-hidden="true">*</span>
+            <span class="sr-only">(Obligatoire)</span>
+          </label>
+        </div>
+        <div class="col">
+          <input type="text" id="contactName" required>
+
+          <!-- <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
                 <div *ngIf="name.errors.required">
                   Name is required.
                 </div>
               </div> -->
 
-            </div>
-          </div>
-          <div class="row mx-0">
-            <div class="label-container">
-              <label for="contactEmail">
-                Votre adresse email 
-                <span class="form-asterisk" aria-hidden="true">*</span>
-                <span class="sr-only">(Obligatoire)</span>
-              </label>
-            </div>
-            <div class="col">
-              <input type="email" id="contactEmail" required>
-            </div>
-          </div>
-          <div class="row mx-0">
-            <div class="label-container">
-              <label for="subject">Le sujet de votre message</label>
-            </div>
-            <div class="col">
-              <input type="text" id="subject">
-            </div>
-          </div>
-          <div class="row mx-0">
-            <div class="label-container">
-              <label for="message">
-                Votre message
-                <span class="form-asterisk" aria-hidden="true">*</span>
-                <span class="sr-only">(Obligatoire)</span>
-              </label>
-            </div>
-            <div class="col">
-              <textarea id="message" required></textarea>
-            </div>
-          </div>
-          <div class="row mx-0">
-            <div class="label-container">
-            </div>
-            <div class="col">
-              <button class="btn btn-primary">Envoyer</button>
-            </div>
-          </div>
+        </div>
+      </div>
+      <div class="row mx-0">
+        <div class="label-container">
+          <label for="contactEmail">
+            Votre adresse email
+            <span class="form-asterisk" aria-hidden="true">*</span>
+            <span class="sr-only">(Obligatoire)</span>
+          </label>
+        </div>
+        <div class="col">
+          <input type="email" id="contactEmail" required>
+        </div>
+      </div>
+      <div class="row mx-0">
+        <div class="label-container">
+          <label for="subject">Le sujet de votre message</label>
+        </div>
+        <div class="col">
+          <input type="text" id="subject">
+        </div>
+      </div>
+      <div class="row mx-0">
+        <div class="label-container">
+          <label for="message">
+            Votre message
+            <span class="form-asterisk" aria-hidden="true">*</span>
+            <span class="sr-only">(Obligatoire)</span>
+          </label>
+        </div>
+        <div class="col">
+          <textarea id="message" required></textarea>
+        </div>
+      </div>
+      <div class="row mx-0">
+        <div class="label-container">
+        </div>
+        <div class="col">
+          <button class="btn btn-primary">Envoyer</button>
+        </div>
+      </div>
 
-        </form>
-      <!-- </div> -->
+    </form>
+    <!-- </div> -->
     <!-- </div> -->
 
     <!-- <form action="post">
