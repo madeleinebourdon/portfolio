@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SkillsComponent } from './div/skills/skills.component';
 import { PicturesComponent } from './div/pictures/pictures.component';
 import { MessageFormComponent } from './contact/message-form/message-form.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -35,13 +36,14 @@ import { MessageFormComponent } from './contact/message-form/message-form.compon
     FooterComponent,
     SkillsComponent,
     PicturesComponent,
-    MessageFormComponent
+    MessageFormComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

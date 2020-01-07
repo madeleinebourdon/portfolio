@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact',
@@ -6,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  title = 'Me contacter';
+  newTitle = 'Contact | Madeleine Bourdon — Portfolio';
   
-  constructor() { }
+  constructor(private titleService: Title) {
+    this.titleService.setTitle(this.newTitle);
+  }
 
   ngOnInit() {
   }
-
 }

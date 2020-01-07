@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
@@ -7,16 +6,19 @@ import { Location } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
-  title = 'portfolio-angular';
+  urlRoute = this.currentRoute();
+  urlPath = this.location.path()
+
   
-  constructor(private router: Router, private location: Location) {
-    console.log('Route : ' + this.currentRoute());
-    console.log('Path : ' + this.location.path());
+  constructor(private location: Location) {
+    console.log('Route : ' + this.urlRoute);
+    console.log('Path : ' + this.urlPath);
   }
 
-  // isHomeRoute() {
-  //   return this.router.url === '/';
+  // public setTitle( newTitle: string) {
+  //   this.titleService.setTitle( newTitle );
   // }
   
   currentRoute() {
