@@ -69,3 +69,18 @@ textarea {
         border-color: map-get($palette, 'main');
     }
 }
+
+// col-lg
+@media (max-width: 992px) {
+    form {
+        >.row {
+        flex-direction: column;
+            .col {
+                padding: 0;
+            }
+        }
+        .label-container {
+            max-width: 100%;
+        }
+    }
+}
