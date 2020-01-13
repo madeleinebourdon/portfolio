@@ -160,8 +160,29 @@ nav {
             width: 100%;
             background: transparent;
             border: none;
+            padding: 0;
+
+            li {
+                flex-direction: row;
+                align-items: center;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 0.4rem;
+                    height: 0.4rem;
+                    margin-left: 1rem;
+                    // background: map-get($palette, 'main');
+                    border-bottom: 2px solid map-get($palette, 'main');
+                    border-right: 2px solid map-get($palette, 'main');
+                    transform: rotate(-45deg);
+                }
+            }
 
             .dropdown-item {
+                display: flex;
+                padding-left: 0.5rem;
+
                 &:focus, &:hover {
                     background: transparent;
                 }
