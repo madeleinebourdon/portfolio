@@ -18,7 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SkillsComponent } from './div/skills/skills.component';
 import { PicturesComponent } from './div/pictures/pictures.component';
 import { MessageFormComponent } from './contact/message-form/message-form.component';
-import { HeaderComponent } from './header/header.component';
+// import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import { HeaderComponent } from './header/header.component';
     SkillsComponent,
     PicturesComponent,
     MessageFormComponent,
-    HeaderComponent
+    // HeaderComponent
   ],
   imports: [
     BrowserModule,
