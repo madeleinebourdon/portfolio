@@ -4,16 +4,49 @@
       <div class="container">
         <ul class="portfolioList">
           <li *ngFor="let realisation of realisations" class="card foreground">
+            <img *ngIf="realisation.image" src="assets/img/portfolio/{{realisation.image}}" class="realisationImage"
+              alt>
             <div class="card-body">
               <h2 class="card-title">
                 {{realisation.title}}
               </h2>
+              <p *ngIf="realisation.date">
+                {{realisation.date}}
+              </p>
+
+              <div class="row realisationInfos">
+                <div *ngIf="realisation.interventions" class="col realisationTechno">
+                  <div class="">
+                    <span class="fas fa-tools"></span>
+                    <strong>Intervention :</strong>
+                  </div>
+                  <ul>
+                    <li *ngFor="let intervention of realisation.interventions; let last = last">
+                      {{intervention}}<ng-container *ngIf="!last">,</ng-container>
+                    </li>
+                  </ul>
+                </div>
+                <div *ngIf="realisation.technos" class="col realisationTechno">
+                  <div>
+                    <span class="fas fa-code"></span>
+                    <strong>Technologies :</strong>
+                  </div>
+                  <ul>
+                    <li *ngFor="let techno of realisation.technos; let last = last">
+                      {{techno}}<ng-container *ngIf="!last">,</ng-container>
+                    </li>
+                  </ul>
+                </div>
+              </div>
               <div class="card-text">
-                <p *ngIf="realisation.techno" class="realisationTechno">
-                  <strong>Type de technologie :</strong> {{realisation.techno}}
-                </p>
                 <p *ngFor="let paragraph of realisation.description">
                   {{paragraph}}
+                </p>
+                <p *ngIf="realisation.liens">
+                  <strong>Liens : </strong>
+                  <ng-container *ngFor="let lien of realisation.liens; let last = last">
+                    <a  href="{{lien[0]['url']}}">{{lien[0]['texte']}}</a><ng-container *ngIf="!last">, </ng-container>
+                  </ng-container>
                 </p>
                 <ng-container *ngFor="let tag of realisation.tags">
                   <button *ngIf="tag === 'perso'" class="btn badge badge-primary">Projet personnel</button>

@@ -12,40 +12,90 @@ export class PortfolioComponent implements OnInit {
   realisations = [
     {
       id: 1,
-      image: '',
-      title: 'Nico Nico Calendar',
-      description: 
-      [
-        'Duis ut lectus eros. Maecenas ullamcorper luctus tellus eu ultrices. Nulla lobortis massa id eros consectetur, nec blandit est tempor. Duis venenatis lacus purus, sit amet semper tellus laoreet in. ',
-        'Vivamus laoreet lectus eu tortor accumsan, quis laoreet urna venenatis. Mauris risus diam, luctus nec porta faucibus, tincidunt a mauris. Mauris vitae tempus lacus. Vivamus a nisl a metus ullamcorper eleifend. Vestibulum ultricies massa ante, at maximus leo aliquam sed. Duis auctor venenatis cursus. Aliquam et enim lobortis, interdum magna sed, accumsan ante. '
+      image: 'eloca-ebailleur.jpg',
+      title: 'e-loca',
+      date: '2019',
+      interventions: [
+        'Découpage de maquette',
+        'accessibilité'
       ],
-      tags: [
-        'perso',
-        'wip'
-      ]
-    },
-    {
-      id: 2, 
-      image: '',
-      title: 'e-loca et e-bailleur',
-      description:[
-        'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In in massa leo. Nam nisl lectus, lacinia feugiat feugiat in, venenatis in lorem. Sed placerat scelerisque eleifend. ',
-        'Morbi luctus nibh leo, ut feugiat augue laoreet imperdiet. Suspendisse in semper libero. Pellentesque nec tincidunt neque. Vestibulum vel nulla quis dui euismod tincidunt. Maecenas blandit, tellus ac consequat tristique, nulla sapien mollis eros, quis rhoncus sem nulla ac ex. Quisque vel tempor massa, sed dictum metus. Duis vitae consequat lacus. Mauris et aliquet sem, eu tempor nisl. Praesent non massa sodales lectus volutpat egestas non posuere purus. '
+      technos: [
+        'Ionic',
+        'Sass'
+      ],
+      description: [
+        'e-loca et e-bailleur sont 2 éléments d\'un même système de gestion de location Sergic, qui existent à la fois en application pour smartphone ou tablette et en version web.',
+        'e-loca permet aux locataires d’accéder au détail de leur compte personnel, à l’ensemble de leurs documents et à toutes les  informations concernant leur location. Elle permet également de communiquer avec son gestionnaire et de signaler un problème ou un sinistre.',
+        'J\'ai été chargée de découper les maquettes fournies par Sergic et de les intégrer dans une application Ionic, qui devait comporter plusieurs paramètres d\'accessibilité,, '
+      ],
+      liens: [
+        [
+          {
+            texte: 'Google Play',
+            url: 'https://play.google.com/store/apps/details?id=com.sergic.eloca'
+          }
+        ],
+        [
+          {
+            texte: 'App Store',
+            url: 'https://apps.apple.com/fr/app/e-loca/id1488630952'
+          }
+        ]
       ],
       tags: [
         'pro'
+      ]
+    },
+    {
+      id: 2,
+      image: 'eloca-ebailleur.jpg',
+      title: 'e-bailleur',
+      date: '2019',
+      interventions: [
+        'Découpage de maquette',
+        'accessibilité'
       ],
-      techno: [
-        'Ionic', 
-        'Angular',
-        'SCSS'
+      technos: [
+        'Ionic',
+        'Sass'
+      ],
+      description: [
+        'e-loca et e-bailleur sont 2 éléments d\'un même système de gestion de location Sergic.',
+        'L\'application e-loca permet aux locataires d’accéder au détail de leur compte personnel, à l’ensemble de leurs documents et à toutes les  informations concernant leur location. Elle permet également de communiquer avec son gestionnaire et de signaler un problème ou un sinistre.',
+        'L\'application e-bailleur, propose des fonctionnalités similaires à celles de e-loca, mais orientées vers le propriétaire : '
+      ],
+      liens: [
+        [
+          {
+            texte: 'Google Play',
+            url: 'google.fr'
+          }
+        ],
+        [
+          {
+            texte: 'App Store',
+            url: 'google.fr'
+          }
+        ]
+      ],
+      tags: [
+        'pro'
       ]
     },
     {
       id: 3,
-      image: '',
+      image: 'compethance.jpg',
       title: 'Compéthance',
-      description:[
+      date: 2019,
+      interventions: [
+        'Découpage de maquette'
+      ],
+      technos: [
+        'HTML', 
+        'Sass', 
+        'JavaScript'
+      ],
+      description: [
         'Integer varius lectus eu orci rhoncus, eleifend semper turpis iaculis. In mattis ex a nibh bibendum, vel euismod massa condimentum. Ut non nunc vitae velit hendrerit sagittis ut a sapien. Nulla tincidunt sit amet sapien at ullamcorper. Aliquam erat volutpat. Maecenas et rhoncus velit. Proin eget mi at nisi luctus pellentesque. Quisque sit amet metus sed sapien faucibus efficitur sed sed turpis. Duis consequat mi dolor, eget aliquam erat ultrices sit amet. Nullam lacinia eget lacus non placerat. '
       ],
       tags: [
@@ -56,21 +106,20 @@ export class PortfolioComponent implements OnInit {
       id: 4,
       image: '',
       title: 'Legend of Dysmodia',
-      description:[
+      description: [
         'Paragraphe 1',
         'Paragraphe 2'
       ],
       tags: [
         'ecole'
       ],
-      techno: [
-        'Symfony', 
+      technos: [
+        'Symfony',
         'Phaser',
         'Bootstrap'
       ]
     }
   ];
-
 
   constructor(private titleService: Title) {
     this.titleService.setTitle(this.newTitle);
