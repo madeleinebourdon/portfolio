@@ -1,27 +1,33 @@
-<div class="container">
-  <ul class="portfolioList">
-    <li *ngFor="let realisation of realisations" class="card">
-      <div class="card-body">
-        <h2 class="card-title">
-          {{realisation.title}}
-        </h2>
-        <div class="card-text">
-          <p *ngIf="realisation.techno" class="realisationTechno">
-            <strong>Type de technologie :</strong> {{realisation.techno}}
-          </p>
-          <p *ngFor="let paragraph of realisation.description">
-            {{paragraph}}
-          </p>
-          <ng-container *ngFor="let tag of realisation.tags">
-            <button *ngIf="tag === 'perso'" class="btn badge badge-primary">Projet personnel</button>
-            <button *ngIf="tag === 'pro'" class="btn badge badge-primary">Projet professionnel</button>
-            <button *ngIf="tag === 'ecole'" class="btn badge badge-primary">Projet d'études</button>
-            <span *ngIf="tag === 'wip'" class="badge badge-dark">Work in progress</span>
-          </ng-container>
-        </div>
+<div class="part portfolio">
+  <div class="background">
+    <div class="background-dimming">
+      <div class="container">
+        <ul class="portfolioList">
+          <li *ngFor="let realisation of realisations" class="card foreground">
+            <div class="card-body">
+              <h2 class="card-title">
+                {{realisation.title}}
+              </h2>
+              <div class="card-text">
+                <p *ngIf="realisation.techno" class="realisationTechno">
+                  <strong>Type de technologie :</strong> {{realisation.techno}}
+                </p>
+                <p *ngFor="let paragraph of realisation.description">
+                  {{paragraph}}
+                </p>
+                <ng-container *ngFor="let tag of realisation.tags">
+                  <button *ngIf="tag === 'perso'" class="btn badge badge-primary">Projet personnel</button>
+                  <button *ngIf="tag === 'pro'" class="btn badge badge-primary">Projet professionnel</button>
+                  <button *ngIf="tag === 'ecole'" class="btn badge badge-primary">Projet d'études</button>
+                  <span *ngIf="tag === 'wip'" class="badge badge-dark">Work in progress</span>
+                </ng-container>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 
 <!-- <app-jumbotron small="true"></app-jumbotron> -->
