@@ -18,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SkillsComponent } from './div/skills/skills.component';
 import { PicturesComponent } from './div/pictures/pictures.component';
 import { MessageFormComponent } from './contact/message-form/message-form.component';
+import { AccessibilityComponent } from './div/accessibility/accessibility.component';
 // import { HeaderComponent } from './header/header.component';
 
 @NgModule({
@@ -37,6 +38,7 @@ import { MessageFormComponent } from './contact/message-form/message-form.compon
     SkillsComponent,
     PicturesComponent,
     MessageFormComponent,
+    AccessibilityComponent,
     // HeaderComponent
   ],
   imports: [
