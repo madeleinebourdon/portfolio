@@ -15,9 +15,10 @@ export class JumbotronComponent implements OnInit {
   // @Input() about: string;
   // @Input() portfolio: string;
   // @Input() contact: string;
-  @Input() page: string;
-  @Input() small: string;
-  @Input() thin: string;
+  // @Input() page: string;
+  // @Input() small: string;
+  // @Input() thin: string;
+
 
   constructor() { }
 

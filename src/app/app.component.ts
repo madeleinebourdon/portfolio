@@ -16,11 +16,11 @@ export class AppComponent {
   sub: string
 
   constructor(private location: Location) {
-
+    console.log(this.urlRoute)
     switch (this.urlRoute) {
       case '':
         this.intro = true
-        this.name = 'Madeleine bourdon'
+        this.name = 'Madeleine Bourdon'
         this.sub = 'Développeuse front-end junior'
         break
       case '/about':
@@ -32,19 +32,23 @@ export class AppComponent {
       case '/contact':
         this.name = 'Contact'
         break
-      default:
-        this.name = 'Error'
+      // default:
+      //   this.name = 'Error'
     }
-    console.log('Intro: ' + this.intro)
-    console.log('Name: ' + this.name)
-    console.log('Sub: ' + this.sub)
+    if (this.urlRoute.startsWith('/portfolio/project/')) {
+      this.name = 'Détails d\'un projet'
+    }
 
-    console.log(this.urlRoute)
-    console.log('Route : ' + this.urlRoute);
-    console.log('Path : ' + this.urlPath);
+    // console.log('Intro: ' + this.intro)
+    // console.log('Name: ' + this.name)
+    // console.log('Sub: ' + this.sub)
 
-    console.log(document)
-    console.log(document.getElementById('project'))
+    // console.log(this.urlRoute)
+    // console.log('Route : ' + this.urlRoute);
+    // console.log('Path : ' + this.urlPath);
+
+    // console.log(document)
+    // console.log(document.getElementById('project'))
   }
 
   // public setTitle( newTitle: string) {

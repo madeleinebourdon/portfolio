@@ -2,12 +2,6 @@
 
 <app-jumbotron id="template" intro="{{intro}}" name="{{name}}" name2="{{sub}}"></app-jumbotron>
 
-<!-- <app-jumbotron *ngIf="currentRoute()===''" intro="true"></app-jumbotron> -->
-<!-- <app-jumbotron *ngIf="currentRoute()==='/about'" about="true"></app-jumbotron> -->
-<!-- <app-jumbotron *ngIf="currentRoute()==='/portfolio'" portfolio="true"></app-jumbotron> -->
-<!-- <app-jumbotron *ngIf="currentRoute().startsWith('/portfolio/project')" id="project" name="{{name}}"></app-jumbotron> -->
-<!-- <app-jumbotron *ngIf="currentRoute()==='/contact'" contact="true"></app-jumbotron> -->
-
 <main [className]="currentRoute()==='' ? 'homepage-main' : 'main'">
     <router-outlet></router-outlet> 
 </main>

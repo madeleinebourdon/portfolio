@@ -53,7 +53,8 @@ import { LegalComponent } from './pages/legal/legal.component';
   ],
   providers: [
     Title,
-    PortfolioComponent
+    PortfolioComponent,
+    JumbotronComponent
   ],
   bootstrap: [AppComponent]
 })
