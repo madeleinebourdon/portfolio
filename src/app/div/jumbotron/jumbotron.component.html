@@ -1,4 +1,4 @@
-<div class="jumbotron jumbotron-big" *ngIf="intro">
+<!-- <div class="jumbotron jumbotron-big" *ngIf="intro">
   <div class="jumbotron-darken">
     <div class="jumbotron-content">
       <h1>Madeleine Bourdon</h1>
@@ -7,14 +7,15 @@
       </span>
     </div>
   </div>
-</div>
-<div class="jumbotron" *ngIf="!intro" [class.small]="small=='true'" [class.thin]="thin=='true'">
+</div> -->
+<div class="jumbotron" [ngClass]="{'jumbotron-big':intro === 'true'}">
   <div class="jumbotron-darken">
     <div class="jumbotron-content">
       <!-- <h1 *ngIf="about">À propos de moi</h1>
       <h1 *ngIf="portfolio">Réalisations</h1>
       <h1 *ngIf="contact">Contact</h1> -->
       <h1 *ngIf="name">{{name}}</h1>
+      <span *ngIf="name2">{{name2}}</span>
     </div>
   </div>
 </div>

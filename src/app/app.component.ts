@@ -11,27 +11,33 @@ export class AppComponent {
   urlRoute = this.currentRoute();
   urlPath = this.location.path()
 
-  name = ''
-
+  intro = false
+  name: string
+  sub: string
 
   constructor(private location: Location) {
-    // switch (this.urlRoute) {
-    //   case '':
-    //     this.name = 'o'
-    //     break
-    //   case '/about':
-    //     this.name = 'À propos de moi'
-    //     break
-    //   case '/portfolio':
-    //     this.name = 'Réalisations'
-    //     break
-    //   case '/contact':
-    //     this.name = 'Contact'
-    //     break
-    //   default:
-    //     this.name = 'Error'
-    // }
 
+    switch (this.urlRoute) {
+      case '':
+        this.intro = true
+        this.name = 'Madeleine bourdon'
+        this.sub = 'Développeuse front-end junior'
+        break
+      case '/about':
+        this.name = 'À propos de moi'
+        break
+      case '/portfolio':
+        this.name = 'Réalisations'
+        break
+      case '/contact':
+        this.name = 'Contact'
+        break
+      default:
+        this.name = 'Error'
+    }
+    console.log('Intro: ' + this.intro)
+    console.log('Name: ' + this.name)
+    console.log('Sub: ' + this.sub)
 
     console.log(this.urlRoute)
     console.log('Route : ' + this.urlRoute);
