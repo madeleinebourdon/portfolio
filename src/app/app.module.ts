@@ -21,6 +21,8 @@ import { ExperienceComponent } from './div/experience/experience.component';
 import { SkillsComponent } from './div/skills/skills.component';
 import { PicturesComponent } from './div/pictures/pictures.component';
 import { MessageFormComponent } from './contact/message-form/message-form.component';
+import { AccessibilityComponent } from './div/accessibility/accessibility.component';
+import { LegalComponent } from './pages/legal/legal.component';
 // import { HeaderComponent } from './header/header.component';
 
 @NgModule({
@@ -41,6 +43,8 @@ import { MessageFormComponent } from './contact/message-form/message-form.compon
     PicturesComponent,
     MessageFormComponent,
     ProjectComponent,
+    AccessibilityComponent,
+    LegalComponent,
     // HeaderComponent
   ],
   imports: [
