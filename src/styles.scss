@@ -99,8 +99,12 @@ main a {
   // background: #212729;
   // color: #ededed;
   // bricolage lié à l'ajout de display: flex sur le <main> et les <app> qui ne prennent pas toute la largeur dispo
-  min-width: calc(100vw - 17px); 
-  max-width: 100vw; 
+  // min-width: calc(100vw - 17px); 
+  // max-width: 100vw; 
+
+  width: 100%;
+min-height: calc(100vh - 4.2rem - 20vh - 6rem);
+height: 100%;
 }
 
 // réparation des bêtises de bootstrap
@@ -148,6 +152,12 @@ app-about {
 }
 .margin-vertical {
   margin-right: map-get($spacing, 'partGap');
+}
+
+app-portfolio, 
+app-project {
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 1200px) {

@@ -1,20 +1,34 @@
-<div class="part portfolio">
-  <div class="background">
-    <div class="background-dimming">
-      <div class="container">
-        <ul class="portfolioList">
-          <li *ngFor="let realisation of realisations" class="card foreground">
-            <img *ngIf="realisation.image" src="assets/img/portfolio/{{realisation.image}}" class="realisationImage"
-              alt>
-            <div class="card-body">
-              <h2 class="card-title">
-                {{realisation.title}}
-              </h2>
-              <p *ngIf="realisation.date">
-                {{realisation.date}}
-              </p>
+<div class="part portfolio background">
+  <div class="background-dimming">
+    <div class="container">
+      <ul class="portfolioList">
+        <li *ngFor="let realisation of realisations" class="realisation foreground">
+          <!-- <a href="portfolio/project"> -->
+          <img *ngIf="realisation.image" src="assets/img/portfolio/{{realisation.image}}" class="realisationImage" alt>
+          <div class="realisation-text">
+            <div class="left">
+              <div class="top-part">
+                <h2>
+                  {{realisation.title}}
+                </h2>
+                <span *ngIf="realisation.date">
+                  ({{realisation.date}})
+                </span>
+              </div>
+              <ul *ngIf="realisation.interventions" class="realisation-list">
+                <li *ngFor="let intervention of realisation.interventions">
+                  <button class="btn badge badge-secondary">
+                    {{intervention}}
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="right">
+              <a href="portfolio/project/{{realisation.id}}" class="btn btn-primary"
+                title="Voir {{realisation.title}}" attr.aria-label="Voir {{realisation.title}}">Voir</a>
+            </div>
 
-              <div class="row realisationInfos">
+            <!-- <div class="row realisationInfos">
                 <div *ngIf="realisation.interventions" class="col realisationTechno">
                   <div class="">
                     <span class="fas fa-tools"></span>
@@ -54,11 +68,11 @@
                   <button *ngIf="tag === 'ecole'" class="btn badge badge-primary">Projet d'études</button>
                   <span *ngIf="tag === 'wip'" class="badge badge-dark">Work in progress</span>
                 </ng-container>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
+              </div> -->
+          </div>
+          <!-- </a> -->
+        </li>
+      </ul>
     </div>
   </div>
 </div>

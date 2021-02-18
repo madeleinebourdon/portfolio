@@ -16,10 +16,12 @@ export class JumbotronComponent implements OnInit {
   @Input() page: string;
   @Input() small: string;
   @Input() thin: string;
+  @Input() name:string;
 
   constructor() { }
 
   ngOnInit() {
+    console.log('[jumbotron.component.ts] Jumbotron "' + this.name + '"')
   }
 
 }

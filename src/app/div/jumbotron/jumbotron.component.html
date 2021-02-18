@@ -11,9 +11,10 @@
 <div class="jumbotron" *ngIf="!intro" [class.small]="small=='true'" [class.thin]="thin=='true'">
   <div class="jumbotron-darken">
     <div class="jumbotron-content">
-      <h1 *ngIf="about">À propos de moi</h1>
+      <!-- <h1 *ngIf="about">À propos de moi</h1>
       <h1 *ngIf="portfolio">Réalisations</h1>
-      <h1 *ngIf="contact">Contact</h1>
+      <h1 *ngIf="contact">Contact</h1> -->
+      <h1 *ngIf="name">{{name}}</h1>
     </div>
   </div>
 </div>

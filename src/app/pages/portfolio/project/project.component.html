@@ -1,0 +1,13 @@
+<div class="container">
+    <a href="/portfolio"><span class="fas fa-chevron-left" aria-hidden="true"></span> Retour<span class="sr-only"> vers mes réalisations</span></a>
+
+    <div class="split">
+        <div class="image-container">
+            <img src="/assets/img/portfolio/{{realisation.image}}" alt>
+        </div>
+        <div>
+            <h1>{{realisation.title}}</h1>
+            <p *ngFor="let paragraph of realisation.description">{{paragraph}}</p>
+        </div>
+    </div>
+</div>
