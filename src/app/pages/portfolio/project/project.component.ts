@@ -11,8 +11,8 @@ import { JumbotronComponent } from '../../../div/jumbotron/jumbotron.component';
 })
 
 export class ProjectComponent implements OnInit {
-  public id: string;
-  // id: string = this.route.snapshot.queryParamMap.get('id')
+  // public id: string;
+  id: string = this.route.snapshot.queryParamMap.get('id')
   realisations = this.portfolio.realisations
   realisation
   
@@ -25,7 +25,7 @@ export class ProjectComponent implements OnInit {
       console.log('[project.component.ts]')
 
       this.id = this.route.snapshot.paramMap.get('id');
-      this.realisation = this.realisations.find(element => element.id == parseInt(this.id))
+      this.realisation = this.realisations.find(element => element.id === parseInt(this.id))
       console.log('id: ' + this.id)
       
       console.log(this.realisation)
