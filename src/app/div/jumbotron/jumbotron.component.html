@@ -1,8 +1,8 @@
-<div class="jumbotron" [ngClass]="{'jumbotron-big':intro === 'true'}">
+<div class="jumbotron" [ngClass]="{'jumbotron-big': pageTitle.urlPath === ''}">
   <div class="jumbotron-darken">
     <div class="jumbotron-content">
-      <h1 *ngIf="name">{{name}}</h1>
-      <span *ngIf="name2">{{name2}}</span>
+      <h1 *ngIf="jumbotronName">{{jumbotronName}}</h1>
+      <span *ngIf="jumbotronBis">{{jumbotronBis}}</span>
     </div>
   </div>
 </div>

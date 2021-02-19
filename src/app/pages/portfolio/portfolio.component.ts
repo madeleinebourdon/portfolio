@@ -8,9 +8,7 @@ import { SharedService } from 'src/app/services/shared.service';
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })
-export class PortfolioComponent implements OnInit {
-  newTitle = 'Réalisations | Madeleine Bourdon — Portfolio';
-  
+export class PortfolioComponent implements OnInit {  
   // realisations = [
   //   {
   //     id: 3,
@@ -89,8 +87,6 @@ export class PortfolioComponent implements OnInit {
   // ];
 
   constructor(private titleService: Title, public shared: SharedService) {
-    this.titleService.setTitle(this.newTitle);
-
     console.log('[porfolio.component.ts] shared.realisations')
     console.log(shared.realisations)
   }

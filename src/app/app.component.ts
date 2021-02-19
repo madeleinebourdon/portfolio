@@ -1,43 +1,43 @@
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 
+import { PageTitleService } from 'src/app/services/page-title.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [PageTitleService]
 })
 
 export class AppComponent {
-  urlRoute = this.currentRoute();
-  urlPath = this.location.path()
-
   intro = false
   name: string
   sub: string
 
-  constructor(private location: Location) {
-    console.log(this.urlRoute)
-    switch (this.urlRoute) {
-      case '':
-        this.intro = true
-        this.name = 'Madeleine Bourdon'
-        this.sub = 'Développeuse front-end junior'
-        break
-      case '/about':
-        this.name = 'À propos de moi'
-        break
-      case '/portfolio':
-        this.name = 'Réalisations'
-        break
-      case '/contact':
-        this.name = 'Contact'
-        break
+  constructor(private location: Location, private pageTitle: PageTitleService) {
+    // console.log(this.urlRoute)
+    // switch (pageTitle.urlPath) {
+    //   case '':
+    //     this.intro = true
+    //     this.name = 'Madeleine Bourdon'
+    //     this.sub = 'Développeuse front-end junior'
+    //     break
+      // case '/about':
+      //   this.name = 'À propos de moi'
+      //   break
+      // case '/portfolio':
+      //   this.name = 'Réalisations'
+      //   break
+      // case '/contact':
+      //   this.name = 'Contact'
+      //   break
       // default:
       //   this.name = 'Error'
-    }
-    if (this.urlRoute.startsWith('/portfolio/project/')) {
-      this.name = 'Détails d\'un projet'
-    }
+    // }
+    // if (pageTitle.urlPath.startsWith('/portfolio/project/')) {
+    //   this.name = 'Détails d\'un projet'
+    // }
 
     // console.log('Intro: ' + this.intro)
     // console.log('Name: ' + this.name)
@@ -55,7 +55,7 @@ export class AppComponent {
   //   this.titleService.setTitle( newTitle );
   // }
 
-  currentRoute() {
-    return this.location.path();
-  }
+  // currentRoute() {
+  //   return this.location.path();
+  // }
 }

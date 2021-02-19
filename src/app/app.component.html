@@ -1,8 +1,8 @@
 <app-navbar></app-navbar>
 
 
-<app-jumbotron intro="{{intro}}" name="{{name}}" name2="{{sub}}"></app-jumbotron>
-<main [className]="currentRoute()==='' ? 'homepage-main' : 'main'">
+<app-jumbotron></app-jumbotron>
+<main [className]="pageTitle.urlPath==='' ? 'homepage-main' : 'main'">
     <router-outlet></router-outlet> 
 </main>
 

@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 // import {Observable, Observer} from 'rxjs';
 
-var test = 'testtesttest'
-
 @Injectable({
   providedIn: 'root'
 })
@@ -96,6 +94,7 @@ export class SharedService {
     // this.globalVarUpdate = Observable.create((observer:Observer) => {
     //   this.globalVarObserver = observer;
     // });
+    console.log('[shared.service.ts] launched')
   }
 
   // updateGlobalVar(newValue:string) {

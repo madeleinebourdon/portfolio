@@ -10,6 +10,8 @@
 
   padding: 0;
   height: map-get($sizes, 'smallJumbotronHeight');
+  min-height: 8rem;
+  max-height: 20rem;
   border-radius: 0;
   margin-bottom: 0;
 
