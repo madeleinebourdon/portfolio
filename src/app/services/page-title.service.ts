@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
+import { Router } from '@angular/router';
+
 import { SharedService } from 'src/app/services/shared.service';
 
 
@@ -11,18 +13,22 @@ import { SharedService } from 'src/app/services/shared.service';
 })
 export class PageTitleService {
   urlPath = this.location.path()
-  pageTitleFromService: string = 'Madeleine Bourdon : Développeuse front-end junior — Portfolio'
+  pageTitleFromService: string = 'Page introuvable'
   projectId
 
   constructor(
     private titleService: Title,
     private location: Location,
     private route: ActivatedRoute,
-    public shared: SharedService
+    public shared: SharedService,
+    private router: Router
   ) {
-    // console.log('[page-title.service.ts] urlPath ' + this.urlPath)
+    console.log('[page-title.service.ts] urlPath ' + this.urlPath)
 
     switch (this.urlPath) {
+      case '':
+        this.pageTitleFromService = 'Madeleine Bourdon : Développeuse front-end junior — Portfolio'
+        break
       case '/about':
         this.pageTitleFromService = 'À propos de moi'
         break
@@ -36,15 +42,18 @@ export class PageTitleService {
         this.pageTitleFromService = 'Mentions légales'
         break
       // default:
-      //   this.name = 'Error'
+      //   this.pageTitleFromService = 'Error'
     }
 
     if (this.urlPath.startsWith('/portfolio/project/')) {
       this.pageTitleFromService = 'Détails d\'un projet'
       this.projectId = this.urlPath.split('project/')[1]
 
-      if (!isNaN(this.projectId)) {
+      if (!isNaN(this.projectId) && shared.realisations.find(element => element.id === parseInt(this.projectId))) {
         this.pageTitleFromService = shared.realisations.find(element => element.id === parseInt(this.projectId)).title
+      } else {
+        // this.pageTitleFromService = 'Page introuvable'
+        this.router.navigate(['error-404'])
       }
     }
 
