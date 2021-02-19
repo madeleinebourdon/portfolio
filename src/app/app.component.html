@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 
 
-<app-jumbotron id="template" intro="{{intro}}" name="{{name}}" name2="{{sub}}"></app-jumbotron>
+<app-jumbotron intro="{{intro}}" name="{{name}}" name2="{{sub}}"></app-jumbotron>
 <main [className]="currentRoute()==='' ? 'homepage-main' : 'main'">
     <router-outlet></router-outlet> 
 </main>
