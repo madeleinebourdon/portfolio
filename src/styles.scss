@@ -160,6 +160,10 @@ app-project {
   height: 100%;
 }
 
+app-home {
+  min-height: calc(100vh - #{map-get($sizes, 'minHeaderHeight')} - #{map-get($sizes, 'bigJumbotronHeight')} - #{map-get($sizes, 'minFooterHeight')});
+}
+
 @media (min-width: 1200px) {
   .container-xl {
     max-width: 1140px;

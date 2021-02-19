@@ -4,18 +4,19 @@
 // }
 
 .main {
-    min-height: calc(100vh - #{map-get($sizes, 'minHeaderHeight')} - #{map-get($sizes, 'smallJumbotronHeight')} - #{map-get($sizes, 'minFooterHeight')});
+    min-height: calc(100vh - #{map-get($sizes, 'minHeaderHeight')} - #{map-get($sizes, 'minFooterHeight')});
 }
 
 .homepage-main {
-    min-height: calc(100vh - #{map-get($sizes, 'minHeaderHeight')} - #{map-get($sizes, 'bigJumbotronHeight')} - #{map-get($sizes, 'minFooterHeight')});
+    min-height: calc(100vh - #{map-get($sizes, 'minHeaderHeight')} - #{map-get($sizes, 'minFooterHeight')});
 }
 
 .main,
 .homepage-main {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 // / ! \ utiliser le fichier "../style.scss" pour établir des règles de CSS communes à tout le DOM
