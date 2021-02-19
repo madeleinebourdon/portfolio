@@ -2,7 +2,7 @@
   <div class="background-dimming">
     <div class="container">
       <ul class="portfolioList">
-        <li *ngFor="let realisation of realisations" class="realisation foreground">
+        <li *ngFor="let realisation of shared.realisations" class="realisation foreground">
           <!-- <a href="portfolio/project"> -->
           <img *ngIf="realisation.image" src="assets/img/portfolio/{{realisation.image}}" class="realisationImage" alt>
           <div class="realisation-text">

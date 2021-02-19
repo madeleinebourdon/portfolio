@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { PortfolioComponent } from 'src/app/pages/portfolio/portfolio.component';
+// import { PortfolioComponent } from 'src/app/pages/portfolio/portfolio.component';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-jumbotron',
@@ -17,25 +18,28 @@ export class JumbotronComponent implements OnInit {
   @Input() name2: string;
   public id: string;
 
-  realisations = this.portfolio.realisations
-  realisation
+  // realisations = this.shared.realisations
+  // realisation
 
   constructor(
     private route: ActivatedRoute,
-    private portfolio: PortfolioComponent
+    // private portfolio: PortfolioComponent,
+    public shared: SharedService
   ) {
     console.log('[jumbotron.component.ts]')
+    // console.log(this.realisations)
+    console.log(shared)
 
-    this.id = this.route.snapshot.paramMap.get('id');
+    // this.id = this.route.snapshot.paramMap.get('id');
     // // console.log(this.route.snapshot.paramMap.get('id'))
-    this.realisation = this.realisations.find(element => element.id === parseInt(this.id))
-    console.log('[jumbotron.component.ts] id: ' + this.id)
+    // this.realisation = this.realisations.find(element => element.id === parseInt(this.id))
+    // console.log('[jumbotron.component.ts] id: ' + this.id)
   
-    if(this.realisation) {
-      this.name = this.realisation.title
-      console.log(this.name)
-    }
-    console.log(this.realisation)
+    // if(this.realisation) {
+    //   this.name = this.realisation.title
+    //   console.log(this.name)
+    // }
+    // console.log(this.realisation)
     // console.log(this.realisation.title)
   }
   

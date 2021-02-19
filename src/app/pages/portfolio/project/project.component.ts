@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { PortfolioComponent } from '../portfolio.component';
-import { JumbotronComponent } from '../../../div/jumbotron/jumbotron.component';
+// import { PortfolioComponent } from '../portfolio.component';
+// import { JumbotronComponent } from '../../../div/jumbotron/jumbotron.component';
+
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-project',
@@ -13,13 +15,14 @@ import { JumbotronComponent } from '../../../div/jumbotron/jumbotron.component';
 export class ProjectComponent implements OnInit {
   // public id: string;
   id: string = this.route.snapshot.queryParamMap.get('id')
-  realisations = this.portfolio.realisations
+  realisations = this.shared.realisations
   realisation
   
   constructor(
     private route: ActivatedRoute, 
-    private portfolio: PortfolioComponent,
-    private jumbotron: JumbotronComponent
+    // private portfolio: PortfolioComponent,
+    // private jumbotron: JumbotronComponent,
+    public shared: SharedService
     ) {
 
       console.log('[project.component.ts]')
@@ -32,7 +35,7 @@ export class ProjectComponent implements OnInit {
     }
     
     ngOnInit(): void {
-    console.log(this.jumbotron)
+    // console.log(this.jumbotron)
   }
 
 }
