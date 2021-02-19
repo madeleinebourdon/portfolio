@@ -20,31 +20,34 @@ export class PageTitleService {
     private route: ActivatedRoute,
     public shared: SharedService
   ) {
-    console.log('[page-title.service.ts] urlPath ' + this.urlPath)
+    // console.log('[page-title.service.ts] urlPath ' + this.urlPath)
 
     switch (this.urlPath) {
       case '/about':
-        this.pageTitleFromService = 'À propos de moi (from service)'
+        this.pageTitleFromService = 'À propos de moi'
         break
       case '/portfolio':
-        this.pageTitleFromService = 'Réalisations (from service)'
+        this.pageTitleFromService = 'Réalisations'
         break
       case '/contact':
-        this.pageTitleFromService = 'Contact (from service)'
+        this.pageTitleFromService = 'Contact'
         break
       case '/legal':
-        this.pageTitleFromService = 'Mentions légales (from service)'
+        this.pageTitleFromService = 'Mentions légales'
         break
       // default:
       //   this.name = 'Error'
     }
 
     if (this.urlPath.startsWith('/portfolio/project/')) {
-      this.pageTitleFromService = 'Détails d\'un projet (from service)'
+      this.pageTitleFromService = 'Détails d\'un projet'
       this.projectId = this.urlPath.split('project/')[1]
-      this.pageTitleFromService = shared.realisations.find(element => element.id === parseInt(this.projectId)).title
+
+      if (!isNaN(this.projectId)) {
+        this.pageTitleFromService = shared.realisations.find(element => element.id === parseInt(this.projectId)).title
+      }
     }
-    
+
     if (this.pageTitleFromService !== 'Madeleine Bourdon : Développeuse front-end junior — Portfolio') {
       this.titleService.setTitle(this.pageTitleFromService + ' | Madeleine Bourdon — Portfolio')
     }
@@ -59,7 +62,7 @@ export class PageTitleService {
     //   }
     // );
 
-    // console.log(this.projectId)
+    // console.log('[page-title.service.ts] ' + this.projectId)
 
     // console.log('[page-title.service.ts] ' + this.route.snapshot.paramMap.get('id'))
   }

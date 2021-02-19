@@ -1,30 +1,22 @@
 import { Injectable } from '@angular/core';
-// import {Observable, Observer} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class SharedService {
-  // todo: le titre de la page vient de ce service
-  // siteTitle = ''
-
-  globalVar: string = 'test de globalVar'
-  // globalVarUpdate:Observable<string>;
-  // globalVarObserver:Observer;
-
   realisations = [
     {
       id: 3,
       image: 'compethance.jpg',
-      title: 'Compéthance (depuis shared.service.ts)',
+      title: 'Compéthance',
       date: 2019,
       interventions: [
         'Découpage'
       ],
       technos: [
-        'HTML', 
-        'Sass', 
+        'HTML',
+        'Sass',
         'JavaScript'
       ],
       description: [
@@ -91,14 +83,6 @@ export class SharedService {
   ];
 
   constructor() {
-    // this.globalVarUpdate = Observable.create((observer:Observer) => {
-    //   this.globalVarObserver = observer;
-    // });
-    console.log('[shared.service.ts] launched')
+    // console.log('[shared.service.ts] launched')
   }
-
-  // updateGlobalVar(newValue:string) {
-  //   this.globalVar = newValue;
-  //   this.globalVarObserver.next(this.globalVar);
-  // }
 }

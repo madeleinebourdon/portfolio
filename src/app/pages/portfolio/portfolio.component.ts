@@ -87,8 +87,8 @@ export class PortfolioComponent implements OnInit {
   // ];
 
   constructor(private titleService: Title, public shared: SharedService) {
-    console.log('[porfolio.component.ts] shared.realisations')
-    console.log(shared.realisations)
+    // console.log('[porfolio.component.ts] shared.realisations')
+    // console.log(shared.realisations)
   }
 
   ngOnInit() {

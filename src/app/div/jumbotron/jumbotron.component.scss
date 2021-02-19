@@ -47,6 +47,7 @@
 }
 .jumbotron-big {
   height: map-get($sizes, 'bigJumbotronHeight');
+  max-height: 40rem;
 }
 
 .jumbotron-darken {
