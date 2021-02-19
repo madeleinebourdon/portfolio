@@ -1,5 +1,27 @@
+@import "src/app/variables.scss";
+
+.back-link {
+    // color: map-get($palette, 'mainDark');
+    border: 1px solid map-get($palette, 'dark-gray');
+    display: inline-flex;
+    padding: 0.5rem;
+    align-items: baseline;
+    margin: 1rem 0;
+    // margin-bottom: 1rem;
+    // border-radius: 2px;
+    text-decoration: none;
+
+    .fa, 
+    .fas, 
+    .fab, 
+    .fal {
+        padding-right: 0.5rem;
+    }
+}
+
 .split {
     display: flex;
+    flex-direction: column;
 }
 
 .image-container {
@@ -8,5 +30,6 @@
     img {
         width: 100%;
         object-fit: cover;
+        object-position: top;
     }
 }

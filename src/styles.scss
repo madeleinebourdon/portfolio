@@ -103,7 +103,7 @@ main a {
   // max-width: 100vw; 
 
   width: 100%;
-min-height: calc(100vh - 4.2rem - 20vh - 6rem);
+min-height: calc(100vh - #{map-get($sizes, 'minHeaderHeight')} - #{map-get($sizes, 'smallJumbotronHeight')} - #{map-get($sizes, 'minFooterHeight')});
 height: 100%;
 }
 

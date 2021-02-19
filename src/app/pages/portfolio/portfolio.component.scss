@@ -1,5 +1,25 @@
 @import "../../variables.scss";
 
+.filters-container {
+    margin-bottom: #{map-get($spacing, 'halfSpacing')};
+}
+.portfolio-filters {
+    color: white;
+    background: #{map-get($bgColors, 'partDark')};
+    margin-top: #{map-get($spacing, 'quarterSpacing')};
+    padding: #{map-get($spacing, 'halfSpacing')};
+    border-radius: 2px;
+
+    .filters-option {
+        input[type='checkbox'] {
+            margin-right: #{map-get($spacing, 'quarterSpacing')};
+        }
+        &:not(:last-of-type) {
+            padding-right: #{map-get($spacing, 'halfSpacing')};
+        }
+    }
+}
+
 .portfolioList {
     padding-left: 0;
     margin-bottom: 0;
@@ -20,6 +40,8 @@
     width: 100%;
     max-height: 15rem;
     object-fit: cover;
+    object-position: top;
+    border-radius: 2px 2px 0 0;
 }
 
 .realisationInfos {
@@ -63,10 +85,6 @@
     &:hover,
     &:focus {
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, map-get($palette, 'offwhite') 0px 0px 0px 3px;
-    }
-
-    .realisationImage {
-        border-radius: 2px 2px 0 0;
     }
 }
 
