@@ -140,6 +140,7 @@ app-about {
 .background-dimming {
   // background: rgba(0, 0, 0, 0.5);
   padding-top: map-get($spacing, 'partGap');
+  padding-bottom: map-get($spacing, 'partGap');
 }
 .foreground {
   z-index: 1;
@@ -167,5 +168,10 @@ app-home {
 @media (min-width: 1200px) {
   .container-xl {
     max-width: 1140px;
+  }
+}
+@media (min-height: 1600px) {
+  .part {
+    min-height: calc(100vh - 3.2rem - 20vh);
   }
 }
