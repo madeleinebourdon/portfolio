@@ -52,7 +52,7 @@ export class PageTitleService {
       if (!isNaN(this.projectId) && realisationsService.realisations.find(element => element.id === parseInt(this.projectId))) {
         this.pageTitleFromService = realisationsService.realisations.find(element => element.id === parseInt(this.projectId)).title
       } else {
-        // this.pageTitleFromService = 'Page introuvable'
+        this.pageTitleFromService = 'Page introuvable'
         this.router.navigate(['error-404'])
       }
     }
