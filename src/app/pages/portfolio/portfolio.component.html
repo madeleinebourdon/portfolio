@@ -2,12 +2,12 @@
   <div class="background-dimming">
     <div class="container">
       <div class="filters-container">
-        <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseFilters" aria-expanded="false"
-          aria-controls="collapseFilters">
+        <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse-filters" aria-expanded="false"
+          aria-controls="collapse-filters">
           <span class="fas fa-cog"></span>
           Filtres
         </button>
-        <div class="collapse" id="collapseFilters">
+        <div class="collapse" id="collapse-filters">
           <form class="portfolio-filters">
             <fieldset>
               <legend>Type d'intervention</legend>
@@ -22,7 +22,7 @@
 
       <ul class="portfolioList">
         <li *ngFor="let realisation of outputResults" class="realisation foreground">
-          <img *ngIf="realisation.image" src="assets/img/portfolio/{{realisation.image}}" class="realisationImage" alt>
+          <img *ngIf="realisation.image" src="assets/img/portfolio/{{realisation.image}}" class="realisation-image" alt>
           <div class="realisation-text">
             <div class="left">
               <div class="top-part">
@@ -53,5 +53,3 @@
     </div>
   </div>
 </div>
-
-<!-- <app-jumbotron small="true"></app-jumbotron> -->

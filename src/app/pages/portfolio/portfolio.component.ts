@@ -131,12 +131,10 @@ export class PortfolioComponent implements OnInit {
             if (pushToOutput === false && this.outputResults.includes(this.shared.realisations[i])) {
               console.log('à supprimer')
               console.log('i: ' + i)
-              // ne supprime pas le bon index
+              // console.log(this.outputResults)
+              // console.log(this.shared.realisations[i])
+              
               // l'index dans this.outputResults de l'élément this.shared.realisations[i]
-              // sûrement problème de typage
-
-              console.log(this.outputResults)
-              console.log(this.shared.realisations[i])
               this.outputResults.splice(this.outputResults.findIndex(filter => filter === this.shared.realisations[i]), 1)
             }
 
@@ -150,10 +148,5 @@ export class PortfolioComponent implements OnInit {
     }
     // console.log(this.shared.realisations)
     console.log(this.outputResults)
-  }
-
-  kebabize(string: string) {
-    console.log('KEBAB')
-    return string
   }
 }
