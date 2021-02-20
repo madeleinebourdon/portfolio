@@ -5,7 +5,7 @@ import { Title } from '@angular/platform-browser';
 
 import { Router } from '@angular/router';
 
-import { SharedService } from 'src/app/services/shared.service';
+import { RealisationsService } from 'src/app/services/realisations.service';
 
 
 @Injectable({
@@ -20,7 +20,7 @@ export class PageTitleService {
     private titleService: Title,
     private location: Location,
     private route: ActivatedRoute,
-    public shared: SharedService,
+    public realisationsService: RealisationsService,
     private router: Router
   ) {
     console.log('[page-title.service.ts] urlPath ' + this.urlPath)
@@ -49,8 +49,8 @@ export class PageTitleService {
       this.pageTitleFromService = 'Détails d\'un projet'
       this.projectId = this.urlPath.split('project/')[1]
 
-      if (!isNaN(this.projectId) && shared.realisations.find(element => element.id === parseInt(this.projectId))) {
-        this.pageTitleFromService = shared.realisations.find(element => element.id === parseInt(this.projectId)).title
+      if (!isNaN(this.projectId) && realisationsService.realisations.find(element => element.id === parseInt(this.projectId))) {
+        this.pageTitleFromService = realisationsService.realisations.find(element => element.id === parseInt(this.projectId)).title
       } else {
         // this.pageTitleFromService = 'Page introuvable'
         this.router.navigate(['error-404'])

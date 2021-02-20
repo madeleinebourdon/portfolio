@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { SharedService } from 'src/app/services/shared.service';
 import { PageTitleService } from 'src/app/services/page-title.service';
 
 @Component({
@@ -13,16 +12,15 @@ import { PageTitleService } from 'src/app/services/page-title.service';
   styleUrls: ['./jumbotron.component.scss']
 })
 export class JumbotronComponent implements OnInit {
-  @Input() intro: string;
-  @Input() name: string;
-  @Input() name2: string;
+  // @Input() intro: string;
+  // @Input() name: string;
+  // @Input() name2: string;
   public id: string;
   public jumbotronName: string;
   public jumbotronBis: string
 
   constructor(
     private route: ActivatedRoute,
-    public shared: SharedService,
     public pageTitle: PageTitleService
     ) {
     // console.log('[jumbotron.component.ts]')

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import { SharedService } from 'src/app/services/shared.service';
+
+import { RealisationsService } from 'src/app/services/realisations.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -12,30 +12,30 @@ export class PortfolioComponent implements OnInit {
   filtersCurrentlyChecked = []
   outputResults = []
 
-  constructor(private titleService: Title, public shared: SharedService) {
+  constructor(public realisationsService: RealisationsService) {
     // console.log('portfolio')
-    // console.log('[porfolio.component.ts] shared.realisations')
-    console.log(shared.realisations)
+    // console.log('[porfolio.component.ts] realisationsService.realisations')
+    console.log(realisationsService.realisations)
 
-    for (var i = 0; i < shared.realisations.length; i++) {
+    for (var i = 0; i < realisationsService.realisations.length; i++) {
       // console.log('i: ' + i)
-      // console.log(shared.realisations[i].interventions)
+      // console.log(realisationsService.realisations[i].interventions)
 
-      if (shared.realisations[i].interventions) {
-        // console.log(shared.realisations[i].interventions.length)
+      if (realisationsService.realisations[i].interventions) {
+        // console.log(realisationsService.realisations[i].interventions.length)
 
-        for (let j = 0; j < shared.realisations[i].interventions.length; j++) {
-          if (!this.completeTagsArray.includes(shared.realisations[i].interventions[j])) {
-            this.completeTagsArray.push(shared.realisations[i].interventions[j])
-            this.filtersCurrentlyChecked.push(shared.realisations[i].interventions[j]) // ils sont tous cochés par défaut
+        for (let j = 0; j < realisationsService.realisations[i].interventions.length; j++) {
+          if (!this.completeTagsArray.includes(realisationsService.realisations[i].interventions[j])) {
+            this.completeTagsArray.push(realisationsService.realisations[i].interventions[j])
+            this.filtersCurrentlyChecked.push(realisationsService.realisations[i].interventions[j]) // ils sont tous cochés par défaut
           }
-          // console.log(shared.realisations[i].interventions[j])
+          // console.log(realisationsService.realisations[i].interventions[j])
         }
       }
     }
 
     // console.log(this.completeTagsArray)
-    // this.outputResults = this.shared.realisations // pour visualiser l'array sans son tri, pour débugger
+    // this.outputResults = this.realisationsService.realisations // pour visualiser l'array sans son tri, pour débugger
 
     this.initializeOutput(this.filtersCurrentlyChecked)
   }
@@ -96,46 +96,46 @@ export class PortfolioComponent implements OnInit {
     console.log(filtersArray)
 
 
-    for (let i = 0; i < this.shared.realisations.length; i++) {
+    for (let i = 0; i < this.realisationsService.realisations.length; i++) {
       // console.log('[initializeOutput()] ' + i)
       
-      if (this.shared.realisations[i].interventions) {
+      if (this.realisationsService.realisations[i].interventions) {
         console.log('==========')
-        console.log(this.shared.realisations[i])
+        console.log(this.realisationsService.realisations[i])
         console.log('Réalisation avec des interventions')
         var pushToOutput = false
 
         for (let j = 0; j < filtersArray.length; j++) {
           console.log('Filtre vérifié : "' + filtersArray[j] + '"')
 
-          if (this.shared.realisations[i].interventions.includes(filtersArray[j])) {
+          if (this.realisationsService.realisations[i].interventions.includes(filtersArray[j])) {
             pushToOutput = true
-            console.log(this.shared.realisations[i].interventions)
+            console.log(this.realisationsService.realisations[i].interventions)
             console.log('contient')
             console.log(filtersArray[j])
           } else {
-            console.log(this.shared.realisations[i].interventions)
+            console.log(this.realisationsService.realisations[i].interventions)
             console.log('ne contient pas')
             console.log(filtersArray[j])
           }
 
           // vérifie que ce n'est pas déjà dans le tableau avant de push
-          if (pushToOutput === true && !this.outputResults.includes(this.shared.realisations[i])) {
+          if (pushToOutput === true && !this.outputResults.includes(this.realisationsService.realisations[i])) {
             console.log('à push')
-            this.outputResults.push(this.shared.realisations[i])
+            this.outputResults.push(this.realisationsService.realisations[i])
           }
 
           
           // supprime du tableau si non pertinent
           // if (pushToOutput === false) {
-            if (pushToOutput === false && this.outputResults.includes(this.shared.realisations[i])) {
+            if (pushToOutput === false && this.outputResults.includes(this.realisationsService.realisations[i])) {
               console.log('à supprimer')
               console.log('i: ' + i)
               // console.log(this.outputResults)
-              // console.log(this.shared.realisations[i])
-              
-              // l'index dans this.outputResults de l'élément this.shared.realisations[i]
-              this.outputResults.splice(this.outputResults.findIndex(filter => filter === this.shared.realisations[i]), 1)
+              // console.log(this.realisationsService.realisations[i])
+
+              // l'index dans this.outputResults de l'élément this.realisationsService.realisations[i]
+              this.outputResults.splice(this.outputResults.findIndex(filter => filter === this.realisationsService.realisations[i]), 1)
             }
 
             if (pushToOutput) {
@@ -146,7 +146,7 @@ export class PortfolioComponent implements OnInit {
           }
       }
     }
-    // console.log(this.shared.realisations)
+    // console.log(this.realisationsService.realisations)
     console.log(this.outputResults)
   }
 }

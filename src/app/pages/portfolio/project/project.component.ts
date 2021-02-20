@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { SharedService } from 'src/app/services/shared.service';
+import { RealisationsService } from 'src/app/services/realisations.service';
 
 @Component({
   selector: 'app-project',
@@ -12,12 +12,12 @@ import { SharedService } from 'src/app/services/shared.service';
 export class ProjectComponent implements OnInit {
   // public id: string;
   id: string = this.route.snapshot.queryParamMap.get('id')
-  realisations = this.shared.realisations
+  realisations = this.realisationsService.realisations
   realisation
 
   constructor(
     private route: ActivatedRoute,
-    public shared: SharedService
+    public realisationsService: RealisationsService
   ) {
     // console.log('[project.component.ts]')
 
