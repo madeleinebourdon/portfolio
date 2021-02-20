@@ -31,7 +31,7 @@ export class RealisationsService {
       id: 2,
       image: 'eloca-ebailleur.jpg',
       title: 'e-loca et e-bailleur',
-      date: '2019',
+      date: 2019,
       interventions: [
         'Découpage',
         'Accessibilité'
@@ -67,7 +67,12 @@ export class RealisationsService {
       id: 1,
       image: '',
       title: 'Legend of Dysmodia',
-      date: '2018',
+      date: 2018,
+      interventions: [
+        'Conception',
+        'Découpage',
+        'Intégration'
+      ],
       description: [
         'Paragraphe 1',
         'Paragraphe 2'
