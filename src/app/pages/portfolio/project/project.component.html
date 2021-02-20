@@ -1,7 +1,7 @@
 <div class="container">
     <a href="/portfolio" class="btn back-link">
         <span class="fas fa-chevron-left" aria-hidden="true"></span>
-        Mes réalisations
+        <span class="sr-only">Retour vers "</span>Mes réalisations<span class="sr-only">"</span>
     </a>
 
     <div class="split">
@@ -9,7 +9,7 @@
             <img src="/assets/img/portfolio/{{realisation.image}}" alt>
         </div>
         <div>
-            <h1>{{realisation.title}}</h1>
+            <!-- <h1>{{realisation.title}}</h1> -->
             <p *ngFor="let paragraph of realisation.description">{{paragraph}}</p>
         </div>
     </div>

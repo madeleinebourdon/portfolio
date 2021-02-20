@@ -1,21 +1,20 @@
 @import "src/app/variables.scss";
 
-.back-link {
-    // color: map-get($palette, 'mainDark');
-    border: 1px solid map-get($palette, 'dark-gray');
-    display: inline-flex;
-    padding: 0.5rem;
-    align-items: baseline;
-    margin: 1rem 0;
-    // margin-bottom: 1rem;
-    // border-radius: 2px;
-    text-decoration: none;
+.container {
+    margin-top: map-get($spacing, 'general');
+    margin-bottom: map-get($spacing, 'general');
+}
 
-    .fa, 
-    .fas, 
-    .fab, 
-    .fal {
-        padding-right: 0.5rem;
+.back-link {
+    display: inline-flex;
+    align-items: baseline;
+    padding: map-get($spacing, 'quarterSpacing');
+    margin-bottom: map-get($spacing, 'halfSpacing');
+    text-decoration: none;
+    border: 1px solid map-get($palette, 'dark-gray');
+
+    .fa, .fas, .fab, .fal {
+        padding-right: map-get($spacing, 'quarterSpacing');
     }
 }
 
