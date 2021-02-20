@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-accessibility',
   templateUrl: './accessibility.component.html',
-  styleUrls: ['./accessibility.component.css']
+  styleUrls: ['./accessibility.component.scss']
 })
 export class AccessibilityComponent implements OnInit {
 

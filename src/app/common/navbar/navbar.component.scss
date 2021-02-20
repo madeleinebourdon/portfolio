@@ -1,0 +1,234 @@
+@import 'src/app/variables.scss';
+
+nav {
+    background: map-get($bgColors, 'navbar');
+    color: white;
+    padding: 0;
+
+
+    a {
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            font-style: normal;
+        }
+    }
+
+    // donne les dimensions de la navbar
+    .uncollapsedNavbar {
+        display: flex;
+        justify-content: inherit;
+        align-items: inherit;
+        // width: 100%;
+        min-height: map-get($sizes, 'minHeaderHeight');
+    }
+
+    // "Madeleine Bourdon"
+    .navbar-brand {
+        font-weight: 600;
+        color: map-get($palette, 'main');
+        font-family: 'Paprika', cursive;
+        font-size: 1.4rem;
+    }
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+
+        &::after {
+            margin-left: 1rem;
+            width: 2px;
+            height: 1.5rem;
+            background: map-get($palette, 'main');
+            content: '';
+        }
+    }
+
+    li:last-of-type a::after {
+        display: none;
+    }
+
+    .btn-group .btn {
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .hover {
+        // padding-bottom: 1px;
+        border-bottom: 2px solid transparent;
+    }
+
+    .hover:hover,
+    .hover:focus,
+    .hover:active,
+    *:focus>.hover {
+        // padding-bottom: 1px;
+        border-bottom: 2px solid map-get($palette, 'main');
+        transition: all 0.35s;
+        transition-timing-function: linear;
+    }
+
+    /// modifications de Bootstrap
+    .btn-group {
+        // padding: .5rem 1rem;
+        padding: .5rem .5rem;
+
+
+        a, 
+        .btn {
+            // color: rgba(255, 255, 255, 0.5) !important;
+            color: map-get($txtColors, 'navbar');
+            text-decoration: none;
+        }
+    }
+    .nav-link {
+        color: map-get($txtColors, 'navbar');
+    }
+
+    .dropdown-menu {
+        background: black;
+        margin: 0;
+    }
+
+    a.dropdown-item:focus,
+    a.dropdown-item:hover {
+        color: map-get($palette, 'white') !important;
+        background: map-get($palette, 'black');
+    }
+
+    // les flèches de dropdown menu sont mieux alignées avec le texte
+    .dropdown-toggle {
+        margin-left: 0.4rem;
+        margin-top: 0.3rem;
+
+        &::after {
+            margin-left: 0;
+        }
+    }
+
+    ul {
+        padding-left: 0;
+    }
+    li {
+        display: flex;
+        line-height: initial;
+    }
+}
+
+
+.navbar-dark .navbar-toggler {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/// desktop
+@media (min-width: 992px) {
+    .dropdown:hover .dropdown-menu,
+    .btn-group:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+///  responsive
+@media (max-width: 992px) {
+    nav {
+        .nav-link,
+        .btn-group {
+            &::after {
+                content: none;
+            }
+        }
+
+        .btn-group {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        // afficher directement le contenu des dropdown en resposive
+        .btn-group {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        // masquer le bouton pour dérouler
+        .btn-group .btn.dropdown-toggle {
+            display: none;
+        }
+
+        .dropdown-menu {
+            display: block;
+            width: 100%;
+            background: transparent;
+            border: none;
+            padding: 0;
+
+            li {
+                flex-direction: row;
+                align-items: center;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 0.4rem;
+                    height: 0.4rem;
+                    margin-left: 1rem;
+                    // background: map-get($palette, 'main');
+                    border-bottom: 2px solid map-get($palette, 'main');
+                    border-right: 2px solid map-get($palette, 'main');
+                    transform: rotate(-45deg);
+                }
+            }
+
+            .dropdown-item {
+                display: flex;
+                padding-left: 0.5rem;
+
+                &:focus, &:hover {
+                    background: transparent;
+                }
+            }
+        }
+
+        li {
+            flex-direction: column;
+        }
+    }
+
+    .navbar-brand,
+    .navbar-toggler {
+        margin: 0 0.5rem;
+
+    }
+
+    .navbar-toggler {
+        display: flex;
+        flex-direction: column;
+        min-height: 2rem;
+        transition: all 0.5s;
+
+        &[aria-expanded="true"] {
+            // -webkit-box-shadow: inset 0px 0px 22px 0px rgba(0, 0, 0, 0.75);
+            // -moz-box-shadow: inset 0px 0px 22px 0px rgba(0, 0, 0, 0.75);
+            // box-shadow: inset 0px 0px 2rem 0px rgba(0, 0, 0, 0.75);
+            background: rgba(0,0,0,0.4);
+        }
+
+        .legend {
+            margin-top: 0.2rem;
+            font-size: 0.8rem;
+        }
+
+        span {
+            margin: auto;
+        }
+    }
+
+    .uncollapsedNavbar {
+        width: 100%;
+    }
+
+
+
+}
