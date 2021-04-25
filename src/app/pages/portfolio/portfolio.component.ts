@@ -8,9 +8,10 @@ import { RealisationsService } from 'src/app/services/realisations.service';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent implements OnInit {
-  completeTagsArray = []
-  filtersCurrentlyChecked = []
-  outputResults = []
+  completeTagsArray = []          // every tag in the whole JSON
+  filtersCurrentlyChecked = []    // tags checked
+  outputResults = []              // results shown
+  emptyResults: boolean
 
   constructor(public realisationsService: RealisationsService) {
     // console.log('portfolio')
@@ -138,12 +139,20 @@ export class PortfolioComponent implements OnInit {
               this.outputResults.splice(this.outputResults.findIndex(filter => filter === this.realisationsService.realisations[i]), 1)
             }
 
-            if (pushToOutput) {
-              console.log('[On affiche la réalisation]')
-            } else {
-              console.log('[On n\'affiche pas la réalisation]')
-            }
+            // if (pushToOutput) {
+            //   console.log('[On affiche la réalisation]')
+            // } else {
+            //   console.log('[On n\'affiche pas la réalisation]')
+            // }
           }
+
+        if(filtersArray.length === 0) {
+          console.log('Rien n\'est coché')
+          this.outputResults = []
+          this.emptyResults = true
+        } else {
+          this.emptyResults = false
+        }
       }
     }
     // console.log(this.realisationsService.realisations)

@@ -92,6 +92,20 @@
     }
 }
 
+.realisation-error {
+    // background: #{map-get($palette, 'dark-gray')};
+    color: #{map-get($palette, 'white')};
+    text-align: center;
+    padding: #{map-get($spacing, 'doubleSpacing')};
+
+    h1, h2, h3, h4, h5, h6 {
+        color: inherit;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}
 
 
 @media only screen and (max-width: 1200px) {

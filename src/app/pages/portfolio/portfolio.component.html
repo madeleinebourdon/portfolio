@@ -20,7 +20,7 @@
         </div>
       </div>
 
-      <ul class="portfolioList">
+      <ul class="portfolioList" *ngIf="!emptyResults; else noRealisation">
         <li *ngFor="let realisation of outputResults" class="realisation foreground">
           <img *ngIf="realisation.image" src="assets/img/portfolio/{{realisation.image}}" class="realisation-image" alt>
           <div class="realisation-text">
@@ -50,6 +50,17 @@
           </div>
         </li>
       </ul>
+
+      <ng-template #noRealisation>
+        <div class="realisation-error">
+          <h2>
+            Aucun résultat n'a été trouvé.
+          </h2>
+          <p>
+            Essayez à nouveau avec d'autres paramètres.
+          </p>
+        </div>
+      </ng-template>
     </div>
   </div>
 </div>
