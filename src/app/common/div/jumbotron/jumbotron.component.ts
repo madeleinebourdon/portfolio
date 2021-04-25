@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 import { PageTitleService } from 'src/app/services/page-title.service';
 
@@ -19,10 +18,7 @@ export class JumbotronComponent implements OnInit {
   public jumbotronName: string;
   public jumbotronBis: string
 
-  constructor(
-    private route: ActivatedRoute,
-    public pageTitle: PageTitleService
-    ) {
+  constructor(public pageTitle: PageTitleService) {
     // console.log('[jumbotron.component.ts]')
     if (pageTitle.pageTitleFromService) {
       this.jumbotronName = pageTitle.pageTitleFromService
