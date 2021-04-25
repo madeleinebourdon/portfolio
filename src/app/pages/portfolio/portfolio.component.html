@@ -3,9 +3,9 @@
     <div class="container">
       <div class="filters-container">
         <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse-filters" aria-expanded="false"
-          aria-controls="collapse-filters">
-          <span class="fas fa-cog"></span>
-          Filtres
+          aria-controls="collapse-filters" (click)="toggleFiltersButton()">
+          <span class="fas fa-cog"></span> 
+          <span id="toggle-filters">Afficher les filtres</span>
         </button>
         <div class="collapse" id="collapse-filters">
           <form class="portfolio-filters">

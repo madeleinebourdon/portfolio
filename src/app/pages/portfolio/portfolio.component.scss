@@ -2,6 +2,12 @@
 
 .filters-container {
     margin-bottom: #{map-get($spacing, 'halfSpacing')};
+
+    .btn {
+        .fas:not(:last-child) {
+            margin-right: #{map-get($spacing, 'quarterSpacing')};
+        }
+    }
 }
 .portfolio-filters {
     color: white;
@@ -31,8 +37,6 @@
     grid-column-gap: #{map-get($spacing, 'halfSpacing')};
     grid-row-gap: #{map-get($spacing, 'halfSpacing')};
 }
-
-
 
 .realisation {
     border-radius: 2px;

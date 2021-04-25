@@ -116,8 +116,20 @@ export class PortfolioComponent implements OnInit {
         }
       }
     }
-  
+
     // console.log(this.realisationsService.realisations)
     // console.log(this.outputResults)
+  }
+
+  /**
+   *  Changes the text of the "Show filters" button.
+   **/
+  toggleFiltersButton() {
+    /* The function tries to synchronize itself with the aria-expanded attribute, to avoid unexpected results */
+    if (document.querySelector('[data-target="#collapse-filters"]').attributes['aria-expanded'].value === "false") {
+      document.getElementById('toggle-filters').innerText = 'Masquer les filtres'
+    } else {
+      document.getElementById('toggle-filters').innerText = 'Afficher les filtres'
+    }
   }
 }
