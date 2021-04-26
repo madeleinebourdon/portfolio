@@ -67,9 +67,18 @@ export class PortfolioComponent implements OnInit {
     } else {
       this.filtersCurrentlyChecked.splice(this.filtersCurrentlyChecked.findIndex(filter => filter === this.completeTagsArray[id]), 1)
     }
+    this.filtersCurrentlyChecked.sort()
 
-    // console.log(this.filtersCurrentlyChecked)
-    // console.log(this.completeTagsArray)
+    console.log(this.filtersCurrentlyChecked)
+    console.log(this.completeTagsArray)
+
+    /* If filters aren't on their default position, the "Reset" button becomes usable */
+    if (this.filtersCurrentlyChecked.length !== this.completeTagsArray.length) {
+      // console.log('The reset button should be usable')
+      document.getElementById('reset-filters').removeAttribute('disabled')
+    } else {
+      document.getElementById('reset-filters').setAttribute('disabled', '')
+    }
 
     this.initializeOutput(this.filtersCurrentlyChecked)
   }
@@ -132,4 +141,24 @@ export class PortfolioComponent implements OnInit {
       document.getElementById('toggle-filters').innerText = 'Afficher les filtres'
     }
   }
+
+  /**
+   *  Sets the filters back to their default state (everything checked)
+   **/
+   resetFilters() {
+     /* Change the array with checked items */
+    this.filtersCurrentlyChecked = []
+    for (let i=0; i<this.completeTagsArray.length; i++) {
+      this.filtersCurrentlyChecked.push(this.completeTagsArray[i])
+    }
+
+    /* Change the DOM accordingly */
+    let filters = document.getElementsByClassName('portfolio-filters')[0].querySelectorAll('[type="checkbox"]')
+    for (let i=0; i<filters.length; i++){
+      (filters[i] as HTMLInputElement).checked = true
+    }
+
+    document.getElementById('reset-filters').setAttribute('disabled', '')
+    this.initializeOutput(this.filtersCurrentlyChecked)
+   }
 }

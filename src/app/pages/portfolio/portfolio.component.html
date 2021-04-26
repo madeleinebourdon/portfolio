@@ -2,11 +2,16 @@
   <div class="background-dimming">
     <div class="container">
       <div class="filters-container">
-        <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse-filters" aria-expanded="false"
-          aria-controls="collapse-filters" (click)="toggleFiltersButton()">
-          <span class="fas fa-cog"></span> 
-          <span id="toggle-filters">Afficher les filtres</span>
-        </button>
+        <div class="buttons">
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse-filters" aria-expanded="false"
+            aria-controls="collapse-filters" (click)="toggleFiltersButton()">
+            <span class="fas fa-cog"></span> 
+            <span id="toggle-filters">Afficher les filtres</span>
+          </button>
+          <button id="reset-filters" class="btn btn-secondary" disabled  (click)="resetFilters()">
+            Réinitialiser les filtres
+          </button>
+        </div>
         <div class="collapse" id="collapse-filters">
           <form class="portfolio-filters">
             <fieldset>

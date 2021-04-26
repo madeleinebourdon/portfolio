@@ -3,6 +3,11 @@
 .filters-container {
     margin-bottom: #{map-get($spacing, 'halfSpacing')};
 
+    .buttons {
+        .btn:not(:last-of-type) {
+            margin-right: #{map-get($spacing, 'quarterSpacing')};
+        }
+    }
     .btn {
         .fas:not(:last-child) {
             margin-right: #{map-get($spacing, 'quarterSpacing')};
