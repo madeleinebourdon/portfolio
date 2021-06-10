@@ -1,7 +1,7 @@
 <div class="part portfolio background">
   <div class="background-dimming">
     <div class="container">
-      <div class="filters-container">
+      <!-- <div class="filters-container">
         <div class="buttons">
           <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse-filters" aria-expanded="false"
             aria-controls="collapse-filters" (click)="toggleFiltersButton()">
@@ -14,16 +14,18 @@
         </div>
         <div class="collapse" id="collapse-filters">
           <form class="portfolio-filters">
-            <fieldset>
-              <legend>Type d'intervention</legend>
-              <span *ngFor="let tag of completeTagsArray; let i = index" class="filters-option">
-                <input type="checkbox" id="intervention-{{i+1}}" (change)="portfolioFiltersChanged($event)" checked>
-                <label for="intervention-{{i+1}}">{{tag}}</label>
+            <fieldset *ngFor="let tagCategory of completeTagsObject; let i = index">
+              <legend>
+                {{fullFiltersTitlesFunction(tagCategory.name)}}
+              </legend>
+              <span *ngFor="let tag of tagCategory.textContent; let j = index" class="filters-option">
+                <input type="checkbox" id="{{tagCategory.name}}-{{j+1}}" (change)="portfolioFiltersChanged($event)" checked>
+                <label for="{{tagCategory.name}}-{{j+1}}">{{tag}}</label>
               </span>
             </fieldset>
           </form>
         </div>
-      </div>
+      </div> -->
 
       <ul class="portfolioList" *ngIf="!emptyResults; else noRealisation">
         <li *ngFor="let realisation of outputResults" class="realisation foreground">
