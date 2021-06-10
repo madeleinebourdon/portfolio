@@ -30,7 +30,7 @@
       <ul class="portfolioList" *ngIf="!emptyResults; else noRealisation">
         <li *ngFor="let realisation of outputResults" class="realisation foreground">
           <a href="portfolio/project/{{realisation.id}}">
-            <img *ngIf="realisation.image" src="assets/img/portfolio/{{realisation.image}}" class="realisation-image"
+            <img *ngIf="realisation.thumbnail" src="assets/img/portfolio/{{realisation.thumbnail}}" class="realisation-image"
               alt>
             <div class="realisation-text">
               <div class="left">
