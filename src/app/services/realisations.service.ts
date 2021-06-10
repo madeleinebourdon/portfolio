@@ -8,12 +8,92 @@ import { Injectable } from '@angular/core';
 export class RealisationsService {
   realisations = [
     {
-      id: 3,
+      id: 9,
+      image: 'kobu-agency-7okkFhxrxNw-unsplash.jpg',
+      title: 'Extension de navigateur pour audits RGAA 4.1',
+      date: 2021,
+      interventions: [
+        'Maintenance'
+      ],
+      tags: [
+        'pro'
+      ]
+    },
+    {
+      id: 8,
+      image: 'luviana.png',
+      title: 'Luviana Hotel Resort',
+      date: 2021,
+      interventions: [
+        'Découpage'
+      ],
+      tags: [
+        'perso'
+      ]
+    },
+    {
+      id: 7,
+      image: 'json-reader.png',
+      title: 'JSON Reader',
+      date: 2021,
+      interventions: [
+        'Conception',
+        'Découpage',
+        'Intégration',
+        'Accessibilité'
+      ],
+      tags: [
+        'perso'
+      ]
+    },
+    {
+      id: 6,
+      image: 'prith.png',
+      title: 'PRITH Hauts-de-France',
+      date: 2020,
+      interventions: [
+        'Découpage',
+        'Intégration'
+      ],
+      technos: [
+        'HTML',
+        'Sass',
+        'WordPress'
+      ],
+      tags: [
+        'pro'
+      ]
+    },
+    {
+      id: 5,
+      image: 'bagus-hernawan-A6JxK37IlPo-unsplash.jpg',
+      title: 'Application bancaire sur mobile',
+      date: 2019,
+      interventions: [
+        'Découpage',
+        'Maintenance'
+      ],
+      technos: [
+        'Ionic',
+        'HTML',
+        'Sass',
+        'JavaScript'
+      ],
+      description: [
+        'Un projet annulé'
+      ],
+      tags: [
+        'pro'
+      ]
+    },
+    {
+      id: 4,
       image: 'compethance.jpg',
       title: 'Compéthance',
       date: 2019,
       interventions: [
-        'Découpage'
+        'Découpage',
+        'Maintenance'
       ],
       technos: [
         'HTML',
@@ -28,7 +108,7 @@ export class RealisationsService {
       ]
     },
     {
-      id: 2,
+      id: 3,
       image: 'eloca-ebailleur.jpg',
       title: 'e-loca et e-bailleur',
       date: 2019,
@@ -64,8 +144,8 @@ export class RealisationsService {
       ]
     },
     {
-      id: 1,
-      image: '',
+      id: 2,
+      image: 'atul-vinayak-znXGn3heBsw-unsplash.jpg',
       title: 'Legend of Dysmodia',
       date: 2018,
       interventions: [
@@ -84,6 +164,41 @@ export class RealisationsService {
         'Symfony',
         'Phaser',
         'Bootstrap'
+      ]
+    },
+    {
+      id: 1,
+      image: 'meteores-thumbnail.jpg',
+      title: 'La nuit des météores',
+      date: 2018,
+      interventions: [
+        'Conception',
+        'Découpage',
+        'Intégration'
+      ],
+      tags: [
+        'ecole'
+      ],
+      technos: [
+        'HTML',
+        'CSS',
+      ]
+    },
+    {
+      id: 1,
+      image: 'Caesar1.jpg',
+      title: 'Cuisine facile',
+      date: 2018,
+      interventions: [
+        'Conception',
+        'Découpage'
+      ],
+      tags: [
+        'ecole'
+      ],
+      technos: [
+        'HTML',
+        'CSS',
       ]
     }
   ];
