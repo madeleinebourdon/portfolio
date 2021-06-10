@@ -20,15 +20,26 @@
 
 .split {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .image-container {
     width: 100%;
+    max-width: 66%;
 
     img {
         width: 100%;
         object-fit: cover;
         object-position: top;
+    }
+}
+
+@media only screen and (max-width: 992px ) {
+    .split {
+        flex-direction: column;
+    }
+
+    .image-container {
+        max-width: 100%;
     }
 }

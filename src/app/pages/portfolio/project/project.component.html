@@ -8,9 +8,17 @@
         <div class="image-container">
             <img src="/assets/img/portfolio/{{realisation.thumbnail}}" alt>
         </div>
-        <div>
-            <!-- <h1>{{realisation.title}}</h1> -->
-            <p *ngFor="let paragraph of realisation.description">{{paragraph}}</p>
+        <div class="column">
+            <h2>{{realisation.title}}</h2>
+            <ul>
+                <li *ngIf="realisation.date">Année : {{realisation.date}}</li>
+                <li *ngIf="realisation.interventions">Interventions : {{realisation.interventions.join(', ')}}</li>
+                <li *ngIf="realisation.technos">Technologies utilisées : {{realisation.technos.join(', ')}}</li>
+                <!-- <li *ngIf="realisation.tags">Tags : {{realisation.tags.join(', ')}}</li> -->
+            </ul>
         </div>
+    </div>
+    <div class="description">
+        <p *ngFor="let paragraph of realisation.description">{{paragraph}}</p>
     </div>
 </div>
