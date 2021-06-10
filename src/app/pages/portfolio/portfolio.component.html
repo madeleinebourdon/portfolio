@@ -29,32 +29,34 @@
 
       <ul class="portfolioList" *ngIf="!emptyResults; else noRealisation">
         <li *ngFor="let realisation of outputResults" class="realisation foreground">
-          <img *ngIf="realisation.image" src="assets/img/portfolio/{{realisation.image}}" class="realisation-image" alt>
-          <div class="realisation-text">
-            <div class="left">
-              <div class="top-part">
-                <a href="portfolio/project/{{realisation.id}}">
+          <a href="portfolio/project/{{realisation.id}}">
+            <img *ngIf="realisation.image" src="assets/img/portfolio/{{realisation.image}}" class="realisation-image"
+              alt>
+            <div class="realisation-text">
+              <div class="left">
+                <!-- <div class="top-part"> -->
                   <h2>
                     {{realisation.title}}
                   </h2>
-                </a>
-                <span *ngIf="realisation.date">
-                  ({{realisation.date}})
-                </span>
-              </div>
-              <ul *ngIf="realisation.interventions" class="realisation-list">
+                  <p class="date" *ngIf="realisation.date">
+                    {{realisation.date}}
+                  </p>
+                <!-- </div> -->
+                <!-- <ul *ngIf="realisation.interventions" class="realisation-list">
                 <li *ngFor="let intervention of realisation.interventions">
                   <button class="btn badge badge-secondary">
                     {{intervention}}
                   </button>
                 </li>
-              </ul>
-            </div>
-            <div class="right">
+              </ul> -->
+              </div>
+              <!-- <div class="right">
               <a href="portfolio/project/{{realisation.id}}" class="btn btn-primary" title="Voir {{realisation.title}}"
                 attr.aria-label="Voir {{realisation.title}}">Voir</a>
+            </div> -->
             </div>
-          </div>
+          </a>
+
         </li>
       </ul>
 

@@ -46,10 +46,11 @@
 .realisation {
     border-radius: 2px;
     list-style: none;
+    -webkit-box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.25); 
+    box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.25);
 
-    &:hover,
-    &:focus {
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, map-get($palette, 'offwhite') 0px 0px 0px 3px;
+    a {
+        text-decoration: none;
     }
 
     .realisation-image {
@@ -57,7 +58,7 @@
         max-height: 15rem;
         object-fit: cover;
         object-position: top;
-        border-radius: 2px 2px 0 0;
+        // border-radius: 2px 2px 0 0;
     }
     
     .realisation-text {
@@ -77,6 +78,11 @@
                 margin-bottom: 0;
                 padding-right: map-get($spacing, 'quarterSpacing');
                 font-size: 1.5rem;
+            }
+
+            .date {
+                color: map-get($palette, 'dark-gray');
+                font-weight: normal;
             }
     
             ul, 
