@@ -9,7 +9,7 @@ export class RealisationsService {
   realisations = [
     {
       id: 11,
-      thumbnail: 'kobu-agency-7okkFhxrxNw-unsplash.jpg',
+      thumbnail: 'sarah-dorweiler-x2Tmfd1-SgA-unsplash.jpg',
       title: 'Portfolio',
       date: 2021,
       interventions: [
@@ -25,7 +25,7 @@ export class RealisationsService {
     {
       id: 10,
       thumbnail: 'kobu-agency-7okkFhxrxNw-unsplash.jpg',
-      title: 'Extension de navigateur pour audits RGAA 4.1',
+      title: 'Extension de navigateur pour audit RGAA 4.1',
       date: 2021,
       interventions: [
         'Maintenance'
