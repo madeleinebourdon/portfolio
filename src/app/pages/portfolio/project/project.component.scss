@@ -34,6 +34,38 @@
     }
 }
 
+.side-column {
+    width: 33%;
+    background-color: map-get($palette, 'light-gray');
+    margin-left: map-get($spacing, 'general');
+    padding: map-get($spacing, 'general');
+    height: min-content;
+
+    .btn {
+        text-decoration: none;
+
+        span:first-child {
+            padding-right: 0.2rem;
+        }
+    }
+
+    > ul,
+    > ul > li {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    h2 {
+        color: inherit;
+        margin-bottom: map-get($spacing, 'general');
+    }
+
+    .outside-link {
+        font-style: italic;
+        font-size: 0.8rem;
+    }
+}
+
 @media only screen and (max-width: 992px ) {
     .split {
         flex-direction: column;

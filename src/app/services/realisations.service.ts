@@ -18,17 +18,33 @@ export class RealisationsService {
         'Intégration',
         'Accessibilité'
       ],
+      technos: [
+        'Angular',
+        'HTML',
+        'SCSS',
+        'TypeScript',
+        'JavaScript'
+      ],
+      description: [
+        'Mon portfolio est le site sur lequel vous êtes en train de naviguer. Sa première version terminée est sortie en 2021, comportant une introduction, l\'essentiel de mon CV, une gallerie de mes réalisations et comment me contacter.',
+        'J\'ai créé ce site par moi-même, sur Angular. Le fait de m\'occuper de ce projet de A à Z m\'a permis de voir le développement dans une approche générale et m\'a aidé à progresser sur de nombreux sujets, comme Angular, Bootstrap, la nouvelle mise à jour de SASS, mais aussi JavaScript en général.'
+      ],
       tags: [
         'perso'
-      ]
+      ],
+      insideLink: 'https://madeleinebourdon.fr'
     },
     {
       id: 10,
       thumbnail: 'kobu-agency-7okkFhxrxNw-unsplash.jpg',
-      title: 'Extension de navigateur pour audit RGAA 4.1',
+      title: 'Extension de navigateur "Assistant RGAA 4.1"',
       date: 2021,
       interventions: [
         'Maintenance'
+      ],
+      description: [
+        'Dans le cadre de mon travail chez Compéthance, j\'ai été amenée à travailler sur cette extension de navigateur. Celle-ci a pour but d\'aider à la réalisation d\'audits d\'accessibilité numérique sous la norme "RGAA 4.1" (laquelle correspond à la norme française actuelle, demandée aux grandes entreprises et aux administrations publiques).',
+        'Une autre extension open-source de ce type était déjà disponible, mais elle prenait en compte le RGAA 3. Mon travail a été de comparer les différences et de proposer de nouveaux tests automatisés en cas de divergence.'
       ],
       tags: [
         'pro'
@@ -41,6 +57,12 @@ export class RealisationsService {
       date: 2021,
       interventions: [
         'Découpage'
+      ],
+      technos: [
+        'Vue.js'
+      ],
+      description: [
+        'Dans une démarche de prise en main du framework Vue.js, j\'ai décidé de partir d\'une maquette de thème Wordpress et de la découper de la façon la plus ressemblante possible. J\'ai décidé de me limiter à la page d\'accueil, car pour moi, le but n\'était pas de créer un nouveau thème.'
       ],
       tags: [
         'perso'
@@ -57,6 +79,14 @@ export class RealisationsService {
         'Intégration',
         'Accessibilité'
       ],
+      technos: [
+        'Angular'
+      ],
+      description: [
+        'JSON Reader est un projet personnel que j\'avais d\'abord imaginé pour m\'améliorer professionnellement, mais que j\'utilise aujourd\'hui plutôt pour travailler le code de la route.',
+        'En effet, comme son nom l\'indique, le site sert à afficher de façon détaillée une liste complexe, permettant de la séparer en catégories et de n\'en afficher qu\'une partie. Il permet également de copier du texte dans le presse-papier, ce qui peut s\'avérer utile dans certaines situations.',
+        'J\'ai toujours souhaité faire en sorte que les termes et références de cet outil soient le plus général possible, pour qu\'il puisse s\'adapter à de nombreuses situations. J\'aimerais rendre cet outil public au long terme, mais ce n\'est actuellement pas le cas.'
+      ],
       tags: [
         'perso'
       ]
@@ -68,16 +98,22 @@ export class RealisationsService {
       date: 2020,
       interventions: [
         'Découpage',
-        'Intégration'
+        'Intégration',
+        'Accessibilité'
       ],
       technos: [
         'HTML',
         'Sass',
         'WordPress'
       ],
+      description: [
+        'Dans le cadre de mon travail chez Compéthance, j\'ai participé, dans un premier temps, à la mise en accessibilité du site PRITH Hauts-de-France. Quelques mois plus tard, j\'ai également participé à sa refonte totale sur WordPress.',
+        'J\'ai d\'abord été chargée de découper certains modules en restant le plus fidèle possible à la maquette graphique, puis de  m\'assurer que le site s\'afficheait correctement sur toutes les tailles d\'écran. Ensuite, je me suis assurée que le mode contrasté était conforme sur l\'ensemble du site et enfin, j\'ai assuré la maintenance corrective.'
+      ],
       tags: [
         'pro'
-      ]
+      ],
+      outsideLink: 'https://prith-hauts-de-france.org/'
     },
     {
       id: 6,
@@ -120,7 +156,8 @@ export class RealisationsService {
       ],
       tags: [
         'pro'
-      ]
+      ],
+      outsideLink: 'https://compethance.fr'
     },
     {
       id: 4,
