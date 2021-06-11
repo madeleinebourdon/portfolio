@@ -32,7 +32,7 @@ export class RealisationsService {
       tags: [
         'perso'
       ],
-      insideLink: 'https://madeleinebourdon.fr'
+      insideLinks: ['https://madeleinebourdon.fr']
     },
     {
       id: 10,
@@ -48,6 +48,13 @@ export class RealisationsService {
       ],
       tags: [
         'pro'
+      ],
+      customLinks: [
+      {
+        icon: 'fab fa-firefox-browser',
+        text: 'Voir l\'extension Firefox',
+        url: 'https://addons.mozilla.org/fr/firefox/addon/comp%C3%A9thance-assistant-rgaa-4-1/'
+      }
       ]
     },
     {
@@ -113,7 +120,7 @@ export class RealisationsService {
       tags: [
         'pro'
       ],
-      outsideLink: 'https://prith-hauts-de-france.org/'
+      outsideLinks: ['https://prith-hauts-de-france.org/']
     },
     {
       id: 6,

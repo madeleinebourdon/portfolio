@@ -20,19 +20,26 @@
                 <!-- <li *ngIf="realisation.tags">Tags : {{realisation.tags.join(', ')}}</li> -->
             </ul>
             <ul>
-                <li *ngIf="realisation.outsideLink">
-                    <a href="{{realisation.outsideLink}}" class="btn btn-primary">
+                <li *ngFor="let ousideLink of realisation.outsideLinks">
+                    <a href="{{ousideLink}}" class="btn btn-primary">
                         <span class="fas fa-globe-europe"></span>
                         Voir le site*
                     </a>
                     <p class="outside-link">* {{realisation.title}} peut avoir changé depuis mon passage. Je ne suis pas responsable de modifications qui ne seraient pas mentionnées ici.</p>
                 </li>
-                <li *ngIf="realisation.insideLink">
-                    <a href="{{realisation.insideLink}}" class="btn btn-primary">
+                <li *ngFor="let insideLink of realisation.insideLinks"> 
+                    <a href="{{insideLink}}" class="btn btn-primary">
                         <span class="fas fa-globe-europe"></span>
                         Voir le site
                     </a>
                 </li>
+                <li *ngFor="let customLink of realisation.customLinks"> 
+                    <a href="{{customLink.url}}" class="btn btn-primary">
+                        <span class="{{customLink.icon}}"></span>
+                        {{customLink.text}}
+                    </a>
+                </li>
+                
             </ul>
         </div>
     </div>
