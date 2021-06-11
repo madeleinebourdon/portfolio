@@ -19,7 +19,6 @@ import { TechnologyComponent } from './common/div/technology/technology.componen
 import { LanguagesComponent } from './common/div/languages/languages.component';
 import { ExperienceComponent } from './common/div/experience/experience.component';
 import { SkillsComponent } from './common/div/skills/skills.component';
-import { PicturesComponent } from './common/div/pictures/pictures.component';
 import { MessageFormComponent } from './contact/message-form/message-form.component';
 import { AccessibilityComponent } from './common/div/accessibility/accessibility.component';
 import { LegalComponent } from './pages/legal/legal.component';
@@ -41,7 +40,6 @@ import { ErrorComponent } from './pages/error/error.component';
     PortfolioComponent,
     FooterComponent,
     SkillsComponent,
-    PicturesComponent,
     MessageFormComponent,
     ProjectComponent,
     AccessibilityComponent,

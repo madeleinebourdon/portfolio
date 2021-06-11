@@ -9,7 +9,6 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { LegalComponent } from './pages/legal/legal.component';
 import { ErrorComponent } from './pages/error/error.component';
 
-
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent},
@@ -25,6 +24,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule {
   name;
 }

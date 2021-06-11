@@ -37,24 +37,27 @@ export class RealisationsService {
     {
       id: 9,
       thumbnail: 'kobu-agency-7okkFhxrxNw-unsplash.jpg',
-      title: 'Extension de navigateur "Assistant RGAA 4.1"',
+      title: 'Extension de navigateur Assistant RGAA 4.1',
       date: 2021,
       interventions: [
         'Maintenance'
       ],
       description: [
-        'Dans le cadre de mon travail chez Compéthance, j\'ai été amenée à travailler sur cette extension de navigateur. Celle-ci a pour but d\'aider à la réalisation d\'audits d\'accessibilité numérique sous la norme "RGAA 4.1" (laquelle correspond à la norme française actuelle, demandée aux grandes entreprises et aux administrations publiques). On peut y tester l\'ensemble des critères du référentiel sur la page où l\'on se trouve.',
+        'Dans le cadre de mon travail chez Compéthance, j\'ai été amenée à travailler sur cette extension de navigateur. Celle-ci a pour but d\'aider à la réalisation d\'audits d\'accessibilité numérique sous la norme RGAA 4.1 (laquelle correspond à la norme française actuelle, demandée aux grandes entreprises et aux administrations publiques). On peut y tester l\'ensemble des critères du référentiel sur la page où l\'on se trouve.',
         'Une autre extension open-source de ce type était déjà disponible, mais elle prenait en compte le RGAA 3. Mon travail a été de comparer les différences et de proposer de nouveaux tests automatisés en cas de divergence.'
       ],
       tags: [
         'pro'
       ],
       customLinks: [
-        {
-          icon: 'fab fa-firefox-browser',
-          text: 'Voir l\'extension Firefox',
-          url: 'https://addons.mozilla.org/fr/firefox/addon/comp%C3%A9thance-assistant-rgaa-4-1/'
-        }
+        [
+          {
+            icon: 'fab fa-firefox-browser',
+            text: 'Voir l\'extension Firefox',
+            url: 'https://addons.mozilla.org/fr/firefox/addon/comp%C3%A9thance-assistant-rgaa-4-1/',
+            btnClass: 'btn btn-orange'
+          }
+        ]
       ]
     },
     {
@@ -161,20 +164,6 @@ export class RealisationsService {
         'e-loca et e-bailleur sont 2 éléments d\'un même système de gestion de location Sergic, qui existent à la fois en application pour smartphone ou tablette et en version web.',
         'e-loca permet aux locataires d’accéder au détail de leur compte personnel, à l’ensemble de leurs documents et à toutes les  informations concernant leur location. Elle permet également de communiquer avec son gestionnaire et de signaler un problème ou un sinistre.',
         'J\'ai été chargée de découper les maquettes fournies par Sergic et de les intégrer dans une application Ionic, qui devait comporter plusieurs paramètres d\'accessibilité.'
-      ],
-      liens: [
-        [
-          {
-            texte: 'Google Play',
-            url: 'https://play.google.com/store/apps/details?id=com.sergic.eloca'
-          }
-        ],
-        [
-          {
-            texte: 'App Store',
-            url: 'https://apps.apple.com/fr/app/e-loca/id1488630952'
-          }
-        ]
       ],
       tags: [
         'pro'

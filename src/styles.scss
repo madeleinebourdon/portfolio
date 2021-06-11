@@ -1,4 +1,6 @@
 @import "src/app/variables.scss";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
 body {
   background: map-get($bgColors, 'body');
 }
@@ -42,7 +44,7 @@ p:last-of-type {
 main a {
   color: map-get($palette, 'mainDark');
   font-weight: 600;
-  text-decoration: underline;
+  // text-decoration: underline;
 
   &:hover,
   &:focus {
@@ -165,11 +167,18 @@ app-home {
   min-height: calc(100vh - #{map-get($sizes, 'minHeaderHeight')} - #{map-get($sizes, 'bigJumbotronHeight')} - #{map-get($sizes, 'minFooterHeight')});
 }
 
-@media (min-width: 1200px) {
-  .container-xl {
-    max-width: 1140px;
+// Ajoute des couleurs supplémentaires aux boutons Bootstrap
+@each $color, $value in $bootstrapOverrideColors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
   }
 }
+
+// @media (min-width: 1200px) {
+//   .container {
+//     max-width: 1140px;
+//   }
+// }
 @media (min-height: 1600px) {
   .part {
     min-height: calc(100vh - 3.2rem - 20vh);

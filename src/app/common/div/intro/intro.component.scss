@@ -1,0 +1,16 @@
+@import 'src/app/variables.scss';
+
+.portrait-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    img {
+        border-radius: 50%;
+        width: map-get($sizes, 'portraitSize');
+        height: map-get($sizes, 'portraitSize');
+        object-fit: cover;
+    }
+}
