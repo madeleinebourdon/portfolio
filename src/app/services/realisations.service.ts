@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 export class RealisationsService {
   realisations = [
     {
-      id: 11,
+      id: 10,
       thumbnail: 'sarah-dorweiler-x2Tmfd1-SgA-unsplash.jpg',
       title: 'Portfolio',
       date: 2021,
@@ -35,7 +35,7 @@ export class RealisationsService {
       insideLinks: ['https://madeleinebourdon.fr']
     },
     {
-      id: 10,
+      id: 9,
       thumbnail: 'kobu-agency-7okkFhxrxNw-unsplash.jpg',
       title: 'Extension de navigateur "Assistant RGAA 4.1"',
       date: 2021,
@@ -43,22 +43,22 @@ export class RealisationsService {
         'Maintenance'
       ],
       description: [
-        'Dans le cadre de mon travail chez Compéthance, j\'ai été amenée à travailler sur cette extension de navigateur. Celle-ci a pour but d\'aider à la réalisation d\'audits d\'accessibilité numérique sous la norme "RGAA 4.1" (laquelle correspond à la norme française actuelle, demandée aux grandes entreprises et aux administrations publiques).',
+        'Dans le cadre de mon travail chez Compéthance, j\'ai été amenée à travailler sur cette extension de navigateur. Celle-ci a pour but d\'aider à la réalisation d\'audits d\'accessibilité numérique sous la norme "RGAA 4.1" (laquelle correspond à la norme française actuelle, demandée aux grandes entreprises et aux administrations publiques). On peut y tester l\'ensemble des critères du référentiel sur la page où l\'on se trouve.',
         'Une autre extension open-source de ce type était déjà disponible, mais elle prenait en compte le RGAA 3. Mon travail a été de comparer les différences et de proposer de nouveaux tests automatisés en cas de divergence.'
       ],
       tags: [
         'pro'
       ],
       customLinks: [
-      {
-        icon: 'fab fa-firefox-browser',
-        text: 'Voir l\'extension Firefox',
-        url: 'https://addons.mozilla.org/fr/firefox/addon/comp%C3%A9thance-assistant-rgaa-4-1/'
-      }
+        {
+          icon: 'fab fa-firefox-browser',
+          text: 'Voir l\'extension Firefox',
+          url: 'https://addons.mozilla.org/fr/firefox/addon/comp%C3%A9thance-assistant-rgaa-4-1/'
+        }
       ]
     },
     {
-      id: 9,
+      id: 8,
       thumbnail: 'luviana.png',
       title: 'Luviana Hotel Resort',
       date: 2021,
@@ -76,7 +76,7 @@ export class RealisationsService {
       ]
     },
     {
-      id: 8,
+      id: 7,
       thumbnail: 'json-reader.png',
       title: 'JSON Reader',
       date: 2021,
@@ -99,7 +99,7 @@ export class RealisationsService {
       ]
     },
     {
-      id: 7,
+      id: 6,
       thumbnail: 'prith.png',
       title: 'PRITH Hauts-de-France',
       date: 2020,
@@ -123,28 +123,6 @@ export class RealisationsService {
       outsideLinks: ['https://prith-hauts-de-france.org/']
     },
     {
-      id: 6,
-      thumbnail: 'bagus-hernawan-A6JxK37IlPo-unsplash.jpg',
-      title: 'Application bancaire sur mobile',
-      date: 2019,
-      interventions: [
-        'Découpage',
-        'Maintenance'
-      ],
-      technos: [
-        'Ionic',
-        'HTML',
-        'Sass',
-        'JavaScript'
-      ],
-      description: [
-        'Un projet annulé'
-      ],
-      tags: [
-        'pro'
-      ]
-    },
-    {
       id: 5,
       thumbnail: 'compethance.jpg',
       title: 'Compéthance',
@@ -164,7 +142,7 @@ export class RealisationsService {
       tags: [
         'pro'
       ],
-      outsideLink: 'https://compethance.fr'
+      outsideLinks: ['https://compethance.fr']
     },
     {
       id: 4,
@@ -200,6 +178,48 @@ export class RealisationsService {
       ],
       tags: [
         'pro'
+      ],
+      customLinks: [
+        [
+          {
+            icon: 'fab fa-google-play',
+            text: 'Voir e-loca sur Google Play',
+            url: 'https://play.google.com/store/apps/details?id=com.sergic.eloca',
+            btnClass: 'btn btn-cyan'
+          },
+          {
+            icon: 'fab fa-app-store',
+            text: 'Voir e-loca sur l\'App Store',
+            url: 'https://apps.apple.com/app/e-loca/id1488630952',
+            btnClass: 'btn btn-cyan'
+          },
+          {
+            icon: 'fas fa-globe-europe',
+            text: 'Voir e-loca sur le web',
+            url: 'https://www.client.e-loca.com/',
+            btnClass: 'btn btn-cyan'
+          }
+        ],
+        [
+          {
+            icon: 'fab fa-google-play',
+            text: 'Voir e-bailleur sur Google Play',
+            url: 'https://play.google.com/store/apps/details?id=com.sergic.ebailleur',
+            btnClass: 'btn btn-indigo'
+          },
+          {
+            icon: 'fab fa-app-store',
+            text: 'Voir e-bailleur sur l\'App Store',
+            url: 'https://apps.apple.com/app/e-bailleur/id1487935207',
+            btnClass: 'btn btn-indigo'
+          },
+          {
+            icon: 'fas fa-globe-europe',
+            text: 'Voir e-bailleur sur le web',
+            url: 'https://www.client.e-bailleur.com/',
+            btnClass: 'btn btn-indigo'
+          }
+        ]
       ]
     },
     {

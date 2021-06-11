@@ -45,12 +45,15 @@
         text-decoration: none;
 
         span:first-child {
-            padding-right: 0.2rem;
+            padding-right: map-get($spacing, 'eighthSpacing');
         }
     }
 
-    > ul,
-    > ul > li {
+    li:not(:last-of-type) .btn {
+        margin-bottom: map-get($spacing, 'eighthSpacing');
+    }
+
+    ul, li {
         list-style: none;
         padding-left: 0;
     }
@@ -63,6 +66,10 @@
     .outside-link {
         font-style: italic;
         font-size: 0.8rem;
+    }
+
+    .link-group:not(:last-of-type) {
+        margin-bottom: map-get($spacing, 'halfSpacing');
     }
 }
 

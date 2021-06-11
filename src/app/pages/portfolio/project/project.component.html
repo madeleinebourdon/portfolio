@@ -33,11 +33,15 @@
                         Voir le site
                     </a>
                 </li>
-                <li *ngFor="let customLink of realisation.customLinks"> 
-                    <a href="{{customLink.url}}" class="btn btn-primary">
-                        <span class="{{customLink.icon}}"></span>
-                        {{customLink.text}}
-                    </a>
+                <li *ngIf="realisation.customLinks">
+                    <ul class="link-group" *ngFor="let linkGroup of realisation.customLinks">
+                        <li *ngFor="let customLink of linkGroup">
+                            <a href="{{customLink.url}}" class="{{customLink.btnClass}}">
+                                <span class="{{customLink.icon}}"></span>
+                                {{customLink.text}}
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 
             </ul>
