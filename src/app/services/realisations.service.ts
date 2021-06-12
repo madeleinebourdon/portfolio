@@ -38,7 +38,7 @@ export class RealisationsService {
     {
       id: 9,
       thumbnail: 'assistant-rgaa-thumbnail.jpg',
-      title: 'Extension de navigateur Assistant RGAA 4.1',
+      title: 'Extension de navigateur "Assistant RGAA 4.1"',
       date: 2021,
       interventions: [
         'Maintenance'

@@ -36,7 +36,6 @@
     margin-bottom: 0;
 
     display: grid;
-
     grid-template-columns: 1fr 1fr 1fr;
     // grid-template-rows: 1fr 1fr; 
     grid-column-gap: #{map-get($spacing, 'halfSpacing')};
@@ -52,8 +51,20 @@
     a {
         text-decoration: none;
     }
+    > a {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
 
+    .thumbnail-container {
+        background-color: white;
+        // display: grid;
+        // grid-template-columns: 1fr;
+        // grid-template-rows: 1fr;
+    }
     .realisation-image {
+        aspect-ratio: 1;
         width: 100%;
         max-height: 15rem;
         object-fit: cover;
@@ -66,6 +77,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 1rem;
+        height: 100%;
     
         .left {
             .top-part {
