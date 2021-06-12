@@ -29,8 +29,7 @@ export class RealisationsService {
       description: [
         'Mon portfolio est le site sur lequel vous êtes en train de naviguer. Sa première version terminée est sortie en 2021, comportant une introduction, l\'essentiel de mon CV, une gallerie de mes réalisations et comment me contacter.',
         'J\'ai créé ce site par moi-même, sur Angular. Le fait de m\'occuper de ce projet de A à Z m\'a permis de voir le développement dans une approche générale et m\'a aidé à progresser sur de nombreux sujets, comme Angular, Bootstrap, SASS, mais aussi JavaScript en général.'
-      ],
-      insideLinks: ['https://madeleinebourdon.fr']
+      ]
     },
     {
       id: 9,
@@ -47,16 +46,18 @@ export class RealisationsService {
       customLinks: [
         [
           {
-            icon: 'fab fa-firefox-browser',
-            text: 'Voir l\'extension Firefox',
-            url: 'https://addons.mozilla.org/fr/firefox/addon/comp%C3%A9thance-assistant-rgaa-4-1/',
-            btnClass: 'btn btn-orange'
-          },
-          {
             icon: 'fab fa-chrome',
-            text: 'Voir l\'extension Chrome',
+            text: 'Extension pour Chrome',
             url: 'https://chrome.google.com/webstore/detail/comp%C3%A9thance-assistant-rga/oghdikaepecoiejflgkminkaallldcjj',
-            btnClass: 'btn btn-blue'
+            btnClass: 'btn btn-primary'
+          }
+        ],
+        [
+          {
+            icon: 'fab fa-firefox-browser',
+            text: 'Extension pour Firefox',
+            url: 'https://addons.mozilla.org/fr/firefox/addon/comp%C3%A9thance-assistant-rgaa-4-1/',
+            btnClass: 'btn btn-primary'
           }
         ]
       ]
@@ -77,7 +78,17 @@ export class RealisationsService {
       ],
       description: [
         'Dans une démarche de prise en main du framework Vue.js, J\'ai travaillé en groupe sur un projet qui consistait à partir d\'une maquette de thème Wordpress et de la découper de la façon la plus ressemblante possible.',
-        'Nous avons décidé de nous limiter à la page d\'accueil, car le but n\'était pas de créer un nouveau thème, mais bien de prendre le framework en main.'
+        'Nous avons décidé de nous limiter à la page d\'accueil, car le but n\'était pas de créer une copie du thème, mais bien de prendre en main le framework.'
+      ],
+      customLinks: [
+        [
+          {
+            icon: 'fab fa-wordpress-simple',
+            text: 'Voir le thème original',
+            url: 'https://themes.getmotopress.com/luviana/?refmp',
+            btnClass: 'btn btn-primary'
+          }
+        ]
       ]
     },
     {
@@ -162,39 +173,39 @@ export class RealisationsService {
         'SCSS'
       ],
       description: [
-        'Au cours de mon stage chez Compéthance, j\'ai pu travailler sur e-loca et e-bailleur, qui sont 2 éléments d\'un même système de gestion de location par Sergic.',
+        'Au cours de mon stage chez Compéthance, j\'ai pu travailler sur e-loca et e-bailleur, qui sont 2 éléments d\'un même système de gestion de location assuré par Sergic.',
         'e-loca permet aux locataires d’accéder au détail de leur compte personnel, à l’ensemble de leurs documents et à toutes les  informations concernant leur location. Elle permet également de communiquer avec son gestionnaire et de signaler un problème ou un sinistre.',
         'e-bailleur correspond à l\'autre côté du mécanisme, en permettant au bailleur d\'accéder à son solde, aux signalements sur ses différentes propriétés, à la messagerie et à divers documents.',
         'Ces deux parties sont disponibles à la fois en application smartphone / tablette et à la fois en version web.',
-        'C\'est sur la partie application que j\'ai travaillé, en utilisant le framework Ionic. Sous la supervision d\'un collègue expérimenté, j\'ai été chargée de découper et de commencer l\'intégration des maquettes fournies par Sergic.'
+        'C\'est sur la partie application que j\'ai travaillé, en utilisant le framework Ionic. Sous la supervision d\'un collègue expérimenté, j\'ai été chargée de découper et de commencer l\'intégration des maquettes fournies par Sergic, tout en suivant un planning rigoureux défini par le client.'
       ],
       customLinks: [
         [
           {
             icon: 'fab fa-google-play',
-            text: 'Voir e-loca sur Google Play',
+            text: 'e-loca sur Google Play',
             url: 'https://play.google.com/store/apps/details?id=com.sergic.eloca',
-            btnClass: 'btn btn-cyan'
+            btnClass: 'btn btn-primary'
           },
           {
             icon: 'fab fa-app-store',
-            text: 'Voir e-loca sur l\'App Store',
+            text: 'e-loca sur l\'App Store',
             url: 'https://apps.apple.com/app/e-loca/id1488630952',
-            btnClass: 'btn btn-cyan'
+            btnClass: 'btn btn-primary'
           }
         ],
         [
           {
             icon: 'fab fa-google-play',
-            text: 'Voir e-bailleur sur Google Play',
+            text: 'e-bailleur sur Google Play',
             url: 'https://play.google.com/store/apps/details?id=com.sergic.ebailleur',
-            btnClass: 'btn btn-indigo'
+            btnClass: 'btn btn-primary'
           },
           {
             icon: 'fab fa-app-store',
-            text: 'Voir e-bailleur sur l\'App Store',
+            text: 'e-bailleur sur l\'App Store',
             url: 'https://apps.apple.com/app/e-bailleur/id1487935207',
-            btnClass: 'btn btn-indigo'
+            btnClass: 'btn btn-primary'
           }
         ]
       ]
