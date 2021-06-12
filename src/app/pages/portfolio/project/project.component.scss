@@ -25,7 +25,7 @@
 
 .image-container {
     width: 100%;
-    max-width: 66%;
+    max-width: 72%;
 
     img {
         width: 100%;
@@ -35,7 +35,7 @@
 }
 
 .side-column {
-    width: 33%;
+    width: 28%;
     background-color: map-get($palette, 'light-gray');
     margin-left: map-get($spacing, 'general');
     padding: map-get($spacing, 'general');
@@ -81,4 +81,15 @@
     .image-container {
         max-width: 100%;
     }
+}
+
+
+// placeholder
+// swiper {
+//     height: 400px;
+//     width: 600px;
+//   }
+.swiper2 {
+    // padding-top: map-get($spacing, 'eighthSpacing');
+    padding-bottom: map-get($spacing, 'general');
 }

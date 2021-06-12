@@ -7,18 +7,40 @@
     <div class="split">
         <div class="image-container">
             <ng-container *ngIf="realisation.pictures; else noPictures">
-                <ng-container *ngFor="let picture of realisation.pictures; index as i; first as isFirst">
+                <!-- <ng-container *ngFor="let picture of realisation.pictures; index as i; first as isFirst">
                     <img src="/assets/img/portfolio/{{picture.url}}" alt="{{realisation.title}} - {{picture.legend}}">
                     <button *ngIf="isFirst" id="more-pictures" class="btn btn-primary" title="Voir plus d'images">
                         <span class="fas fa-arrow-down"></span>
                     </button>
-                </ng-container>
+                </ng-container> -->
+                <swiper style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff" [loop]="false"
+                    [spaceBetween]="10" [navigation]="true" [thumbs]="{ swiper: thumbsSwiper }" class="swiper1">
+                    <ng-template swiperSlide *ngFor="let picture of  realisation.pictures">
+                        <img src="/assets/img/portfolio/{{picture.url}}"
+                            alt="{{realisation.title}} - {{picture.legend}}">
+                    </ng-template>
+                    <!-- <ng-template swiperSlide *ngFor="let picture of  realisation.pictures">
+                        <img src="/assets/img/portfolio/{{picture.url}}"
+                            alt="{{realisation.title}} - {{picture.legend}}">
+                    </ng-template> -->
+                </swiper>
+                <swiper (swiper)="thumbsSwiper = $event" [loop]="false" [spaceBetween]="0" [slidesPerView]="5"
+                     [watchSlidesVisibility]="true" [watchSlidesProgress]="true" class="swiper2" [pagination]="{clickable: true, type: 'bullets'}" [mousewheel]="{invert: false, eventsTarget: 'container', releaseOnEdges: true}" [watchOverflow]="true">
+                    <ng-template swiperSlide *ngFor="let picture of  realisation.pictures">
+                        <img src="/assets/img/portfolio/{{picture.url}}"
+                            alt="{{realisation.title}} - {{picture.legend}}">
+                    </ng-template>
+                    <!-- <ng-template swiperSlide *ngFor="let picture of  realisation.pictures">
+                        <img src="/assets/img/portfolio/{{picture.url}}"
+                            alt="{{realisation.title}} - {{picture.legend}}">
+                    </ng-template> -->
+                </swiper>
             </ng-container>
             <ng-template #noPictures>
                 <img src="/assets/img/portfolio/{{realisation.thumbnail}}" alt>
             </ng-template>
         </div>
-        <div class="side-column ms-lg-auto">
+        <div class="side-column">
             <h2>{{realisation.title}}</h2>
             <ul>
                 <li *ngIf="realisation.date">

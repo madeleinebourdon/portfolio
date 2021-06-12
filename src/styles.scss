@@ -1,5 +1,7 @@
 @import "src/app/variables.scss";
+@import '~swiper/swiper-bundle';
 @import "../node_modules/bootstrap/scss/bootstrap";
+
 
 body {
   background: map-get($bgColors, 'body');

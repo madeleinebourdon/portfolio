@@ -25,6 +25,8 @@ import { LegalComponent } from './pages/legal/legal.component';
 import { ErrorComponent } from './pages/error/error.component';
 // import { HeaderComponent } from './header/header.component';
 
+import { SwiperModule } from 'swiper/angular';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +51,8 @@ import { ErrorComponent } from './pages/error/error.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SwiperModule
   ],
   providers: [
     Title,
