@@ -1,23 +1,38 @@
 <div class="container">
     <a href="/portfolio" class="btn back-link">
         <span class="fas fa-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Retour vers "</span>Mes réalisations<span class="sr-only">"</span>
+        <span class="sr-only">Retour vers </span>Mes réalisations
     </a>
 
     <div class="split">
         <div class="image-container">
-            <img src="/assets/img/portfolio/{{realisation.thumbnail}}" alt>
+            <ng-container *ngIf="realisation.pictures; else noPictures">
+                <ng-container *ngFor="let picture of realisation.pictures; index as i; first as isFirst">
+                    <img src="/assets/img/portfolio/{{picture.url}}" alt="{{realisation.title}} - {{picture.legend}}">
+                    <button *ngIf="isFirst" id="more-pictures" class="btn btn-primary" title="Voir plus d'images">
+                        <span class="fas fa-arrow-down"></span>
+                    </button>
+                </ng-container>
+            </ng-container>
+            <ng-template #noPictures>
+                <img src="/assets/img/portfolio/{{realisation.thumbnail}}" alt>
+            </ng-template>
         </div>
         <div class="side-column ms-lg-auto">
             <h2>{{realisation.title}}</h2>
             <ul>
-                <li *ngIf="realisation.date"><span class="fas fa-calendar-alt" title="Année"></span>
-                    {{realisation.date}}</li>
-                <li *ngIf="realisation.interventions"><span class="fas fa-toolbox"></span>
-                    {{realisation.interventions.join(', ')}}</li>
-                <li *ngIf="realisation.technos"><span class="fas fa-microchip"></span> {{realisation.technos.join(',
-                    ')}}</li>
-                <!-- <li *ngIf="realisation.tags">Tags : {{realisation.tags.join(', ')}}</li> -->
+                <li *ngIf="realisation.date">
+                    <span class="fas fa-calendar-alt" title="Année"></span>
+                    {{realisation.date}}
+                </li>
+                <li *ngIf="realisation.interventions">
+                    <span class="fas fa-toolbox" title="Interventions"></span>
+                    {{realisation.interventions.join(', ')}}
+                </li>
+                <li *ngIf="realisation.technos" title="Technologies">
+                    <span class="fas fa-microchip"></span>
+                    {{realisation.technos.join(', ')}}
+                </li>
             </ul>
             <ul>
                 <li *ngFor="let ousideLink of realisation.outsideLinks">
@@ -25,9 +40,10 @@
                         <span class="fas fa-globe-europe"></span>
                         Voir le site*
                     </a>
-                    <p class="outside-link">* {{realisation.title}} peut avoir changé depuis mon passage. Je ne suis pas responsable de modifications qui ne seraient pas mentionnées ici.</p>
+                    <p class="outside-link">* {{realisation.title}} peut avoir changé depuis mon passage. Je ne suis pas
+                        responsable de modifications qui ne seraient pas mentionnées ici.</p>
                 </li>
-                <li *ngFor="let insideLink of realisation.insideLinks"> 
+                <li *ngFor="let insideLink of realisation.insideLinks">
                     <a href="{{insideLink}}" class="btn btn-primary">
                         <span class="fas fa-globe-europe"></span>
                         Voir le site
@@ -43,7 +59,7 @@
                         </li>
                     </ul>
                 </li>
-                
+
             </ul>
         </div>
     </div>

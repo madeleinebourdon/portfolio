@@ -30,9 +30,6 @@ export class RealisationsService {
         'Mon portfolio est le site sur lequel vous êtes en train de naviguer. Sa première version terminée est sortie en 2021, comportant une introduction, l\'essentiel de mon CV, une gallerie de mes réalisations et comment me contacter.',
         'J\'ai créé ce site par moi-même, sur Angular. Le fait de m\'occuper de ce projet de A à Z m\'a permis de voir le développement dans une approche générale et m\'a aidé à progresser sur de nombreux sujets, comme Angular, Bootstrap, SASS, mais aussi JavaScript en général.'
       ],
-      tags: [
-        'perso'
-      ],
       insideLinks: ['https://madeleinebourdon.fr']
     },
     {
@@ -46,9 +43,6 @@ export class RealisationsService {
       description: [
         'Dans le cadre de mon travail chez Compéthance, j\'ai été amenée à travailler sur l\'extension de navigateur "Assistant RGAA 4.1", qui a pour but d\'aider à la réalisation d\'audits d\'accessibilité numérique sous la norme RGAA 4.1 (qui correspond à la norme française actuelle, demandée aux grandes entreprises et aux administrations publiques). On peut y tester l\'ensemble des critères du référentiel sur la page où l\'on se trouve.',
         'Une autre extension open-source de ce type était déjà disponible, mais elle prenait en compte le RGAA 3. Mon travail a été de comparer les différences et de proposer de nouveaux tests automatisés, tout en veillant à leur bon fonctionnement.'
-      ],
-      tags: [
-        'pro'
       ],
       customLinks: [
         [
@@ -84,9 +78,6 @@ export class RealisationsService {
       description: [
         'Dans une démarche de prise en main du framework Vue.js, J\'ai travaillé en groupe sur un projet qui consistait à partir d\'une maquette de thème Wordpress et de la découper de la façon la plus ressemblante possible.',
         'Nous avons décidé de nous limiter à la page d\'accueil, car le but n\'était pas de créer un nouveau thème, mais bien de prendre le framework en main.'
-      ],
-      tags: [
-        'perso'
       ]
     },
     {
@@ -112,9 +103,6 @@ export class RealisationsService {
         'En effet, comme son nom l\'indique, le site sert à afficher de façon détaillée une liste complexe, permettant de la séparer en catégories et de n\'en afficher qu\'une partie. Il est donc utile pour la relecture de prises de notes. Il permet également de copier du texte dans le presse-papier, ce qui peut parfois s\'avérer utile.',
         'Une partie "Options" est également prévue, permettant de sélectionner le JSON à lire et d\'afficher ou non certains éléments d\'interface.',
         'J\'ai toujours souhaité faire en sorte que les termes et références de cet outil soient le plus général possible, pour qu\'il puisse s\'adapter à de nombreuses situations. J\'aimerais rendre cet outil public au long terme, mais ce n\'est pas encore le cas.'
-      ],
-      tags: [
-        'perso'
       ]
     },
     {
@@ -137,9 +125,6 @@ export class RealisationsService {
         'Le site est articulé en pages composées de modules complètement personnalisables, offrant de grandes possibilités de personnalisation au client.',
         'J\'ai d\'abord été chargée de découper certains modules en restant le plus fidèle possible à la maquette graphique, puis de  m\'assurer que le site s\'afficheait correctement sur toutes les tailles d\'écran. Ensuite, je me suis assurée que le mode contrasté était conforme sur l\'ensemble du site et enfin, j\'ai assuré la maintenance corrective.'
       ],
-      tags: [
-        'pro'
-      ],
       outsideLinks: ['https://prith-hauts-de-france.org/']
     },
     {
@@ -160,9 +145,6 @@ export class RealisationsService {
       description: [
         'Dans le cadre de mon travail chez Compéthance, j\'ai été amenée à participer à une refonte totale de leur site vitrine sur WordPress.',
         'J\'ai d\'abord été chargée de découper les maquettes de certaines pages, puis de mettre en commun l\'ensemble des pages du site pour leur donner la même identité graphique. J\'ai également été en charge du responsive et du mode contrasté, et enfin, j\'ai assuré la maintenance sur le back-office WordPress.'
-      ],
-      tags: [
-        'pro'
       ],
       outsideLinks: ['https://compethance.fr']
     },
@@ -185,9 +167,6 @@ export class RealisationsService {
         'e-bailleur correspond à l\'autre côté du mécanisme, en permettant au bailleur d\'accéder à son solde, aux signalements sur ses différentes propriétés, à la messagerie et à divers documents.',
         'Ces deux parties sont disponibles à la fois en application smartphone / tablette et à la fois en version web.',
         'C\'est sur la partie application que j\'ai travaillé, en utilisant le framework Ionic. Sous la supervision d\'un collègue expérimenté, j\'ai été chargée de découper et de commencer l\'intégration des maquettes fournies par Sergic.'
-      ],
-      tags: [
-        'pro'
       ],
       customLinks: [
         [
@@ -236,9 +215,6 @@ export class RealisationsService {
         'Le site comportait une connexion utilisateur (soit par une combinaison adresse email / mot de passe, soit par Facebook Connect) et sa réinitialisation de mot de passe associée, une page de jeu, une page de guide, une page de meilleurs scores et une page de contact.',
         'J\'avais été à l\'origine du design du site et j\'avais donc assuré son apparence sur une grosse partie du contenu. J\'avais également été en charge du formulaire de réinitialisation de mot de passe et des mails envoyés par celui-ci. De plus, nous avons tous effectué un important travail de veille, car alors que nous avions étudié Symfony en cours, Phaser était complètement nouveau pour nous, tout en représentant une partie essentielle du site.'
       ],
-      tags: [
-        'ecole'
-      ],
       technos: [
         'Symfony',
         'Phaser',
@@ -260,18 +236,38 @@ export class RealisationsService {
         'Découpage',
         'Intégration'
       ],
+      technos: [
+        'HTML',
+        'CSS',
+      ],
       description: [
         'Au cours de mes études "Développeur Intégrateur Web et Mobile", il nous a été demandé de créer le site d\'un évènement, avec la contrainte que celui-ci devrait être en one-page (c\'est-à-dire que l\'intégralité du site peut être parcourue en défilant sur une seule même page).',
         'J\'ai choisi de présenter un évènement lié aux pluies de météores.',
         'Le site comportait une image d\'introduction, une section de présentation, un programme, comment accéder à l\'évènement (grâce à Google Maps), et enfin, comment contacter les organisateurs.'
       ],
-      tags: [
-        'ecole'
-      ],
-      technos: [
-        'HTML',
-        'CSS',
+      pictures: [
+        {
+          'url': 'meteores/meteores1.jpg',
+          'legend': 'Accueil'
+        },
+        {
+          'url': 'meteores/meteores2.jpg',
+          'legend': 'Section "Présentation"'
+        },
+        {
+          'url': 'meteores/meteores3.jpg',
+          'legend': 'Section "Programme"'
+        },
+        {
+          'url': 'meteores/meteores4.jpg',
+          'legend': 'Section "Accès"'
+        },
+        {
+          'url': 'meteores/meteores5.jpg',
+          'legend': 'Section "Contact"'
+        },
       ]
+
     },
     {
       id: 1,
@@ -288,9 +284,6 @@ export class RealisationsService {
       description: [
         'Au cours de mes études "Développeur Intégrateur Web et Mobile", il nous a été demandé de créer une page de recette qui soit SEO friendly (c\'est-à-dire constituée de micro-données, pour faciliter le référencement).',
         'Souhaitant pousser l\'exercice alors que j\'avais terminé la partie référencement, j\'avais décidé de donner un design plus élaboré à la page. Voici le résultat final auquel je suis arrivée.'
-      ],
-      tags: [
-        'ecole'
       ],
       technos: [
         'HTML',
