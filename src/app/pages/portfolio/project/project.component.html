@@ -47,7 +47,7 @@
             </ul>
         </div>
     </div>
-    <div class="description">
+    <div class="description" *ngIf="realisation.description">
         <p *ngFor="let paragraph of realisation.description">{{paragraph}}</p>
     </div>
 </div>
