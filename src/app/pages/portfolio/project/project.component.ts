@@ -6,8 +6,8 @@ import { RealisationsService } from 'src/app/services/realisations.service';
 
 import { SwiperOptions } from 'swiper';
 
+import { Navigation } from 'swiper';
 import SwiperCore, {
-  Navigation,
   Pagination,
   Scrollbar,
   A11y,
@@ -29,21 +29,21 @@ export class ProjectComponent implements OnInit {
   realisations = this.realisationsService.realisations
   realisation
 
-  config: SwiperOptions = {
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-    spaceBetween: 30
-  };
+  // config: SwiperOptions = {
+  //   pagination: {
+  //     el: '.swiper-pagination',
+  //     clickable: true
+  //   },
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev'
+  //   },
+  //   spaceBetween: 30
+  // };
 
-  onSwiper(swiper) {
-    console.log(swiper);
-  }
+  // onSwiper(swiper) {
+  //   console.log(swiper);
+  // }
   // onSlideChange() {
   //   console.log('slide change');
   // }

@@ -60,7 +60,8 @@ export class RealisationsService {
             btnClass: 'btn btn-primary'
           }
         ]
-      ]
+      ],
+      linksDisclaimer: true
     },
     {
       id: 8,
@@ -113,7 +114,8 @@ export class RealisationsService {
         'JSON Reader est un projet personnel que j\'avais d\'abord imaginé pour m\'améliorer professionnellement, mais que j\'utilise aujourd\'hui plutôt pour travailler le code de la route.',
         'En effet, comme son nom l\'indique, le site sert à afficher de façon détaillée une liste complexe, permettant de la séparer en catégories et de n\'en afficher qu\'une partie. Il est donc utile pour la relecture de prises de notes. Il permet également de copier du texte dans le presse-papier, ce qui peut parfois s\'avérer utile.',
         'Une partie "Options" est également prévue, permettant de sélectionner le JSON à lire et d\'afficher ou non certains éléments d\'interface.',
-        'J\'ai toujours souhaité faire en sorte que les termes et références de cet outil soient le plus général possible, pour qu\'il puisse s\'adapter à de nombreuses situations. J\'aimerais rendre cet outil public au long terme, mais ce n\'est pas encore le cas.'
+        'J\'ai toujours souhaité faire en sorte que les termes et références de cet outil soient le plus général possible, pour qu\'il puisse s\'adapter à de nombreuses situations.',
+        'J\'aimerais rendre cet outil public au long terme, mais ce n\'est pas encore le cas.'
       ]
     },
     {
@@ -133,8 +135,8 @@ export class RealisationsService {
       ],
       description: [
         'Dans le cadre de mon travail chez Compéthance, j\'ai participé, dans un premier temps, à la mise en accessibilité du site PRITH Hauts-de-France. Quelques mois plus tard, j\'ai également participé à sa refonte totale sur WordPress.',
-        'Le site est articulé en pages composées de modules complètement personnalisables, offrant de grandes possibilités de personnalisation au client.',
-        'J\'ai d\'abord été chargée de découper certains modules en restant le plus fidèle possible à la maquette graphique, puis de  m\'assurer que le site s\'afficheait correctement sur toutes les tailles d\'écran. Ensuite, je me suis assurée que le mode contrasté était conforme sur l\'ensemble du site et enfin, j\'ai assuré la maintenance corrective.'
+        'Le site est articulé en pages composées de modules complètement personnalisables en back-office, offrant au client une expérience autonome.',
+        'Lors de la refonte totale, j\'ai d\'abord été chargée de découper certains modules en restant le plus fidèle possible à la maquette graphique, puis de  m\'assurer que le site s\'afficheait correctement sur toutes les tailles d\'écran. Ensuite, je me suis assurée que le mode contrasté était conforme sur l\'ensemble du site et enfin, j\'ai assuré la maintenance corrective.'
       ],
       outsideLinks: ['https://prith-hauts-de-france.org/']
     },
@@ -208,7 +210,8 @@ export class RealisationsService {
             btnClass: 'btn btn-primary'
           }
         ]
-      ]
+      ],
+      linksDisclaimer: true
     },
     {
       id: 3,
@@ -252,9 +255,9 @@ export class RealisationsService {
         'CSS',
       ],
       description: [
-        'Au cours de mes études "Développeur Intégrateur Web et Mobile", il nous a été demandé de créer le site d\'un évènement, avec la contrainte que celui-ci devrait être en one-page (c\'est-à-dire que l\'intégralité du site peut être parcourue en défilant sur une seule même page).',
+        'Au cours de mes études "Développeur Intégrateur Web et Mobile" chez Webforce 3, j\'ai eu l\'exercice de créer le site d\'un évènement, avec la contrainte que celui-ci devrait être en one-page (c\'est-à-dire que l\'intégralité du site peut être parcourue en défilant sur une seule page).',
         'J\'ai choisi de présenter un évènement lié aux pluies de météores.',
-        'Le site comportait une image d\'introduction, une section de présentation, un programme, comment accéder à l\'évènement (grâce à Google Maps), et enfin, comment contacter les organisateurs.'
+        'Le site comportait une image d\'introduction avec une vidéo de fond, une section de présentation, un programme avec la carte des boissons, comment y accéder (en utilisant l\'API de Google Maps), et enfin, comment contacter les organisateurs de l\'évènement.'
       ],
       pictures: [
         {
@@ -263,19 +266,19 @@ export class RealisationsService {
         },
         {
           'url': 'meteores/meteores2.jpg',
-          'legend': 'Section "Présentation"'
+          'legend': 'Présentation'
         },
         {
           'url': 'meteores/meteores3.jpg',
-          'legend': 'Section "Programme"'
+          'legend': 'Programme'
         },
         {
           'url': 'meteores/meteores4.jpg',
-          'legend': 'Section "Accès"'
+          'legend': 'Accès'
         },
         {
           'url': 'meteores/meteores5.jpg',
-          'legend': 'Section "Contact"'
+          'legend': 'Contact'
         },
       ]
 

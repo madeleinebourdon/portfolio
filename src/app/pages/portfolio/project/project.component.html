@@ -1,69 +1,55 @@
 <div class="container">
-    <a href="/portfolio" class="btn back-link">
-        <span class="fas fa-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Retour vers </span>Toutes mes réalisations
-    </a>
-
     <div class="split">
-        <div class="image-container">
-            <ng-container *ngIf="realisation.pictures; else noPictures">
-                <!-- <ng-container *ngFor="let picture of realisation.pictures; index as i; first as isFirst">
-                    <img src="/assets/img/portfolio/{{picture.url}}" alt="{{realisation.title}} - {{picture.legend}}">
-                    <button *ngIf="isFirst" id="more-pictures" class="btn btn-primary" title="Voir plus d'images">
-                        <span class="fas fa-arrow-down"></span>
-                    </button>
-                </ng-container> -->
-                <swiper style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff" [loop]="false"
-                    [spaceBetween]="10" [navigation]="true" [thumbs]="{ swiper: thumbsSwiper }" class="swiper1">
-                    <ng-template swiperSlide *ngFor="let picture of  realisation.pictures">
-                        <img src="/assets/img/portfolio/{{picture.url}}"
-                            alt="{{realisation.title}} - {{picture.legend}}">
-                    </ng-template>
-                    <!-- <ng-template swiperSlide *ngFor="let picture of  realisation.pictures">
-                        <img src="/assets/img/portfolio/{{picture.url}}"
-                            alt="{{realisation.title}} - {{picture.legend}}">
-                    </ng-template> -->
-                </swiper>
-                <swiper (swiper)="thumbsSwiper = $event" [loop]="false" [spaceBetween]="0" [slidesPerView]="5"
-                     [watchSlidesVisibility]="true" [watchSlidesProgress]="true" class="swiper2" [pagination]="{clickable: true, type: 'bullets'}" [mousewheel]="{invert: false, eventsTarget: 'container', releaseOnEdges: true}" [watchOverflow]="true">
-                    <ng-template swiperSlide *ngFor="let picture of  realisation.pictures">
-                        <img src="/assets/img/portfolio/{{picture.url}}"
-                            alt="{{realisation.title}} - {{picture.legend}}">
-                    </ng-template>
-                    <!-- <ng-template swiperSlide *ngFor="let picture of  realisation.pictures">
-                        <img src="/assets/img/portfolio/{{picture.url}}"
-                            alt="{{realisation.title}} - {{picture.legend}}">
-                    </ng-template> -->
-                </swiper>
-            </ng-container>
-            <ng-template #noPictures>
-                <img src="/assets/img/portfolio/{{realisation.thumbnail}}" alt>
-            </ng-template>
-        </div>
         <div class="side-column">
-            <h2>{{realisation.title}}</h2>
+            <div class="header-container">
+                <a href="/portfolio" class="btn btn-outline-dark back-link" title="Mes réalisations">
+                    <span class="fas fa-chevron-left" aria-hidden="true"></span>
+                </a>
+                <h2>{{realisation.title}}</h2>
+            </div>
             <ul>
                 <li *ngIf="realisation.date">
-                    <span class="fas fa-calendar-alt" title="Année"></span>
-                    {{realisation.date}}
+                    <span class="info-category">
+                        <!-- <span class="fas fa-calendar-alt"></span> -->
+                        Année :
+                    </span>
+                    <span class="fst-italic">
+                        {{realisation.date}}
+                    </span>
                 </li>
                 <li *ngIf="realisation.interventions">
-                    <span class="fas fa-toolbox" title="Interventions"></span>
-                    {{realisation.interventions.join(', ')}}
+                    <span class="info-category">
+                        <!-- <span class="fas fa-toolbox"></span> -->
+                        Intervention<ng-container *ngIf="realisation.interventions.length > 1">s</ng-container> :
+                    </span>
+                    <span class="fst-italic">
+                        {{realisation.interventions.join(', ')}}
+                    </span>
                 </li>
-                <li *ngIf="realisation.technos" title="Technologies">
-                    <span class="fas fa-microchip"></span>
-                    {{realisation.technos.join(', ')}}
+                <li *ngIf="realisation.technos">
+                    <span class="info-category">
+                        <!-- <span class="fas fa-microchip"></span> -->
+                        Technologie<ng-container *ngIf="realisation.technos.length > 1">s</ng-container> :
+                    </span>
+                    <span class="fst-italic">
+                        {{realisation.technos.join(', ')}}
+                    </span>
                 </li>
             </ul>
-            <ul>
-                <li *ngFor="let ousideLink of realisation.outsideLinks">
-                    <a href="{{ousideLink}}" class="btn btn-primary">
+
+            <span *ngIf="realisation.outsideLinks ||  realisation.insideLinks || realisation.customLinks"
+                class="info-category">
+                Lien<ng-container
+                    *ngIf="realisation.outsideLinks?.length + realisation.insideLinks?.length + realisation.customLinks?.length > 1"
+                    >s</ng-container> :
+            </span>
+            <ul class="links-container"
+                *ngIf="realisation.outsideLinks ||  realisation.insideLinks || realisation.customLinks">
+                <li *ngFor="let outsideLink of realisation.outsideLinks">
+                    <a href="{{outsideLink}}" class="btn btn-primary">
                         <span class="fas fa-globe-europe"></span>
                         Voir le site*
                     </a>
-                    <p class="outside-link">* {{realisation.title}} peut avoir changé depuis mon passage. Je ne suis pas
-                        responsable de modifications qui ne seraient pas mentionnées ici.</p>
                 </li>
                 <li *ngFor="let insideLink of realisation.insideLinks">
                     <a href="{{insideLink}}" class="btn btn-primary">
@@ -81,11 +67,69 @@
                         </li>
                     </ul>
                 </li>
-
             </ul>
+            <p *ngIf="realisation.outsideLinks || realisation.linksDisclaimer" class="outside-disclaimer">* Le projet
+                "{{realisation.title}}" peut avoir changé depuis mon passage. Je ne suis pas responsable d'éventuelles
+                modifications ultérieures qui ne seraient pas mentionnées ici.</p>
+        </div>
+        <div class="image-container">
+            <span class="info-category">
+                Illustration<ng-container *ngIf="realisation.pictures?.length > 1">s</ng-container> :
+            </span>
+            <ng-container *ngIf="realisation.pictures; else noPictures">
+                <!-- <ng-container *ngFor="let picture of realisation.pictures; index as i; first as isFirst">
+                    <img src="/assets/img/portfolio/{{picture.url}}" alt="{{realisation.title}} - {{picture.legend}}">
+                    <button *ngIf="isFirst" id="more-pictures" class="btn btn-primary" title="Voir plus d'images">
+                        <span class="fas fa-arrow-down"></span>
+                    </button>
+                </ng-container> -->
+                <swiper style="--swiper-navigation-color: #fff; --bg-color: #363636" [loop]="false" [spaceBetween]="100"
+                    [navigation]="true" [thumbs]="{ swiper: thumbsSwiper }" class="swiper1"
+                    [mousewheel]="{invert: false,releaseOnEdges: false}">
+                    <ng-template swiperSlide *ngFor="let picture of  realisation.pictures">
+                        <figure>
+                            <img src="/assets/img/portfolio/{{picture.url}}" alt>
+                            <figcaption>{{picture.legend}}</figcaption>
+                        </figure>
+                        <a href="/assets/img/portfolio/{{picture.url}}" class="bigger-image-link" target="_blank"
+                            title="Ouvrir l'image &quot;{{picture.legend}}&quot; dans un nouvel onglet">
+                            <span class="fas fa-external-link-alt"></span>
+                        </a>
+                    </ng-template>
+                    <!-- <ng-template swiperSlide *ngFor="let picture of  realisation.pictures">
+                        <img src="/assets/img/portfolio/{{picture.url}}"
+                            alt="{{realisation.title}} - {{picture.legend}}">
+                    </ng-template> -->
+                </swiper>
+                <span class="info-category">
+                    Plus d'images :
+                </span>
+                <swiper (swiper)="thumbsSwiper = $event" [loop]="false" [spaceBetween]="0" [slidesPerView]="5"
+                    [watchSlidesVisibility]="true" [watchSlidesProgress]="true" class="swiper2"
+                    [pagination]="{clickable: true, type: 'bullets'}"
+                    [mousewheel]="{invert: false, eventsTarget: 'container', releaseOnEdges: false}"
+                    [watchOverflow]="true"
+                    [a11y]="{enabled: 'true', prevSlideMessage: 'Image précédente', nextSlideMessage: 'Image suivante'}">
+                    <ng-template swiperSlide *ngFor="let picture of  realisation.pictures; index as i">
+                        <img src="/assets/img/portfolio/{{picture.url}}"
+                            alt="Mettre en avant &quot;{{picture.legend}}&quot; ({{i+1}}/{{realisation.pictures.length}})"
+                            title="Mettre en avant &quot;{{picture.legend}}&quot; ({{i+1}}/{{realisation.pictures.length}})">
+                    </ng-template>
+                    <!-- <ng-template swiperSlide *ngFor="let picture of  realisation.pictures">
+                        <img src="/assets/img/portfolio/{{picture.url}}"
+                            alt="{{realisation.title}} - {{picture.legend}}">
+                    </ng-template> -->
+                </swiper>
+            </ng-container>
+            <ng-template #noPictures>
+                <img src="/assets/img/portfolio/{{realisation.thumbnail}}" alt>
+            </ng-template>
         </div>
     </div>
     <div class="description" *ngIf="realisation.description">
+        <span class="info-category">
+            Description :
+        </span>
         <p *ngFor="let paragraph of realisation.description">{{paragraph}}</p>
     </div>
 </div>

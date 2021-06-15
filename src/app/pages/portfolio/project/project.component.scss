@@ -6,12 +6,15 @@
 }
 
 .back-link {
+    position: absolute;
+    top: 0.3rem;
+
     display: inline-flex;
     align-items: baseline;
     padding: map-get($spacing, 'quarterSpacing');
-    margin-bottom: map-get($spacing, 'halfSpacing');
+    // margin-bottom: map-get($spacing, 'halfSpacing');
     text-decoration: none;
-    border: 1px solid map-get($palette, 'dark-gray');
+    // border: 1px solid map-get($palette, 'dark-gray');
 
     .fa, .fas, .fab, .fal {
         padding-right: map-get($spacing, 'quarterSpacing');
@@ -20,12 +23,16 @@
 
 .split {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .image-container {
     width: 100%;
-    max-width: 72%;
+    border-bottom: 2px dotted map-get($palette, 'offwhite');
+    // padding-bottom: map-get($spacing, 'halfSpacing');
+    margin-bottom: map-get($spacing, 'halfSpacing');
+
+    // max-width: 72%;
 
     img {
         width: 100%;
@@ -35,11 +42,15 @@
 }
 
 .side-column {
-    width: 28%;
-    background-color: map-get($palette, 'light-gray');
-    margin-left: map-get($spacing, 'general');
-    padding: map-get($spacing, 'general');
-    height: min-content;
+    // width: 28%;
+    // border: 1px solid map-get($palette, 'light-gray');
+    // margin-left: map-get($spacing, 'general');
+    padding: map-get($spacing, 'halfSpacing') 0;
+    // height: min-content;
+    // padding: 0;
+    border-bottom: 2px dotted map-get($palette, 'offwhite');
+    margin-bottom: map-get($spacing, 'halfSpacing');
+
 
     .btn {
         text-decoration: none;
@@ -50,26 +61,60 @@
     }
 
     li:not(:last-of-type) .btn {
-        margin-bottom: map-get($spacing, 'eighthSpacing');
+        margin-right: map-get($spacing, 'quarterSpacing');
     }
 
     ul, li {
         list-style: none;
         padding-left: 0;
+        margin-bottom: 0;
+    }
+
+    .header-container {
+        display: flex;
+        margin-bottom: map-get($spacing, 'general');
+        position: relative;
     }
 
     h2 {
-        color: inherit;
-        margin-bottom: map-get($spacing, 'general');
+        // color: inherit;
+        color: map-get($palette, 'dark-gray');
+        width: 100%;
+        text-align: center;
+        padding: 0 2.5rem;
     }
 
-    .outside-link {
+    .outside-disclaimer {
         font-style: italic;
         font-size: 0.8rem;
+        // margin-top: 1rem;
     }
 
     .link-group:not(:last-of-type) {
-        margin-bottom: map-get($spacing, 'halfSpacing');
+        margin-right: map-get($spacing, 'halfSpacing');
+    }
+
+    .links-container, .links-container li, .links-container .link-group {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.info-category {
+    font-weight: 600;
+    color: map-get($palette, 'dark-gray');
+}
+
+.description {
+    padding-bottom: map-get($spacing, 'general');
+
+    p {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+
+        &:first-of-type {
+            padding-top: 0.25rem;
+        }
     }
 }
 
@@ -89,7 +134,65 @@
 //     height: 400px;
 //     width: 600px;
 //   }
+
+// .image-container img {
+//     // max-width: 10px;
+// }
+// .swiper1 {
+//     padding: 0 3rem;
+// }
+
+swiper.swiper-button-disabled, 
+.swiper-button-disabled {
+    display: none!important;
+}
+
+.swiper1 {
+    margin-bottom: map-get($spacing, 'halfSpacing');
+
+    img {
+        position: relative;
+    }
+    figure {
+        margin: 0;
+    }
+    figcaption {
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        padding: map-get($spacing, 'quarterSpacing');
+    }
+
+    .bigger-image-link {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        text-decoration: none;
+        position: absolute;
+        bottom: 66px;
+        right: 10px;
+    
+        color: white;
+        background-color: map-get($palette, 'dark-gray');
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
 .swiper2 {
     // padding-top: map-get($spacing, 'eighthSpacing');
-    padding-bottom: map-get($spacing, 'general');
+    // padding-bottom: 1.5rem;
+    padding-bottom: map-get($spacing, 'halfSpacing');
+    display: flex;
+    flex-direction: column-reverse;
+
+    img:hover {
+        cursor:pointer;
+    }
 }
+
+// .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+//     bottom: 0;
+// }

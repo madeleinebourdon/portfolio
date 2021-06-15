@@ -52,13 +52,3 @@ $spacing: (
     'eighthSpacing': 0.25rem,
     'partGap': #{map-get($sizes, 'smallJumbotronHeight') / 6},
 );
-
-
-/// PARTIES DE CODE DEVENUES INUTILES
-/// (parce que leurs conteneurs ont été commentés)
-$iconsColors: (
-    'full-star': #fed330,
-    'empty-star': #909090
-);
-
-// $chartSize: 9rem; // taille des skill charts
