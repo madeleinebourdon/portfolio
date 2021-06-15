@@ -281,11 +281,10 @@ export class RealisationsService {
           'legend': 'Contact'
         },
       ]
-
     },
     {
       id: 1,
-      thumbnail: 'Caesar1.jpg',
+      thumbnail: 'cuisine-facile-thumbnail.jpg',
       title: 'Cuisine facile',
       date: 2018,
       interventions: [
@@ -303,6 +302,12 @@ export class RealisationsService {
         'HTML',
         'CSS',
         'Bootstrap'
+      ],
+      pictures: [
+        {
+          'url': 'cuisine facile/cuisine-facile.jpg',
+          'legend': 'Accueil'
+        }
       ]
     }
   ];

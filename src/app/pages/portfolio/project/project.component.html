@@ -101,25 +101,27 @@
                             alt="{{realisation.title}} - {{picture.legend}}">
                     </ng-template> -->
                 </swiper>
-                <span class="info-category">
-                    Plus d'images :
-                </span>
-                <swiper (swiper)="thumbsSwiper = $event" [loop]="false" [spaceBetween]="0" [slidesPerView]="5"
-                    [watchSlidesVisibility]="true" [watchSlidesProgress]="true" class="swiper2"
-                    [pagination]="{clickable: true, type: 'bullets'}"
-                    [mousewheel]="{invert: false, eventsTarget: 'container', releaseOnEdges: false}"
-                    [watchOverflow]="true"
-                    [a11y]="{enabled: 'true', prevSlideMessage: 'Image précédente', nextSlideMessage: 'Image suivante'}">
-                    <ng-template swiperSlide *ngFor="let picture of  realisation.pictures; index as i">
-                        <img src="/assets/img/portfolio/{{picture.url}}"
-                            alt="Mettre en avant &quot;{{picture.legend}}&quot; ({{i+1}}/{{realisation.pictures.length}})"
-                            title="Mettre en avant &quot;{{picture.legend}}&quot; ({{i+1}}/{{realisation.pictures.length}})">
-                    </ng-template>
-                    <!-- <ng-template swiperSlide *ngFor="let picture of  realisation.pictures">
-                        <img src="/assets/img/portfolio/{{picture.url}}"
-                            alt="{{realisation.title}} - {{picture.legend}}">
-                    </ng-template> -->
-                </swiper>
+                <ng-container *ngIf="realisation.pictures?.length > 1">
+                    <span class="info-category">
+                        Plus d'images :
+                    </span>
+                    <swiper (swiper)="thumbsSwiper = $event" [loop]="false" [spaceBetween]="0" [slidesPerView]="5"
+                        [watchSlidesVisibility]="true" [watchSlidesProgress]="true" class="swiper2"
+                        [pagination]="{clickable: true, type: 'bullets'}"
+                        [mousewheel]="{invert: false, eventsTarget: 'container', releaseOnEdges: false}"
+                        [watchOverflow]="true"
+                        [a11y]="{enabled: 'true', prevSlideMessage: 'Image précédente', nextSlideMessage: 'Image suivante'}">
+                        <ng-template swiperSlide *ngFor="let picture of  realisation.pictures; index as i">
+                            <img src="/assets/img/portfolio/{{picture.url}}"
+                                alt="Mettre en avant &quot;{{picture.legend}}&quot; ({{i+1}}/{{realisation.pictures.length}})"
+                                title="Mettre en avant &quot;{{picture.legend}}&quot; ({{i+1}}/{{realisation.pictures.length}})">
+                        </ng-template>
+                        <!-- <ng-template swiperSlide *ngFor="let picture of  realisation.pictures">
+                            <img src="/assets/img/portfolio/{{picture.url}}"
+                                alt="{{realisation.title}} - {{picture.legend}}">
+                        </ng-template> -->
+                    </swiper>
+                </ng-container>
             </ng-container>
             <ng-template #noPictures>
                 <img src="/assets/img/portfolio/{{realisation.thumbnail}}" alt>
