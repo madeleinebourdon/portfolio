@@ -7,6 +7,7 @@
                 </a>
                 <h2>{{realisation.title}}</h2>
             </div>
+            <h3>Fiche technique</h3>
             <ul>
                 <li *ngIf="realisation.date">
                     <span class="info-category">
@@ -72,23 +73,23 @@
                 "{{realisation.title}}" peut avoir changé depuis mon passage. Je ne suis pas responsable d'éventuelles
                 modifications ultérieures qui ne seraient pas mentionnées ici.</p>
         </div>
+        <div class="description" *ngIf="realisation.description">
+            <h3>
+                Description
+            </h3>
+            <p *ngFor="let paragraph of realisation.description">{{paragraph}}</p>
+        </div>
         <div class="image-container">
-            <span class="info-category">
-                Illustration<ng-container *ngIf="realisation.pictures?.length > 1">s</ng-container> :
-            </span>
+            <h3>
+                Illustration<ng-container *ngIf="realisation.pictures?.length > 1">s</ng-container>
+            </h3>
             <ng-container *ngIf="realisation.pictures; else noPictures">
-                <!-- <ng-container *ngFor="let picture of realisation.pictures; index as i; first as isFirst">
-                    <img src="/assets/img/portfolio/{{picture.url}}" alt="{{realisation.title}} - {{picture.legend}}">
-                    <button *ngIf="isFirst" id="more-pictures" class="btn btn-primary" title="Voir plus d'images">
-                        <span class="fas fa-arrow-down"></span>
-                    </button>
-                </ng-container> -->
                 <swiper style="--swiper-navigation-color: #fff; --bg-color: #363636" [loop]="false" [spaceBetween]="100"
                     [navigation]="true" [thumbs]="{ swiper: thumbsSwiper }" class="swiper1"
                     [mousewheel]="{invert: false,releaseOnEdges: false}">
                     <ng-template swiperSlide *ngFor="let picture of  realisation.pictures">
                         <figure>
-                            <img src="/assets/img/portfolio/{{picture.url}}" alt>
+                            <img src="/assets/img/portfolio/{{picture.url}}" [ngClass]="{'tall': realisation.tallPictures}" alt>
                             <figcaption>{{picture.legend}}</figcaption>
                         </figure>
                         <a href="/assets/img/portfolio/{{picture.url}}" class="bigger-image-link" target="_blank"
@@ -96,15 +97,11 @@
                             <span class="fas fa-external-link-alt"></span>
                         </a>
                     </ng-template>
-                    <!-- <ng-template swiperSlide *ngFor="let picture of  realisation.pictures">
-                        <img src="/assets/img/portfolio/{{picture.url}}"
-                            alt="{{realisation.title}} - {{picture.legend}}">
-                    </ng-template> -->
                 </swiper>
                 <ng-container *ngIf="realisation.pictures?.length > 1">
-                    <span class="info-category">
-                        Plus d'images :
-                    </span>
+                    <h4>
+                        Plus d'images
+                    </h4>
                     <swiper (swiper)="thumbsSwiper = $event" [loop]="false" [spaceBetween]="0" [slidesPerView]="5"
                         [watchSlidesVisibility]="true" [watchSlidesProgress]="true" class="swiper2"
                         [pagination]="{clickable: true, type: 'bullets'}"
@@ -128,10 +125,5 @@
             </ng-template>
         </div>
     </div>
-    <div class="description" *ngIf="realisation.description">
-        <span class="info-category">
-            Description :
-        </span>
-        <p *ngFor="let paragraph of realisation.description">{{paragraph}}</p>
-    </div>
+    
 </div>

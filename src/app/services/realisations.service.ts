@@ -163,7 +163,7 @@ export class RealisationsService {
     },
     {
       id: 4,
-      thumbnail: 'eloca-ebailleur.jpg',
+      thumbnail: 'e-loca e-bailleur/accueil.jpg',
       title: 'e-loca et e-bailleur',
       date: 2019,
       interventions: [
@@ -211,7 +211,158 @@ export class RealisationsService {
           }
         ]
       ],
-      linksDisclaimer: true
+      linksDisclaimer: true,
+      pictures: [
+        {
+          'url': 'e-loca e-bailleur/e-loca-accueil1.jpg',
+          'legend': 'Page d\'accueil de e-loca'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-loca-compte1.jpg',
+          'legend': 'Page "Mon compte" de e-loca'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-loca-messages1.jpg',
+          'legend': 'Page "Messages" de e-loca'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-loca-messages2.jpg',
+          'legend': 'Page "Messages" de e-loca'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-loca-messages3.jpg',
+          'legend': 'Page "Messages" de e-loca'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-loca-messages4.jpg',
+          'legend': 'Page "Messages" de e-loca'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-loca-signalements1.jpg',
+          'legend': 'Page "Signalements" de e-loca'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-loca-signalements2.jpg',
+          'legend': 'Page "Signalements" de e-loca'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-loca-signalements3.jpg',
+          'legend': 'Page "Signalements" de e-loca'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-loca-signalements4.jpg',
+          'legend': 'Page "Signalements" de e-loca'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-loca-signalements5.jpg',
+          'legend': 'Page "Signalements" de e-loca'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-loca-documents1.jpg',
+          'legend': 'Page "Documents" de e-loca'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-loca-documents2.jpg',
+          'legend': 'Page "Documents" de e-loca'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-loca-documents3.jpg',
+          'legend': 'Page "Documents" de e-loca'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-loca-documents4.jpg',
+          'legend': 'Page "Documents" de e-loca'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-loca-documents5.jpg',
+          'legend': 'Page "Documents" de e-loca'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-loca-documents6.jpg',
+          'legend': 'Page "Documents" de e-loca'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-loca-documents7.jpg',
+          'legend': 'Page "Documents" de e-loca'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-loca-documents8.jpg',
+          'legend': 'Page "Documents" de e-loca'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-bailleur-accueil1.jpg',
+          'legend': 'Page d\'accueil de e-bailleur'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-bailleur-compte1.jpg',
+          'legend': 'Page "Mon compte" de e-bailleur'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-bailleur-messages1.jpg',
+          'legend': 'Page "Messages" de e-bailleur'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-bailleur-messages2.jpg',
+          'legend': 'Page "Messages" de e-bailleur'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-bailleur-messages3.jpg',
+          'legend': 'Page "Messages" de e-bailleur'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-bailleur-messages4.jpg',
+          'legend': 'Page "Messages" de e-bailleur'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-bailleur-biens1.jpg',
+          'legend': 'Page "Biens" de e-bailleur'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-bailleur-biens2.jpg',
+          'legend': 'Page "Biens" de e-bailleur'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-bailleur-biens3.jpg',
+          'legend': 'Page "Biens" de e-bailleur'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-bailleur-documents1.jpg',
+          'legend': 'Page "Documents" de e-bailleur'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-bailleur-documents2.jpg',
+          'legend': 'Page "Documents" de e-bailleur'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-bailleur-documents3.jpg',
+          'legend': 'Page "Documents" de e-bailleur'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-bailleur-documents4.jpg',
+          'legend': 'Page "Documents" de e-bailleur'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-bailleur-documents5.jpg',
+          'legend': 'Page "Documents" de e-bailleur'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-bailleur-documents6.jpg',
+          'legend': 'Page "Documents" de e-bailleur'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-bailleur-documents7.jpg',
+          'legend': 'Page "Documents" de e-bailleur'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-bailleur-documents8.jpg',
+          'legend': 'Page "Documents" de e-bailleur'
+        },
+        {
+          'url': 'e-loca e-bailleur/e-bailleur-documents9.jpg',
+          'legend': 'Page "Documents" de e-bailleur'
+        }
+      ],
+      tallPictures: true
     },
     {
       id: 3,
@@ -225,7 +376,7 @@ export class RealisationsService {
         'Intégration'
       ],
       description: [
-        'À la fin de ma formation "Développeur Intégrateur Web et Mobile" chez Webforce 3, il nous a été demandé de présenter un projet en groupe de 4.','Nous avons choisi de présenter Legend of Dysmodia, site d\'un jeu RPG en ligne. Celui-ci tournait sur Symfony avec Bootstrap 4, tandis que le jeu était basé sur Phaser.',
+        'À la fin de ma formation "Développeur Intégrateur Web et Mobile" chez Webforce 3, il nous a été demandé de présenter un projet en groupe de 4.', 'Nous avons choisi de présenter Legend of Dysmodia, site d\'un jeu RPG en ligne. Celui-ci tournait sur Symfony avec Bootstrap 4, tandis que le jeu était basé sur Phaser.',
         'Le site comportait une connexion utilisateur (soit par une combinaison adresse email / mot de passe, soit par Facebook Connect) et sa réinitialisation de mot de passe associée, une page de jeu, une page de guide, une page de meilleurs scores et une page de contact.',
         'J\'avais été à l\'origine du design du site et j\'avais donc assuré son apparence sur une grosse partie du contenu. J\'avais également été en charge du formulaire de réinitialisation de mot de passe et des mails envoyés par celui-ci. De plus, nous avons tous effectué un important travail de veille, car alors que nous avions étudié Symfony en cours, Phaser était complètement nouveau pour nous, tout en représentant une partie essentielle du site.'
       ],

@@ -21,6 +21,12 @@
     }
 }
 
+h3, h4 {
+    text-align: left;
+    color: map-get($palette, 'dark-gray');
+    font-weight: 600;
+}
+
 .split {
     display: flex;
     flex-direction: column;
@@ -38,6 +44,15 @@
         width: 100%;
         object-fit: cover;
         object-position: top;
+
+        // &.tall  {
+            
+        // }
+    }
+    img.tall {
+        max-height: calc(100vh - #{map-get($sizes, 'minHeaderHeight')} - #{map-get($sizes, 'smallJumbotronHeight')} - #{map-get($sizes, 'minFooterHeight')} - 2rem);
+        width: auto;
+        object-fit: contain;
     }
 }
 
@@ -155,10 +170,13 @@ swiper.swiper-button-disabled,
     }
     figure {
         margin: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: map-get($palette, 'near-black');
     }
     figcaption {
-        background-color: #000;
-        color: #fff;
+        background-color: map-get($palette, 'black');
+        color: map-get($palette, 'white');
         text-align: center;
         padding: map-get($spacing, 'quarterSpacing');
     }
@@ -174,7 +192,7 @@ swiper.swiper-button-disabled,
         right: 10px;
     
         color: white;
-        background-color: map-get($palette, 'dark-gray');
+        background-color: map-get($palette, 'near-black');
         border-radius: 50%;
         width: 3rem;
         height: 3rem;
@@ -188,8 +206,14 @@ swiper.swiper-button-disabled,
     display: flex;
     flex-direction: column-reverse;
 
-    img:hover {
-        cursor:pointer;
+    img {
+        max-height: 10rem;
+        // max-width: 8rem;
+        object-fit: cover;
+
+        &:hover {
+            cursor:pointer;
+        }
     }
 }
 
