@@ -118,11 +118,7 @@ h3, h4 {
         &.thumbnail {
             width: auto;
         }
-        &.tall {
-            max-height: calc(100vh - #{map-get($sizes, 'minHeaderHeight')} - #{map-get($sizes, 'smallJumbotronHeight')} - #{map-get($sizes, 'minFooterHeight')} - 2rem);
-            width: auto;
-            object-fit: contain;
-        }
+        
     }
 }
 
@@ -138,6 +134,15 @@ h3, h4 {
         display: flex;
         flex-direction: column;
         background-color: map-get($palette, 'near-black');
+
+        img {
+            max-height: 150vh;
+            object-fit: contain;
+
+            &.tall {
+                max-height: calc(100vh - #{map-get($sizes, 'minHeaderHeight')} - #{map-get($sizes, 'smallJumbotronHeight')} - #{map-get($sizes, 'minFooterHeight')} - 2rem);
+            }
+        }
     }
     
     figcaption {
