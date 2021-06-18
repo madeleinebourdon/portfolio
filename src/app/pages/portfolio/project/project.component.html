@@ -1,13 +1,13 @@
 <div class="container">
-    <div class="split">
-        <div class="side-column">
-            <div class="header-container">
-                <a href="/portfolio" class="btn btn-outline-dark back-link" title="Mes réalisations">
-                    <span class="fas fa-chevron-left" aria-hidden="true"></span>
-                </a>
-                <h2>{{realisation.title}}</h2>
-            </div>
-            <h3>Fiche technique</h3>
+    <section class="technical">
+        <div class="header-container">
+            <a href="/portfolio" class="btn btn-outline-dark back-link" title="Mes réalisations">
+                <span class="fas fa-chevron-left" aria-hidden="true"></span>
+            </a>
+            <h2>{{realisation.title}}</h2>
+        </div>
+        <h3>Fiche technique</h3>
+        <div class="section-content">
             <ul>
                 <li *ngIf="realisation.date">
                     <span class="info-category">
@@ -37,7 +37,6 @@
                     </span>
                 </li>
             </ul>
-
             <span *ngIf="realisation.outsideLinks ||  realisation.insideLinks || realisation.customLinks"
                 class="info-category">
                 Lien<ng-container
@@ -73,17 +72,21 @@
                 "{{realisation.title}}" peut avoir changé depuis mon passage. Je ne suis pas responsable d'éventuelles
                 modifications ultérieures qui ne seraient pas mentionnées ici.</p>
         </div>
-        <div class="description" *ngIf="realisation.description">
-            <h3>
-                Description
-            </h3>
+    </section>
+    <section class="description" *ngIf="realisation.description">
+        <h3>
+            Description
+        </h3>
+        <div class="section-content">
             <p *ngFor="let paragraph of realisation.description">{{paragraph}}</p>
         </div>
-        <div class="image-container">
-            <h3>
-                Illustration<ng-container *ngIf="realisation.pictures?.length > 1">s</ng-container>
-            </h3>
-            <ng-container *ngIf="realisation.pictures; else noPictures">
+    </section>
+    <section class="image-container">
+        <h3>
+            Illustration<ng-container *ngIf="realisation.pictures?.length > 1">s</ng-container>
+        </h3>
+        <ng-container *ngIf="realisation.pictures; else noPictures">
+            <div class="section-content">
                 <swiper style="--swiper-navigation-color: #fff; --bg-color: #363636" [loop]="false" [spaceBetween]="100"
                     [navigation]="true" [thumbs]="{ swiper: thumbsSwiper }" class="swiper1"
                     [mousewheel]="{invert: false,releaseOnEdges: false}">
@@ -98,13 +101,15 @@
                         </a>
                     </ng-template>
                 </swiper>
-                <ng-container *ngIf="realisation.pictures?.length > 1">
-                    <h4>
-                        Plus d'images
-                    </h4>
-                    <swiper (swiper)="thumbsSwiper = $event" [loop]="false" [spaceBetween]="0" [slidesPerView]="5"
+            </div>
+            <ng-container *ngIf="realisation.pictures?.length > 1">
+                <h4>
+                    Plus d'images
+                </h4>
+                <div class="section-content">
+                    <swiper (swiper)="thumbsSwiper = $event" [loop]="false" [spaceBetween]="0" [slidesPerView]="5" [slidesPerGroup]="5"
                         [watchSlidesVisibility]="true" [watchSlidesProgress]="true" class="swiper2"
-                        [pagination]="{clickable: true, type: 'bullets'}"
+                        [pagination]="{ clickable: true }"
                         [mousewheel]="{invert: false, eventsTarget: 'container', releaseOnEdges: false}"
                         [watchOverflow]="true"
                         [a11y]="{enabled: 'true', prevSlideMessage: 'Image précédente', nextSlideMessage: 'Image suivante'}">
@@ -118,12 +123,13 @@
                                 alt="{{realisation.title}} - {{picture.legend}}">
                         </ng-template> -->
                     </swiper>
-                </ng-container>
+                </div>
             </ng-container>
-            <ng-template #noPictures>
+        </ng-container>
+        <ng-template #noPictures>
+            <div class="section-content">
                 <img src="/assets/img/portfolio/{{realisation.thumbnail}}" alt>
-            </ng-template>
-        </div>
-    </div>
-    
+            </div>
+        </ng-template>
+    </section>
 </div>
