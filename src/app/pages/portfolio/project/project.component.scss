@@ -89,7 +89,7 @@ h3, h4 {
     .outside-disclaimer {
         font-style: italic;
         font-size: 0.8rem;
-        // margin-top: 1rem;
+        margin-top: map-get($spacing, 'quarterSpacing');
     }
 
     .link-group:not(:last-of-type) {
