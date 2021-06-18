@@ -89,13 +89,14 @@
             <div class="section-content">
                 <swiper style="--swiper-navigation-color: #fff; --bg-color: #363636" [loop]="false" [spaceBetween]="100"
                     [navigation]="true" [thumbs]="{ swiper: thumbsSwiper }" class="swiper1"
-                    [mousewheel]="{invert: false,releaseOnEdges: false}">
+                    [mousewheel]="{invert: false,releaseOnEdges: false}"
+                    [autoHeight]="true">
                     <ng-template swiperSlide *ngFor="let picture of  realisation.pictures">
                         <figure>
-                            <img src="/assets/img/portfolio/{{picture.url}}" [ngClass]="{'tall': realisation.tallPictures}" alt>
+                            <img src="/assets/img/portfolio/pictures/{{picture.url}}" [ngClass]="{'tall': realisation.tallPictures}" alt>
                             <figcaption>{{picture.legend}}</figcaption>
                         </figure>
-                        <a href="/assets/img/portfolio/{{picture.url}}" class="bigger-image-link" target="_blank"
+                        <a href="/assets/img/portfolio/pictures/{{picture.url}}" class="bigger-image-link" target="_blank"
                             title="Ouvrir l'image &quot;{{picture.legend}}&quot; dans un nouvel onglet">
                             <span class="fas fa-external-link-alt"></span>
                         </a>
@@ -114,21 +115,17 @@
                         [watchOverflow]="true"
                         [a11y]="{enabled: 'true', prevSlideMessage: 'Image précédente', nextSlideMessage: 'Image suivante'}">
                         <ng-template swiperSlide *ngFor="let picture of  realisation.pictures; index as i">
-                            <img src="/assets/img/portfolio/{{picture.url}}"
+                            <img src="/assets/img/portfolio/pictures/{{picture.url}}"
                                 alt="Mettre en avant &quot;{{picture.legend}}&quot; ({{i+1}}/{{realisation.pictures.length}})"
                                 title="Mettre en avant &quot;{{picture.legend}}&quot; ({{i+1}}/{{realisation.pictures.length}})">
                         </ng-template>
-                        <!-- <ng-template swiperSlide *ngFor="let picture of  realisation.pictures">
-                            <img src="/assets/img/portfolio/{{picture.url}}"
-                                alt="{{realisation.title}} - {{picture.legend}}">
-                        </ng-template> -->
                     </swiper>
                 </div>
             </ng-container>
         </ng-container>
         <ng-template #noPictures>
             <div class="section-content">
-                <img src="/assets/img/portfolio/{{realisation.thumbnail}}" alt>
+                <img src="/assets/img/portfolio/thumbnails/{{realisation.thumbnail}}" class="thumbnail" alt>
             </div>
         </ng-template>
     </section>

@@ -31,7 +31,7 @@
         <li *ngFor="let realisation of outputResults" class="realisation foreground">
           <a href="portfolio/project/{{realisation.id}}">
             <div class="thumbnail-container">
-              <img *ngIf="realisation.thumbnail" src="assets/img/portfolio/{{realisation.thumbnail}}" class="realisation-image"
+              <img *ngIf="realisation.thumbnail" src="assets/img/portfolio/thumbnails/{{realisation.thumbnail}}" class="realisation-image"
                 alt>
             </div>
             <div class="realisation-text">

@@ -9,7 +9,7 @@ export class RealisationsService {
   realisations = [
     {
       id: 10,
-      thumbnail: 'sarah-dorweiler-x2Tmfd1-SgA-unsplash.jpg',
+      thumbnail: 'placeholders/sarah-dorweiler-x2Tmfd1-SgA-unsplash.jpg',
       title: 'Portfolio',
       date: 2021,
       interventions: [
@@ -33,7 +33,7 @@ export class RealisationsService {
     },
     {
       id: 9,
-      thumbnail: 'assistant-rgaa-thumbnail.jpg',
+      thumbnail: 'placeholders/assistant-rgaa-thumbnail.jpg',
       title: 'Extension de navigateur "Assistant RGAA 4.1"',
       date: 2021,
       interventions: [
@@ -65,7 +65,7 @@ export class RealisationsService {
     },
     {
       id: 8,
-      thumbnail: 'luviana.png',
+      thumbnail: 'luviana-thumbnail.jpg',
       title: 'Luviana Hotel Resort',
       date: 2021,
       interventions: [
@@ -90,11 +90,17 @@ export class RealisationsService {
             btnClass: 'btn btn-primary'
           }
         ]
+      ],
+      pictures: [
+        {
+          'url': 'luviana/luviana.jpg',
+          'legend': 'Le morceau de page que j\'ai traité'
+        },
       ]
     },
     {
       id: 7,
-      thumbnail: 'json-reader.png',
+      thumbnail: 'json-reader-thumbnail.jpg',
       title: 'JSON Reader',
       date: 2021,
       interventions: [
@@ -116,11 +122,17 @@ export class RealisationsService {
         'Une partie "Options" est également prévue, permettant de sélectionner le JSON à lire et d\'afficher ou non certains éléments d\'interface.',
         'J\'ai toujours souhaité faire en sorte que les termes et références de cet outil soient le plus général possible, pour qu\'il puisse s\'adapter à de nombreuses situations.',
         'J\'aimerais rendre cet outil public au long terme, mais ce n\'est pas encore le cas.'
+      ],
+      pictures: [
+        {
+          'url': 'json-reader/json-reader-lecture-json.jpg',
+          'legend': 'Exemple de page de lecture de fichier JSON'
+        },
       ]
     },
     {
       id: 6,
-      thumbnail: 'prith.png',
+      thumbnail: 'prith-thumbnail.jpg',
       title: 'PRITH Hauts-de-France',
       date: 2020,
       interventions: [
@@ -138,11 +150,41 @@ export class RealisationsService {
         'Le site est articulé en pages composées de modules complètement personnalisables en back-office, offrant au client une expérience autonome.',
         'Lors de la refonte totale, j\'ai d\'abord été chargée de découper certains modules en restant le plus fidèle possible à la maquette graphique, puis de  m\'assurer que le site s\'afficheait correctement sur toutes les tailles d\'écran. Ensuite, je me suis assurée que le mode contrasté était conforme sur l\'ensemble du site et enfin, j\'ai assuré la maintenance corrective.'
       ],
-      outsideLinks: ['https://prith-hauts-de-france.org/']
+      outsideLinks: ['https://prith-hauts-de-france.org/'],
+      pictures: [
+        {
+          'url': 'prith/prith-accueil.jpg',
+          'legend': 'Accueil'
+        },
+        {
+          'url': 'prith/prith-employeur.jpg',
+          'legend': 'Employeur'
+        },
+        {
+          'url': 'prith/prith-guide-maintien-emploi.jpg',
+          'legend': 'Guide du maintien dans l\'emploi'
+        },
+        {
+          'url': 'prith/prith-evenements.jpg',
+          'legend': 'Évènements'
+        },
+        {
+          'url': 'prith/prith-resultats-recherche.jpg',
+          'legend': 'Résultats de recherche'
+        },
+        {
+          'url': 'prith/prith-popin-accessibilite.jpg',
+          'legend': 'Options d\'accessibilté'
+        },
+        {
+          'url': 'prith/prith-accueil-options-accessibilite.jpg',
+          'legend': 'Accueil avec police dyslexique, contrastes augmentés et taille de police augmentée'
+        },
+      ]
     },
     {
       id: 5,
-      thumbnail: 'compethance.jpg',
+      thumbnail: 'compethance-thumbnail.jpg',
       title: 'Compéthance',
       date: 2019,
       interventions: [
@@ -159,11 +201,17 @@ export class RealisationsService {
         'Dans le cadre de mon travail chez Compéthance, j\'ai été amenée à participer à une refonte totale de leur site vitrine sur WordPress.',
         'J\'ai d\'abord été chargée de découper les maquettes de certaines pages, puis de mettre en commun l\'ensemble des pages du site pour leur donner la même identité graphique. J\'ai également été en charge du responsive et du mode contrasté, et enfin, j\'ai assuré la maintenance sur le back-office WordPress.'
       ],
-      outsideLinks: ['https://compethance.fr']
+      outsideLinks: ['https://compethance.fr'],
+      pictures: [
+        {
+          'url': 'compethance/compethance-accueil.jpg',
+          'legend': 'Page d\'accueil'
+        },
+      ]
     },
     {
       id: 4,
-      thumbnail: 'e-loca e-bailleur/accueil.jpg',
+      thumbnail: 'eloca-ebailleur-thumbnail.jpg',
       title: 'e-loca et e-bailleur',
       date: 2019,
       interventions: [
@@ -366,7 +414,7 @@ export class RealisationsService {
     },
     {
       id: 3,
-      thumbnail: 'atul-vinayak-znXGn3heBsw-unsplash.jpg',
+      thumbnail: 'placeholders/atul-vinayak-znXGn3heBsw-unsplash.jpg',
       title: 'Legend of Dysmodia',
       date: 2018,
       interventions: [
