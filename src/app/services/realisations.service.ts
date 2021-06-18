@@ -223,71 +223,71 @@ export class RealisationsService {
         },
         {
           'url': 'e-loca e-bailleur/e-loca-messages1.jpg',
-          'legend': 'Page "Messages" de e-loca'
+          'legend': 'Page "Messages" de e-loca : Accueil'
         },
         {
           'url': 'e-loca e-bailleur/e-loca-messages2.jpg',
-          'legend': 'Page "Messages" de e-loca'
+          'legend': 'Page "Messages" de e-loca : Nouveau message (1/2) - Choisir le type'
         },
         {
           'url': 'e-loca e-bailleur/e-loca-messages3.jpg',
-          'legend': 'Page "Messages" de e-loca'
+          'legend': 'Page "Messages" de e-loca : Nouveau message (2/2) - Rédaction'
         },
         {
           'url': 'e-loca e-bailleur/e-loca-messages4.jpg',
-          'legend': 'Page "Messages" de e-loca'
+          'legend': 'Page "Messages" de e-loca : Conversation'
         },
         {
           'url': 'e-loca e-bailleur/e-loca-signalements1.jpg',
-          'legend': 'Page "Signalements" de e-loca'
+          'legend': 'Page "Signalements" de e-loca : Accueil'
         },
         {
           'url': 'e-loca e-bailleur/e-loca-signalements2.jpg',
-          'legend': 'Page "Signalements" de e-loca'
+          'legend': 'Page "Signalements" de e-loca : Détail d\'un signalement'
         },
         {
           'url': 'e-loca e-bailleur/e-loca-signalements3.jpg',
-          'legend': 'Page "Signalements" de e-loca'
+          'legend': 'Page "Signalements" de e-loca : Nouveau signalement (1/3)'
         },
         {
           'url': 'e-loca e-bailleur/e-loca-signalements4.jpg',
-          'legend': 'Page "Signalements" de e-loca'
+          'legend': 'Page "Signalements" de e-loca : Nouveau signalement (2/3)'
         },
         {
           'url': 'e-loca e-bailleur/e-loca-signalements5.jpg',
-          'legend': 'Page "Signalements" de e-loca'
+          'legend': 'Page "Signalements" de e-loca : Nouveau signalement (3/3)'
         },
         {
           'url': 'e-loca e-bailleur/e-loca-documents1.jpg',
-          'legend': 'Page "Documents" de e-loca'
+          'legend': 'Page "Documents" de e-loca : Accueil'
         },
         {
           'url': 'e-loca e-bailleur/e-loca-documents2.jpg',
-          'legend': 'Page "Documents" de e-loca'
+          'legend': 'Page "Documents" de e-loca : Mes documents'
         },
         {
           'url': 'e-loca e-bailleur/e-loca-documents3.jpg',
-          'legend': 'Page "Documents" de e-loca'
+          'legend': 'Page "Documents" de e-loca : Détail d\'un document'
         },
         {
           'url': 'e-loca e-bailleur/e-loca-documents4.jpg',
-          'legend': 'Page "Documents" de e-loca'
+          'legend': 'Page "Documents" de e-loca : Attestations d\'entretien'
         },
         {
           'url': 'e-loca e-bailleur/e-loca-documents5.jpg',
-          'legend': 'Page "Documents" de e-loca'
+          'legend': 'Page "Documents" de e-loca : Mon assurance (non renseignée)'
         },
         {
           'url': 'e-loca e-bailleur/e-loca-documents6.jpg',
-          'legend': 'Page "Documents" de e-loca'
+          'legend': 'Page "Documents" de e-loca : Enregistrer mon assurance'
         },
         {
           'url': 'e-loca e-bailleur/e-loca-documents7.jpg',
-          'legend': 'Page "Documents" de e-loca'
+          'legend': 'Page "Documents" de e-loca : Mon assurance (renseignée)'
         },
         {
           'url': 'e-loca e-bailleur/e-loca-documents8.jpg',
-          'legend': 'Page "Documents" de e-loca'
+          'legend': 'Page "Documents" de e-loca : Popin "En savoir plus"'
         },
         {
           'url': 'e-loca e-bailleur/e-bailleur-accueil1.jpg',
@@ -299,67 +299,67 @@ export class RealisationsService {
         },
         {
           'url': 'e-loca e-bailleur/e-bailleur-messages1.jpg',
-          'legend': 'Page "Messages" de e-bailleur'
+          'legend': 'Page "Messages" de e-bailleur : Accueil'
         },
         {
           'url': 'e-loca e-bailleur/e-bailleur-messages2.jpg',
-          'legend': 'Page "Messages" de e-bailleur'
+          'legend': 'Page "Messages" de e-bailleur : Nouveau message (1/2) - Choisir le type'
         },
         {
           'url': 'e-loca e-bailleur/e-bailleur-messages3.jpg',
-          'legend': 'Page "Messages" de e-bailleur'
+          'legend': 'Page "Messages" de e-bailleur : Nouveau message (2/2) - Rédaction'
         },
         {
           'url': 'e-loca e-bailleur/e-bailleur-messages4.jpg',
-          'legend': 'Page "Messages" de e-bailleur'
+          'legend': 'Page "Messages" de e-bailleur : Conversation'
         },
         {
           'url': 'e-loca e-bailleur/e-bailleur-biens1.jpg',
-          'legend': 'Page "Biens" de e-bailleur'
+          'legend': 'Page "Biens" de e-bailleur : Accueil'
         },
         {
           'url': 'e-loca e-bailleur/e-bailleur-biens2.jpg',
-          'legend': 'Page "Biens" de e-bailleur'
+          'legend': 'Page "Biens" de e-bailleur : Détail d\'un bien'
         },
         {
           'url': 'e-loca e-bailleur/e-bailleur-biens3.jpg',
-          'legend': 'Page "Biens" de e-bailleur'
+          'legend': 'Page "Biens" de e-bailleur : Détail d\'un(e) occupant(e)'
         },
         {
           'url': 'e-loca e-bailleur/e-bailleur-documents1.jpg',
-          'legend': 'Page "Documents" de e-bailleur'
+          'legend': 'Page "Documents" de e-bailleur : Accueil'
         },
         {
           'url': 'e-loca e-bailleur/e-bailleur-documents2.jpg',
-          'legend': 'Page "Documents" de e-bailleur'
+          'legend': 'Page "Documents" de e-bailleur : Mes documents'
         },
         {
           'url': 'e-loca e-bailleur/e-bailleur-documents3.jpg',
-          'legend': 'Page "Documents" de e-bailleur'
+          'legend': 'Page "Documents" de e-bailleur : Détail d\'un document'
         },
         {
           'url': 'e-loca e-bailleur/e-bailleur-documents4.jpg',
-          'legend': 'Page "Documents" de e-bailleur'
+          'legend': 'Page "Documents" de e-bailleur : Documents personnels'
         },
         {
           'url': 'e-loca e-bailleur/e-bailleur-documents5.jpg',
-          'legend': 'Page "Documents" de e-bailleur'
+          'legend': 'Page "Documents" de e-bailleur : Assurance - liste des biens'
         },
         {
           'url': 'e-loca e-bailleur/e-bailleur-documents6.jpg',
-          'legend': 'Page "Documents" de e-bailleur'
+          'legend': 'Page "Documents" de e-bailleur : Assurance propriétaire (non renseignée)'
         },
         {
           'url': 'e-loca e-bailleur/e-bailleur-documents7.jpg',
-          'legend': 'Page "Documents" de e-bailleur'
+          'legend': 'Page "Documents" de e-bailleur : Enregistrer mon assurance'
         },
         {
           'url': 'e-loca e-bailleur/e-bailleur-documents8.jpg',
-          'legend': 'Page "Documents" de e-bailleur'
+          'legend': 'Page "Documents" de e-bailleur : Assurance propriétaire (renseignée)'
         },
         {
           'url': 'e-loca e-bailleur/e-bailleur-documents9.jpg',
-          'legend': 'Page "Documents" de e-bailleur'
+          'legend': 'Page "Documents" de e-bailleur : Popin "En savoir plus"'
         }
       ],
       tallPictures: true
