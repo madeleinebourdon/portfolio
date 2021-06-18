@@ -6,7 +6,6 @@
 }
 
 section:not(:last-of-type) {
-    // background-color: red;
     border-bottom: 2px dotted map-get($palette, 'offwhite');
     padding-bottom: map-get($spacing, 'general');
     margin-bottom: map-get($spacing, 'halfSpacing');
@@ -44,7 +43,6 @@ h3, h4 {
     color: map-get($palette, 'dark-gray');
 }
 
-
 .technical {
     // width: 28%;
     // border: 1px solid map-get($palette, 'light-gray');
@@ -57,8 +55,8 @@ h3, h4 {
 
 
     .btn {
-        text-decoration: none;
-
+            width: max-content;
+        
         span:first-child {
             padding-right: map-get($spacing, 'eighthSpacing');
         }
@@ -98,18 +96,28 @@ h3, h4 {
         margin-right: map-get($spacing, 'halfSpacing');
     }
 
-    .links-container, .links-container li, .links-container .link-group {
+    .links-container, 
+    .links-container li, 
+    .links-container .link-group {
         display: flex;
         flex-direction: row;
     }
 }
 
 .image-container {
+    .section-content {
+        text-align: center;
+    }
     img {
+        max-width: 100%;
         width: 100%;
         object-fit: cover;
         object-position: top;
 
+
+        &.thumbnail {
+            width: auto;
+        }
         &.tall {
             max-height: calc(100vh - #{map-get($sizes, 'minHeaderHeight')} - #{map-get($sizes, 'smallJumbotronHeight')} - #{map-get($sizes, 'minFooterHeight')} - 2rem);
             width: auto;
@@ -118,47 +126,20 @@ h3, h4 {
     }
 }
 
-@media only screen and (max-width: 992px ) {
-    .split {
-        flex-direction: column;
-    }
-
-    .image-container {
-        max-width: 100%;
-    }
-}
-
-
-// placeholder
-// swiper {
-//     height: 400px;
-//     width: 600px;
-//   }
-
-// .image-container img {
-//     // max-width: 10px;
-// }
-// .swiper1 {
-//     padding: 0 3rem;
-// }
-
-swiper.swiper-button-disabled, 
-.swiper-button-disabled {
-    display: none!important;
-}
-
 .swiper1 {
     margin-bottom: map-get($spacing, 'halfSpacing');
 
     img {
         position: relative;
     }
+
     figure {
         margin: 0;
         display: flex;
         flex-direction: column;
         background-color: map-get($palette, 'near-black');
     }
+    
     figcaption {
         background-color: map-get($palette, 'black');
         color: map-get($palette, 'white');
@@ -185,15 +166,12 @@ swiper.swiper-button-disabled,
 }
 
 .swiper2 {
-    // padding-top: map-get($spacing, 'eighthSpacing');
-    // padding-bottom: 1.5rem;
     padding-bottom: map-get($spacing, 'halfSpacing');
     display: flex;
     flex-direction: column-reverse;
 
     img {
         max-height: 10rem;
-        // max-width: 8rem;
         object-fit: cover;
 
         &:hover {
@@ -202,6 +180,54 @@ swiper.swiper-button-disabled,
     }
 }
 
-// .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
-//     bottom: 0;
-// }
+// Bootstrap lg
+@media only screen and (max-width: 992px) {
+    .technical {
+        li:not(:last-of-type) .btn {
+            margin-bottom: 0;
+        }
+
+        .link-group {
+            margin: auto;
+
+            &:not(:last-of-type) {
+                margin-right: auto;
+                margin-bottom: map-get($spacing, 'quarterSpacing');
+
+            }
+        }
+
+        .links-container, 
+        .links-container li 
+        {
+            flex-direction: column;
+        }
+    }
+}
+
+// Bootstrap md
+@media only screen and (max-width: 768px) {
+    .swiper1 {
+        .bigger-image-link {
+            top: 10px;
+        }
+    }
+}
+
+// Bootstrap sm
+@media only screen and (max-width: 576px) {
+    .technical {
+        li:not(:last-of-type) .btn {
+            margin-bottom: map-get($spacing, 'quarterSpacing');
+            margin-right: 0;
+        }
+
+        .link-group:not(:last-of-type) {
+            margin-bottom: map-get($spacing, 'halfSpacing');
+        }
+
+        .links-container .link-group {
+            flex-direction: column;
+        }
+    }
+}
