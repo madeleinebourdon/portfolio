@@ -29,6 +29,9 @@ export class JumbotronComponent implements OnInit {
       this.jumbotronName = 'Madeleine Bourdon'
       this.jumbotronBis = 'Développeuse front-end junior'
     }
+    if (pageTitle.urlPath.startsWith('/portfolio/project/')) {
+      this.jumbotronName = 'Réalisations'
+    }
   }
   
   ngOnInit() {

@@ -1,16 +1,132 @@
 <div class="container">
-    <a href="/portfolio" class="btn back-link">
-        <span class="fas fa-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Retour vers "</span>Mes réalisations<span class="sr-only">"</span>
-    </a>
-
-    <div class="split">
-        <div class="image-container">
-            <img src="/assets/img/portfolio/{{realisation.image}}" alt>
+    <section class="technical">
+        <div class="header-container">
+            <a href="/portfolio" class="btn btn-outline-dark back-link" title="Mes réalisations">
+                <span class="fas fa-chevron-left" aria-hidden="true"></span>
+            </a>
+            <h2>{{realisation.title}}</h2>
         </div>
-        <div>
-            <!-- <h1>{{realisation.title}}</h1> -->
+        <h3>Fiche technique</h3>
+        <div class="section-content">
+            <ul>
+                <li *ngIf="realisation.date">
+                    <span class="info-category">
+                        <!-- <span class="fas fa-calendar-alt"></span> -->
+                        Année :
+                    </span>
+                    <span class="fst-italic">
+                        {{realisation.date}}
+                    </span>
+                </li>
+                <li *ngIf="realisation.interventions">
+                    <span class="info-category">
+                        <!-- <span class="fas fa-toolbox"></span> -->
+                        Intervention<ng-container *ngIf="realisation.interventions.length > 1">s</ng-container> :
+                    </span>
+                    <span class="fst-italic">
+                        {{realisation.interventions.join(', ')}}
+                    </span>
+                </li>
+                <li *ngIf="realisation.technos">
+                    <span class="info-category">
+                        <!-- <span class="fas fa-microchip"></span> -->
+                        Technologie<ng-container *ngIf="realisation.technos.length > 1">s</ng-container> :
+                    </span>
+                    <span class="fst-italic">
+                        {{realisation.technos.join(', ')}}
+                    </span>
+                </li>
+            </ul>
+            <span *ngIf="realisation.outsideLinks ||  realisation.insideLinks || realisation.customLinks"
+                class="info-category">
+                Lien<ng-container
+                    *ngIf="realisation.outsideLinks?.length + realisation.insideLinks?.length + realisation.customLinks?.length > 1"
+                    >s</ng-container> :
+            </span>
+            <ul class="links-container"
+                *ngIf="realisation.outsideLinks ||  realisation.insideLinks || realisation.customLinks">
+                <li *ngFor="let outsideLink of realisation.outsideLinks">
+                    <a href="{{outsideLink}}" class="btn btn-primary">
+                        <span class="fas fa-globe-europe"></span>
+                        Voir le site*
+                    </a>
+                </li>
+                <li *ngFor="let insideLink of realisation.insideLinks">
+                    <a href="{{insideLink}}" class="btn btn-primary">
+                        <span class="fas fa-globe-europe"></span>
+                        Voir le site
+                    </a>
+                </li>
+                <li *ngIf="realisation.customLinks">
+                    <ul class="link-group" *ngFor="let linkGroup of realisation.customLinks">
+                        <li *ngFor="let customLink of linkGroup">
+                            <a href="{{customLink.url}}" class="{{customLink.btnClass}}">
+                                <span class="{{customLink.icon}}"></span>
+                                {{customLink.text}}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p *ngIf="realisation.outsideLinks || realisation.linksDisclaimer" class="outside-disclaimer">* Le projet
+                "{{realisation.title}}" peut avoir changé depuis mon passage. Je ne suis pas responsable d'éventuelles
+                modifications ultérieures qui ne seraient pas mentionnées ici.</p>
+        </div>
+    </section>
+    <section class="description" *ngIf="realisation.description">
+        <h3>
+            Description
+        </h3>
+        <div class="section-content">
             <p *ngFor="let paragraph of realisation.description">{{paragraph}}</p>
         </div>
-    </div>
+    </section>
+    <section class="image-container">
+        <h3>
+            Illustration<ng-container *ngIf="realisation.pictures?.length > 1">s</ng-container>
+        </h3>
+        <ng-container *ngIf="realisation.pictures; else noPictures">
+            <div class="section-content">
+                <swiper style="--swiper-navigation-color: #fff; --bg-color: #363636" [loop]="false" [spaceBetween]="100"
+                    [navigation]="true" [thumbs]="{ swiper: thumbsSwiper }" class="swiper1"
+                    [mousewheel]="{invert: false,releaseOnEdges: false}"
+                    [autoHeight]="true">
+                    <ng-template swiperSlide *ngFor="let picture of  realisation.pictures">
+                        <figure>
+                            <img src="/assets/img/portfolio/pictures/{{picture.url}}" [ngClass]="{'tall': realisation.tallPictures}" alt>
+                            <figcaption>{{picture.legend}}</figcaption>
+                        </figure>
+                        <a href="/assets/img/portfolio/pictures/{{picture.url}}" class="bigger-image-link" target="_blank"
+                            title="Ouvrir l'image &quot;{{picture.legend}}&quot; dans un nouvel onglet">
+                            <span class="fas fa-external-link-alt"></span>
+                        </a>
+                    </ng-template>
+                </swiper>
+            </div>
+            <ng-container *ngIf="realisation.pictures?.length > 1">
+                <h4>
+                    Plus d'images
+                </h4>
+                <div class="section-content">
+                    <swiper (swiper)="thumbsSwiper = $event" [loop]="false" [spaceBetween]="0" [slidesPerView]="5" [slidesPerGroup]="5"
+                        [watchSlidesVisibility]="true" [watchSlidesProgress]="true" class="swiper2"
+                        [pagination]="{ clickable: true }"
+                        [mousewheel]="{invert: false, eventsTarget: 'container', releaseOnEdges: false}"
+                        [watchOverflow]="true"
+                        [a11y]="{enabled: 'true', prevSlideMessage: 'Image précédente', nextSlideMessage: 'Image suivante'}">
+                        <ng-template swiperSlide *ngFor="let picture of  realisation.pictures; index as i">
+                            <img src="/assets/img/portfolio/pictures/{{picture.url}}"
+                                alt="Mettre en avant &quot;{{picture.legend}}&quot; ({{i+1}}/{{realisation.pictures.length}})"
+                                title="Mettre en avant &quot;{{picture.legend}}&quot; ({{i+1}}/{{realisation.pictures.length}})">
+                        </ng-template>
+                    </swiper>
+                </div>
+            </ng-container>
+        </ng-container>
+        <ng-template #noPictures>
+            <div class="section-content">
+                <img src="/assets/img/portfolio/thumbnails/{{realisation.thumbnail}}" class="thumbnail" alt>
+            </div>
+        </ng-template>
+    </section>
 </div>

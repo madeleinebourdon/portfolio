@@ -1,26 +1,25 @@
 <!-- <div class="darker-container"> -->
 <div class="container padding">
-  <a id="experience" class="anchor">
-    <h2>Expérience</h2>
-  </a>
+  <a id="experience" class="anchor"></a>
+  <h2>Expérience</h2>
 
   <div class="ligneTimeline">
     <ul>
       <li *ngFor="let experience of experiencesList; let i = index">
-      <span class="yearTimeline">
+        <span class="yearTimeline">
           {{experience.date.debut}} -
           <span class="yearTimelineEnd"> {{experience.date.fin}}</span>
-      </span>
-      <span class="yearHeadlineTimeline">{{experience.poste}}</span>
-      <div class="yearCompanyTimeline">
-        <span class="sr-only">Chez </span>
-        <a href="{{experience.compagnie.url}}">{{experience.compagnie.nom}}</a> 
-        (<span class="sr-only">À </span>{{experience.compagnie.ville}})
-      </div>
+        </span>
+        <span class="yearHeadlineTimeline">{{experience.poste}}</span>
+        <div class="yearCompanyTimeline">
+          <span class="sr-only">Chez </span>
+          <a href="{{experience.compagnie.url}}">{{experience.compagnie.nom}}</a>
+          (<span class="sr-only">À </span>{{experience.compagnie.ville}})
+        </div>
 
-      <p *ngFor="let paragraph of experience.description">
-        {{paragraph}}
-      </p>
+        <p *ngFor="let paragraph of experience.description">
+          {{paragraph}}
+        </p>
       </li>
     </ul>
   </div>

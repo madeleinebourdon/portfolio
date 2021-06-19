@@ -4,6 +4,12 @@ $bootstrapColors: (
     'primaryDarker':    #016121,
     'secondary':        #014618
 );
+$bootstrapOverrideColors: (
+    'orange':       #ff3d3f,
+    'blue':       #0072aa,
+    'cyan':         #74b9ff,
+    'indigo':       #0c2461
+);
 
 
 /// COULEURS
@@ -14,6 +20,7 @@ $palette: (
     'offwhite':     #c0c0c0,
     'light-gray':   #a5a5a5,
     'dark-gray':    #363636,
+    'near-black':   #1d1d1d,
     'black':        #000,
 );
 $bgColors: (
@@ -43,15 +50,6 @@ $spacing: (
     'halfSpacing': 1rem,
     'thirdSpacing': 0.66rem,
     'quarterSpacing': 0.5rem,
+    'eighthSpacing': 0.25rem,
     'partGap': #{map-get($sizes, 'smallJumbotronHeight') / 6},
 );
-
-
-/// PARTIES DE CODE DEVENUES INUTILES
-/// (parce que leurs conteneurs ont été commentés)
-$iconsColors: (
-    'full-star': #fed330,
-    'empty-star': #909090
-);
-
-// $chartSize: 9rem; // taille des skill charts

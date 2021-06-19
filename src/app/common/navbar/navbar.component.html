@@ -2,7 +2,7 @@
   <div class="container">
     <div class="uncollapsedNavbar">
       <a class="navbar-brand" href="/" aria-hidden="true" tabindex="-1">Madeleine Bourdon</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="fas fa-bars"></span>
         <span class="legend">Menu</span>
@@ -11,7 +11,7 @@
       </button>
     </div>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ms-auto">
         <!-- Acccueil -->
         <li>
           <a class="nav-item nav-link" href="/">
@@ -23,12 +23,12 @@
           <!-- À propos de moi -->
           <a type="button" class="hover" href="about">À propos de moi</a>
 
-          <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
+          <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false" id="about-me">
             <span class="sr-only">Catégorie "À propos de moi" : Dérouler les sous-parties</span>
           </button>
 
-          <div class="dropdown-menu">
+          <div class="dropdown-menu" aria-labelledby="about-me">
             <!-- sous-liens de "À propos de moi" -->
             <ul>
               <!-- Compétences -->
@@ -64,7 +64,7 @@
         <!-- <li class="nav-item btn-group">
           Réalisations
           <a type="button" class="hover" href="portfolio">Réalisations</a>
-          <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+          <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
             <span class="sr-only">Catégorie "Réalisations" : Dérouler les sous-parties</span>
           </button>
