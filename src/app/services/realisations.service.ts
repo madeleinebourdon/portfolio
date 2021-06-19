@@ -205,8 +205,24 @@ export class RealisationsService {
       pictures: [
         {
           'url': 'compethance/compethance-accueil.jpg',
-          'legend': 'Page d\'accueil'
+          'legend': 'Accueil'
         },
+        {
+          'url': 'compethance/compethance-prestations.jpg',
+          'legend': 'Nos prestations'
+        },
+        {
+          'url': 'compethance/compethance-formations.jpg',
+          'legend': 'Nos formations'
+        },
+        {
+          'url': 'compethance/compethance-qui-sommes-nous.jpg',
+          'legend': 'Qui sommes-nous ?'
+        },
+        {
+          'url': 'compethance/compethance-contact.jpg',
+          'legend': 'Contact'
+        }
       ]
     },
     {
