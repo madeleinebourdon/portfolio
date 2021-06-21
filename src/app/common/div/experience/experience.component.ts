@@ -10,7 +10,7 @@ export class ExperienceComponent implements OnInit {
     {
       date: {
         debut: 'Juin 2019',
-        fin: 'aujourd\'hui'
+        fin: 'Avril 2021'
       },  
       poste: 'Développeur web et mobile',
       compagnie: {
@@ -26,7 +26,7 @@ export class ExperienceComponent implements OnInit {
     {
       date: {
         debut: 'Janvier 2019',
-        fin: 'mai 2019'
+        fin: 'Mai 2019'
       },  
       poste: 'Stage de développement web',
       compagnie: {
@@ -42,7 +42,7 @@ export class ExperienceComponent implements OnInit {
     {
       date: {
         debut: 'Septembre 2018',
-        fin: 'décembre 2018'
+        fin: 'Décembre 2018'
       },  
       poste: 'Formation de développeur intégrateur web et mobile',
       compagnie: {
