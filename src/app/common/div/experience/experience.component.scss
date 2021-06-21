@@ -30,8 +30,10 @@
         }
 
         li {
-            padding-left: 1.3rem;
-            padding-bottom: 0.8rem;
+            // padding-left: 1.3rem;
+            // padding-bottom: 0.8rem;
+            padding-left: map-get($spacing, 'general');
+            padding-bottom: map-get($spacing, 'general');
 
             &:last-of-type {
                 padding-bottom: 0;
@@ -43,13 +45,14 @@
                 color: map-get($palette, 'mainDark');
                 display: inline-block;
                 // margin-left: -1.3em;
-                margin-left: -1.5rem;
+                // margin-left: -1.1rem;
+                margin-left: -1.8rem;
                 /* same as padding-left set on li */
                 width: 1.3em;
                 /* same as padding-left set on li */
                 font-weight: 600;
-                font-size: 0.6rem;
-                margin-right: 0.5rem;
+                font-size: 0.7rem;
+                margin-right: 0.9rem;
             }
 
             &>ul {
@@ -84,8 +87,12 @@
                 display: block;
             }
             .yearHeadlineTimeline {
+                text-align: left;
+                display: inline-flex;
+                font-size: 1.3rem;
                 color: map-get($palette, 'mainDark');
-                font-weight: bold;
+                font-weight: 600;
+                margin: 0;
             }
             .yearCompanyTimeline {
                 font-style: italic;

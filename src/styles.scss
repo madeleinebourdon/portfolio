@@ -43,10 +43,19 @@ h5 {
 p:last-of-type {
   margin-bottom: 0;
 }
+a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    &:not(.btn) {
+      text-decoration: underline;
+    }
+  }
+}
 main a {
   color: map-get($palette, 'mainDark');
   font-weight: 600;
-  // text-decoration: underline;
 
   &:hover,
   &:focus {
