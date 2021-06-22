@@ -1,4 +1,6 @@
 @import "src/app/variables.scss";
+@import "src/app/mixin.scss";
+
 
 .container {
     margin-top: map-get($spacing, 'general');
@@ -6,9 +8,7 @@
 }
 
 section:not(:last-of-type) {
-    border-bottom: 2px dotted map-get($palette, 'offwhite');
-    padding-bottom: map-get($spacing, 'general');
-    margin-bottom: map-get($spacing, 'halfSpacing');
+    @include section-separator;
 }
 
 .section-content {
@@ -47,11 +47,13 @@ h3, h4 {
     // width: 28%;
     // border: 1px solid map-get($palette, 'light-gray');
     // margin-left: map-get($spacing, 'general');
-    padding: map-get($spacing, 'halfSpacing') 0;
-    // height: min-content;
-    // padding: 0;
-    border-bottom: 2px dotted map-get($palette, 'offwhite');
-    margin-bottom: map-get($spacing, 'halfSpacing');
+    // padding: map-get($spacing, 'halfSpacing') 0;
+    // // height: min-content;
+    // // padding: 0;
+    // border-bottom: 2px dotted map-get($palette, 'offwhite');
+    // margin-bottom: map-get($spacing, 'halfSpacing');
+
+    @include section-separator;
 
 
     .btn {

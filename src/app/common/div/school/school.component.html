@@ -1,0 +1,33 @@
+<div class="container padding">
+    <a id="formation" class="anchor"></a>
+    <h2>Formation</h2>
+  
+    <div class="ligneTimeline">
+      <ul>
+        <li *ngFor="let formation of formationsList; let i = index">
+          <div class="list-header">
+            <span class="yearTimeline">
+                <ng-container *ngIf="!formation.date.unique">
+                    {{formation.date.debut}} -
+                    <span class="yearTimelineEnd"> {{formation.date.fin}}</span>
+                </ng-container>
+                {{formation.date.unique}}
+            </span>
+            <h3 class="yearHeadlineTimeline">{{formation.poste}}</h3>
+            <div class="yearCompanyTimeline">
+              <span class="sr-only">Chez </span>
+              <a href="{{formation.compagnie.url}}">{{formation.compagnie.nom}}</a>
+              <ng-container *ngIf="formation.compagnie.ville">,
+                {{formation.compagnie.ville}}
+              </ng-container>
+            </div>
+          </div>
+  
+          <p *ngFor="let paragraph of formation.description">
+            {{paragraph}}
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  

@@ -18,6 +18,7 @@ import { IntroComponent } from './common/div/intro/intro.component';
 import { TechnologyComponent } from './common/div/technology/technology.component';
 import { LanguagesComponent } from './common/div/languages/languages.component';
 import { ExperienceComponent } from './common/div/experience/experience.component';
+import { SchoolComponent } from './common/div/school/school.component';
 import { SkillsComponent } from './common/div/skills/skills.component';
 import { MessageFormComponent } from './contact/message-form/message-form.component';
 import { AccessibilityComponent } from './common/div/accessibility/accessibility.component';
@@ -47,6 +48,7 @@ import { SwiperModule } from 'swiper/angular';
     AccessibilityComponent,
     LegalComponent,
     ErrorComponent,
+    SchoolComponent,
     // HeaderComponent
   ],
   imports: [

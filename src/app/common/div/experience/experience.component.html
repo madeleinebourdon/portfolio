@@ -1,4 +1,3 @@
-<!-- <div class="darker-container"> -->
 <div class="container padding">
   <a id="experience" class="anchor"></a>
   <h2>Expérience professionnelle</h2>
@@ -6,16 +5,16 @@
   <div class="ligneTimeline">
     <ul>
       <li *ngFor="let experience of experiencesList; let i = index">
-        <div class="experience-header">
+        <div class="list-header">
           <span class="yearTimeline">
             {{experience.date.debut}} -
             <span class="yearTimelineEnd"> {{experience.date.fin}}</span>
           </span>
           <h3 class="yearHeadlineTimeline">{{experience.poste}}</h3>
           <div class="yearCompanyTimeline">
-            <span class="sr-only">Chez </span>
-            <a href="{{experience.compagnie.url}}">{{experience.compagnie.nom}}</a>
-            (<span class="sr-only">À </span>{{experience.compagnie.ville}})
+            <class class="sr-only">Chez </class>
+            <a href="{{experience.compagnie.url}}">{{experience.compagnie.nom}}</a>,
+            <span class="sr-only">À </span>{{experience.compagnie.ville}}
           </div>
         </div>
 
@@ -26,4 +25,3 @@
     </ul>
   </div>
 </div>
-<!-- </div> -->
