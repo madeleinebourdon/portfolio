@@ -1,4 +1,6 @@
 @import "src/app/variables.scss";
+@import "src/app/mixin.scss";
+
 @import '~swiper/swiper-bundle';
 @import "../node_modules/bootstrap/scss/bootstrap";
 
@@ -11,13 +13,13 @@ h2,
 h4 {
   font-family: "Cabin", sans-serif;
 }
-h1,
 h2 {
-  color: map-get($bootstrapColors, 'primaryDarker');
+  color: map-get($palette, 'dark-gray');
   font-weight: 600;
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 2rem;
   // font-family: 'Cabin', sans-serif;
+  margin-bottom: map-get($spacing, 'general');
 }
 h2 {
   .underline::after {

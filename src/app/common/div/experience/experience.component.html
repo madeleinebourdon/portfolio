@@ -6,15 +6,17 @@
   <div class="ligneTimeline">
     <ul>
       <li *ngFor="let experience of experiencesList; let i = index">
-        <span class="yearTimeline">
-          {{experience.date.debut}} -
-          <span class="yearTimelineEnd"> {{experience.date.fin}}</span>
-        </span>
-        <h3 class="yearHeadlineTimeline">{{experience.poste}}</h3>
-        <div class="yearCompanyTimeline">
-          <span class="sr-only">Chez </span>
-          <a href="{{experience.compagnie.url}}">{{experience.compagnie.nom}}</a>
-          (<span class="sr-only">À </span>{{experience.compagnie.ville}})
+        <div class="experience-header">
+          <span class="yearTimeline">
+            {{experience.date.debut}} -
+            <span class="yearTimelineEnd"> {{experience.date.fin}}</span>
+          </span>
+          <h3 class="yearHeadlineTimeline">{{experience.poste}}</h3>
+          <div class="yearCompanyTimeline">
+            <span class="sr-only">Chez </span>
+            <a href="{{experience.compagnie.url}}">{{experience.compagnie.nom}}</a>
+            (<span class="sr-only">À </span>{{experience.compagnie.ville}})
+          </div>
         </div>
 
         <p *ngFor="let paragraph of experience.description">

@@ -12,7 +12,7 @@ export class ExperienceComponent implements OnInit {
         debut: 'Juin 2019',
         fin: 'Avril 2021'
       },  
-      poste: 'Développeur web et mobile',
+      poste: 'Développeuse web et mobile',
       compagnie: {
         nom: 'Compéthance',
         url: 'https://compethance.fr',

@@ -1,0 +1,176 @@
+@mixin section-separator {
+    border-bottom: 2px dotted map-get($palette, 'offwhite');
+    padding-bottom: map-get($spacing, 'general');
+    margin-bottom: map-get($spacing, 'halfSpacing');
+}
+
+@mixin timeline {
+    .container {
+        position: relative;
+    }
+
+    .ligneTimeline {
+        &::before {
+            content: '';
+            width: 2px;
+            height: auto;
+            // min-height: 16rem;
+            height: calc(100% - 9.5rem);
+            background: map-get($palette, 'mainDark');
+            display: block;
+            position: absolute;
+            margin-top: 1rem;
+            // margin-left: 2.5rem;
+            margin-left: 14.55rem;
+        }
+
+        ul {
+            list-style: none;
+
+            &:first-of-type {
+                margin-left: 12rem;
+            }
+
+            li {
+                // padding-left: 1.3rem;
+                // padding-bottom: 0.8rem;
+                padding-left: map-get($spacing, 'general');
+                padding-bottom: map-get($spacing, 'general');
+
+                &:last-of-type {
+                    padding-bottom: 0;
+                }
+
+                &::before {
+                    content: "\f111";
+                    font-family: "Font Awesome 5 Free";
+                    color: map-get($palette, 'mainDark');
+                    display: inline-block;
+                    // margin-left: -1.3em;
+                    // margin-left: -1.1rem;
+                    margin-left: -1.8rem;
+                    /* same as padding-left set on li */
+                    width: 1.3em;
+                    /* same as padding-left set on li */
+                    font-weight: 600;
+                    font-size: 0.7rem;
+                    margin-right: 0.9rem;
+                }
+
+                &>ul {
+                    list-style: square inside;
+
+                    &:first-of-type {
+                        margin-left: inherit;
+                    }
+
+                    li {
+                        padding-bottom: 0;
+                        
+                        &::before {
+                            // color: red;
+                            content: '';
+                        }
+                    }
+                }
+
+                .yearTimeline {
+                    text-align: right;
+                    position: absolute;
+                    left: 0;
+                    margin-top: -0.5rem;
+                    // width: 20.5rem;
+                    width: 14rem;
+                    // color: #454545;
+                    // color: #8e8e8e;
+                    color: map-get($palette, 'dark-gray');
+                }
+                .yearTimelineEnd {
+                    display: block;
+                    padding-right: 0.7rem;
+                }
+                .yearHeadlineTimeline {
+                    text-align: left;
+                    display: inline-flex;
+                    font-size: 1.1rem;
+                    color: map-get($palette, 'mainDark');
+                    font-weight: 600;
+                    margin: 0;
+                }
+                .yearCompanyTimeline {
+                    font-style: italic;
+                    margin-bottom: map-get($spacing, 'quarterSpacing');
+                    color: map-get($palette, 'near-black');
+
+                    a {
+                        color: map-get($palette, 'near-black');
+                    }
+                }
+            }
+        }
+
+        .experience-header {
+            display: inline-flex;
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .ligneTimeline {
+            display: flex;
+            flex-direction: column;
+
+            &::before {
+                content: none;
+            }
+
+            ul:first-of-type {
+                margin-left: 0;
+                padding-left: 0;
+                text-align: center;
+                margin-bottom: 0;
+
+                li {
+                    padding-left: 0;
+                    padding-bottom: map-get($spacing, 'doubleSpacing');
+
+                    &::before {
+                        content: none;
+                    }
+                    &:not(:last-of-type) {
+                        @include section-separator
+                    }
+                    &:last-of-type {
+                        padding-bottom: 0;
+                    }
+                    .yearTimeline {
+                        position: inherit;
+                        text-align: inherit;
+                        width: auto;
+                    }
+                    .yearTimelineEnd {
+                        display: inline-flex;
+                    }
+                    .yearHeadlineTimeline {
+                        display: block;
+                        text-align: inherit;
+                        font-size: 1.3rem;
+                        font-weight: 500;
+                    }
+                    .yearCompanyTimeline {
+                        margin-bottom: 0;
+                    } 
+                }
+            }
+
+            .experience-header {
+                width: 100%;
+                // background-color: map-get($palette, 'offwhite');
+                width: calc(100% - #{map-get($spacing, 'doubleSpacing')});
+                border-radius: map-get($spacing, 'general');
+                margin: auto;
+                padding: map-get($spacing, 'halfSpacing');
+            }
+        }
+    }
+}
